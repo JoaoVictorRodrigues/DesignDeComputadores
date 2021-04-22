@@ -1,0 +1,22 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE ieee.numeric_std.ALL;
+
+PACKAGE op_constants IS
+    CONSTANT opcode_w : NATURAL := 8;
+
+    CONSTANT add_imed : STD_LOGIC_VECTOR(opcode_w - 1 DOWNTO 0) := "0000";
+    CONSTANT add_mem : STD_LOGIC_VECTOR(opcode_w - 1 DOWNTO 0) := "0001";
+    CONSTANT sub_imed : STD_LOGIC_VECTOR(opcode_w - 1 DOWNTO 0) := "0010";
+    CONSTANT sub_mem : STD_LOGIC_VECTOR(opcode_w - 1 DOWNTO 0) := "0011";
+    CONSTANT m_mov_r : STD_LOGIC_VECTOR(opcode_w - 1 DOWNTO 0) := "0100";
+    CONSTANT r_mov_m : STD_LOGIC_VECTOR(opcode_w - 1 DOWNTO 0) := "0101";
+    CONSTANT load : STD_LOGIC_VECTOR(opcode_w - 1 DOWNTO 0) := "0110";
+    CONSTANT cmp : STD_LOGIC_VECTOR(opcode_w - 1 DOWNTO 0) := "0111";
+    CONSTANT jmp : STD_LOGIC_VECTOR(opcode_w - 1 DOWNTO 0) := "1000";
+    CONSTANT je : STD_LOGIC_VECTOR(opcode_w - 1 DOWNTO 0) := "1001";
+    CONSTANT jne : STD_LOGIC_VECTOR(opcode_w - 1 DOWNTO 0) := "1010";
+    CONSTANT or_inst : STD_LOGIC_VECTOR(opcode_w - 1 DOWNTO 0) := "1011";
+    CONSTANT and_inst : STD_LOGIC_VECTOR(opcode_w - 1 DOWNTO 0) := "1100";
+
+END PACKAGE op_constants;
