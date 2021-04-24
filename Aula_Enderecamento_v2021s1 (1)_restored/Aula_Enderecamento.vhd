@@ -6,11 +6,16 @@ entity Aula_Enderecamento is
   port (
     -- Entradas (placa)
     CLOCK_50 : in STD_LOGIC;
+	 palavraControle  :  in  std_logic_vector(dataWidth-1 downto 0);
+	 
 --    KEY: in STD_LOGIC_VECTOR(3 DOWNTO 0);
-    SW: in STD_LOGIC_VECTOR(7 DOWNTO 0);
+    --SW: in STD_LOGIC_VECTOR(7 DOWNTO 0);
 
     -- Saidas (placa)
-    LEDR  : out STD_LOGIC_VECTOR(7 DOWNTO 0) := (others => '0')
+	 saidaRegistradores :  out  std_logic_vector(dataWidth-1 downto 0);
+	 programCounter  :  out  std_logic_vector(addrWidth-1 downto 0);
+	 opCode  :  out  std_logic_vector(4 downto 0)
+    --LEDR  : out STD_LOGIC_VECTOR(7 DOWNTO 0) := (others => '0')
 --    HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : OUT STD_LOGIC_VECTOR(6 downto 0)
   );
 end entity;
@@ -27,7 +32,7 @@ signal habilitaBlocos : std_logic_vector(3 DOWNTO 0);
 signal clk : std_logic;
 
 -- Formato da instrucao
-alias opCode: std_logic_vector(3 DOWNTO 0) is Instrucao(addrWidth-1 downto addrWidth-4);
+alias opCodeLocal: std_logic_vector(3 DOWNTO 0) is Instrucao(addrWidth-1 downto addrWidth-4);
 alias SelReg: std_logic_vector(2 DOWNTO 0) is Instrucao(addrWidth-5 downto addrWidth-7);
 alias enderecoRAM: std_logic_vector(addrWidth-1 DOWNTO 0) is Instrucao(addrWidth-1 downto 0);
 alias imediatoDado: std_logic_vector (dataWidth-1 DOWNTO 0) is Instrucao(dataWidth-1 downto 0);
@@ -90,16 +95,16 @@ ULAentradaB <= MUXRAMImediato_MUXULAImediato;
 --            port map (entradaA_MUX => ULAentradaA, entradaB_MUX => ULAentradaB, seletor_MUX => SelRegAB, saida_MUX => barramentoEscritaDados);
 				
 decodInstrucao: entity work.decodificadorInstrucoes
-				port map (opCode => opCode, pontosControle => pontosControle);
+				port map (opCode => opCodeLocal, pontosControle => pontosControle);
 				
 decodificador: entity work.decodificador2x4
         port map (seletor => barramentoEnderecos(addrWidth-2 downto addrWidth-3), habilita => habilitaBlocos);
 
-saidaLEDs: entity work.interfaceLEDs
-        port map (clk => clk, entrada => barramentoEscritaDados(dataWidth-1 downto 0), saida => LEDR(dataWidth-1 downto 0), habilita => habilitaBlocos(3));
+--saidaLEDs: entity work.interfaceLEDs
+--        port map (clk => clk, entrada => barramentoEscritaDados(dataWidth-1 downto 0), saida => LEDR(dataWidth-1 downto 0), habilita => habilitaBlocos(3));
 
-entradaChaves: entity work.interfaceCHAVES
-        port map (entrada => SW(dataWidth-1 downto 0), saida => barramentoLeituraDados(dataWidth-1 downto 0), habilita => habilitaBlocos(2));
+--entradaChaves: entity work.interfaceCHAVES
+--        port map (entrada => SW(dataWidth-1 downto 0), saida => barramentoLeituraDados(dataWidth-1 downto 0), habilita => habilitaBlocos(2));
 
 barramentoEnderecos <= imediatoEndereco;
 clk <= CLOCK_50;

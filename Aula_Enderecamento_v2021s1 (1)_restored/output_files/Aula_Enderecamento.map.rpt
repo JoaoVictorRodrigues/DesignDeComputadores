@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Aula_Enderecamento
-Thu Apr 22 17:54:46 2021
+Sat Apr 24 19:21:12 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -14,24 +14,23 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: ULA:ULA
- 12. Parameter Settings for User Entity Instance: memoriaRAM:RAM
- 13. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_proxPC
- 14. Parameter Settings for User Entity Instance: somaConstante:incremento
- 15. Parameter Settings for User Entity Instance: registradorGenerico:PC
- 16. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_RAM_Imediato
- 17. Parameter Settings for User Entity Instance: bancoRegistradoresArqRegMem:Banco_Registradores
- 18. Parameter Settings for User Entity Instance: interfaceLEDs:saidaLEDs
- 19. Parameter Settings for User Entity Instance: interfaceCHAVES:entradaChaves
- 20. Port Connectivity Checks: "decodificador2x4:decodificador"
- 21. Port Connectivity Checks: "registradorGenerico:PC"
- 22. Port Connectivity Checks: "memoriaROM:ROM"
- 23. Port Connectivity Checks: "ULA:ULA"
- 24. Post-Synthesis Netlist Statistics for Top Partition
- 25. Elapsed Time Per Partition
- 26. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: Processador_Calculadora:CPU|Aula_Enderecamento:FD|memoriaRAM:RAM
+ 11. Parameter Settings for User Entity Instance: Processador_Calculadora:CPU|Aula_Enderecamento:FD|muxGenerico2x1:MUX_proxPC
+ 12. Parameter Settings for User Entity Instance: Processador_Calculadora:CPU|Aula_Enderecamento:FD|somaConstante:incremento
+ 13. Parameter Settings for User Entity Instance: Processador_Calculadora:CPU|Aula_Enderecamento:FD|registradorGenerico:PC
+ 14. Parameter Settings for User Entity Instance: Processador_Calculadora:CPU|Aula_Enderecamento:FD|muxGenerico2x1:MUX_RAM_Imediato
+ 15. Parameter Settings for User Entity Instance: Processador_Calculadora:CPU|Aula_Enderecamento:FD|bancoRegistradoresArqRegMem:Banco_Registradores
+ 16. Parameter Settings for User Entity Instance: interfaceLEDs:saidaLEDs
+ 17. Parameter Settings for User Entity Instance: interfaceCHAVES:entradaChaves
+ 18. Port Connectivity Checks: "interfaceCHAVES:entradaChaves"
+ 19. Port Connectivity Checks: "Processador_Calculadora:CPU|Aula_Enderecamento:FD|decodificador2x4:decodificador"
+ 20. Port Connectivity Checks: "Processador_Calculadora:CPU|Aula_Enderecamento:FD|registradorGenerico:PC"
+ 21. Port Connectivity Checks: "Processador_Calculadora:CPU|Aula_Enderecamento:FD|memoriaROM:ROM"
+ 22. Port Connectivity Checks: "Processador_Calculadora:CPU|Aula_Enderecamento:FD|ULA:ULA"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
 
 
 
@@ -58,14 +57,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Apr 22 17:54:46 2021       ;
+; Analysis & Synthesis Status     ; Successful - Sat Apr 24 19:21:12 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula_Enderecamento                          ;
-; Top-level Entity Name           ; Aula_Enderecamento                          ;
+; Top-level Entity Name           ; calculadora                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 17                                          ;
+; Total pins                      ; 34                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -84,7 +83,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CEBA4F23C7        ;                    ;
-; Top-level entity name                                                           ; Aula_Enderecamento ; Aula_Enderecamento ;
+; Top-level entity name                                                           ; calculadora        ; Aula_Enderecamento ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
 ; VHDL Show LMF Mapping Messages                                                  ; Off                ;                    ;
@@ -201,6 +200,9 @@ https://fpgasoftware.intel.com/eula.
 ; decodificadorInstrucoes.vhd      ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/decodificadorInstrucoes.vhd     ;         ;
 ; constantesProcessador.vhd        ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/constantesProcessador.vhd       ;         ;
 ; bancoRegistradoresArqRegMem.vhd  ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/bancoRegistradoresArqRegMem.vhd ;         ;
+; calculadora.vhd                  ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd                 ;         ;
+; Processador_Calculadora.vhd      ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd     ;         ;
+; Unidade_Controle.vhd             ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Unidade_Controle.vhd            ;         ;
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -220,51 +222,35 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;       ;
 ; Dedicated logic registers                   ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 17    ;
+; I/O pins                                    ; 34    ;
 ;                                             ;       ;
 ; Total DSP Blocks                            ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; SW[0] ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 17    ;
+; Total fan-out                               ; 34    ;
 ; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name        ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
-; |Aula_Enderecamento        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 17   ; 0            ; |Aula_Enderecamento ; Aula_Enderecamento ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |calculadora               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 34   ; 0            ; |calculadora        ; calculadora ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; registradorGenerico:PC|DOUT[0..5,8]    ; Stuck at GND due to stuck port data_in      ;
-; interfaceLEDs:saidaLEDs|saida[0..7]    ; Stuck at GND due to stuck port clock_enable ;
-; registradorGenerico:PC|DOUT[6]         ; Stuck at GND due to stuck port data_in      ;
-; registradorGenerico:PC|DOUT[7]         ; Lost fanout                                 ;
-; Total Number of Removed Registers = 17 ;                                             ;
-+----------------------------------------+---------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                      ;
-+--------------------------------+---------------------------+---------------------------------------------------------------------+
-; Register name                  ; Reason for Removal        ; Registers Removed due to This Register                              ;
-+--------------------------------+---------------------------+---------------------------------------------------------------------+
-; registradorGenerico:PC|DOUT[8] ; Stuck at GND              ; interfaceLEDs:saidaLEDs|saida[0], interfaceLEDs:saidaLEDs|saida[1], ;
-;                                ; due to stuck port data_in ; interfaceLEDs:saidaLEDs|saida[2], interfaceLEDs:saidaLEDs|saida[3], ;
-;                                ;                           ; interfaceLEDs:saidaLEDs|saida[4], interfaceLEDs:saidaLEDs|saida[5], ;
-;                                ;                           ; interfaceLEDs:saidaLEDs|saida[6], interfaceLEDs:saidaLEDs|saida[7], ;
-;                                ;                           ; registradorGenerico:PC|DOUT[6], registradorGenerico:PC|DOUT[7]      ;
-+--------------------------------+---------------------------+---------------------------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++---------------------------------------+---------------------------------------------+
+; Register name                         ; Reason for Removal                          ;
++---------------------------------------+---------------------------------------------+
+; interfaceLEDs:saidaLEDs|saida[0..7]   ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 8 ;                                             ;
++---------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -282,76 +268,66 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ULA:ULA ;
-+----------------+-------+-----------------------------+
-; Parameter Name ; Value ; Type                        ;
-+----------------+-------+-----------------------------+
-; larguradados   ; 8     ; Signed Integer              ;
-+----------------+-------+-----------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Processador_Calculadora:CPU|Aula_Enderecamento:FD|memoriaRAM:RAM ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                                                       ;
+; addrwidth      ; 9     ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: memoriaRAM:RAM ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; datawidth      ; 8     ; Signed Integer                     ;
-; addrwidth      ; 9     ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Processador_Calculadora:CPU|Aula_Enderecamento:FD|muxGenerico2x1:MUX_proxPC ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_proxPC ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; larguradados   ; 9     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Processador_Calculadora:CPU|Aula_Enderecamento:FD|somaConstante:incremento ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                                                                 ;
+; constante      ; 1     ; Signed Integer                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: somaConstante:incremento ;
-+----------------+-------+----------------------------------------------+
-; Parameter Name ; Value ; Type                                         ;
-+----------------+-------+----------------------------------------------+
-; larguradados   ; 9     ; Signed Integer                               ;
-; constante      ; 1     ; Signed Integer                               ;
-+----------------+-------+----------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Processador_Calculadora:CPU|Aula_Enderecamento:FD|registradorGenerico:PC ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registradorGenerico:PC ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; larguradados   ; 9     ; Signed Integer                             ;
-+----------------+-------+--------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Processador_Calculadora:CPU|Aula_Enderecamento:FD|muxGenerico2x1:MUX_RAM_Imediato ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_RAM_Imediato ;
-+----------------+-------+-----------------------------------------------------+
-; Parameter Name ; Value ; Type                                                ;
-+----------------+-------+-----------------------------------------------------+
-; larguradados   ; 8     ; Signed Integer                                      ;
-+----------------+-------+-----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: bancoRegistradoresArqRegMem:Banco_Registradores ;
-+---------------------+-------+----------------------------------------------------------------+
-; Parameter Name      ; Value ; Type                                                           ;
-+---------------------+-------+----------------------------------------------------------------+
-; larguradados        ; 8     ; Signed Integer                                                 ;
-; larguraendbancoregs ; 3     ; Signed Integer                                                 ;
-+---------------------+-------+----------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Processador_Calculadora:CPU|Aula_Enderecamento:FD|bancoRegistradoresArqRegMem:Banco_Registradores ;
++---------------------+-------+------------------------------------------------------------------------------------------------------------------+
+; Parameter Name      ; Value ; Type                                                                                                             ;
++---------------------+-------+------------------------------------------------------------------------------------------------------------------+
+; larguradados        ; 8     ; Signed Integer                                                                                                   ;
+; larguraendbancoregs ; 3     ; Signed Integer                                                                                                   ;
++---------------------+-------+------------------------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -375,27 +351,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "interfaceCHAVES:entradaChaves"                                                       ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; saida ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Processador_Calculadora:CPU|Aula_Enderecamento:FD|decodificador2x4:decodificador"             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; habilita[3..2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; habilita[0]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Processador_Calculadora:CPU|Aula_Enderecamento:FD|registradorGenerico:PC" ;
++--------+-------+----------+--------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                  ;
++--------+-------+----------+--------------------------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                                             ;
+; rst    ; Input ; Info     ; Stuck at GND                                                             ;
++--------+-------+----------+--------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "decodificador2x4:decodificador"                                                            ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; habilita[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------+
-; Port Connectivity Checks: "registradorGenerico:PC" ;
-+--------+-------+----------+------------------------+
-; Port   ; Type  ; Severity ; Details                ;
-+--------+-------+----------+------------------------+
-; enable ; Input ; Info     ; Stuck at VCC           ;
-; rst    ; Input ; Info     ; Stuck at GND           ;
-+--------+-------+----------+------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "memoriaROM:ROM"                                                                            ;
+; Port Connectivity Checks: "Processador_Calculadora:CPU|Aula_Enderecamento:FD|memoriaROM:ROM"                          ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -404,7 +390,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ULA:ULA"                                                                                ;
+; Port Connectivity Checks: "Processador_Calculadora:CPU|Aula_Enderecamento:FD|ULA:ULA"                              ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -420,7 +406,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; arriav_lcell_comb     ; 1                           ;
 ;     normal            ; 1                           ;
 ;         0 data inputs ; 1                           ;
-; boundary_port         ; 17                          ;
+; boundary_port         ; 34                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 0.00                        ;
 ; Average LUT depth     ; 0.00                        ;
@@ -442,15 +428,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Apr 22 17:54:28 2021
+    Info: Processing started: Sat Apr 24 19:20:57 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula_Enderecamento -c Aula_Enderecamento
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file aula_enderecamento.vhd
-    Info (12022): Found design unit 1: Aula_Enderecamento-RTL File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 19
+    Info (12022): Found design unit 1: Aula_Enderecamento-RTL File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 24
     Info (12023): Found entity 1: Aula_Enderecamento File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
-    Info (12022): Found design unit 1: ULA-comportamento File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/ULA.vhd Line: 19
-    Info (12023): Found entity 1: ULA File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/ULA.vhd Line: 5
+    Info (12022): Found design unit 1: ULA-comportamento File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/ULA.vhd Line: 16
+    Info (12023): Found entity 1: ULA File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/ULA.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file somaconstante.vhd
     Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/somaConstante.vhd Line: 18
     Info (12023): Found entity 1: somaConstante File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/somaConstante.vhd Line: 5
@@ -486,51 +472,86 @@ Info (12021): Found 1 design units, including 0 entities, in source file constan
 Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradoresarqregmem.vhd
     Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/bancoRegistradoresArqRegMem.vhd Line: 23
     Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/bancoRegistradoresArqRegMem.vhd Line: 5
-Info (12127): Elaborating entity "Aula_Enderecamento" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at Aula_Enderecamento.vhd(21): used implicit default value for signal "barramentoEscritaDados" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 21
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 46
-Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 51
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUX_proxPC" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 56
-Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:incremento" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 59
-Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 62
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 65
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUX_RAM_Imediato" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 68
-Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "bancoRegistradoresArqRegMem:Banco_Registradores" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 71
+Info (12021): Found 2 design units, including 1 entities, in source file calculadora.vhd
+    Info (12022): Found design unit 1: calculadora-arch_name File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 22
+    Info (12023): Found entity 1: calculadora File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file processador_calculadora.vhd
+    Info (12022): Found design unit 1: Processador_Calculadora-arch_name File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 18
+    Info (12023): Found entity 1: Processador_Calculadora File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file unidade_controle.vhd
+    Info (12022): Found design unit 1: Unidade_Controle-arch_name File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Unidade_Controle.vhd Line: 18
+    Info (12023): Found entity 1: Unidade_Controle File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Unidade_Controle.vhd Line: 6
+Info (12127): Elaborating entity "calculadora" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at calculadora.vhd(23): object "barramentoLeituraDados" assigned a value but never read File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 23
+Warning (10541): VHDL Signal Declaration warning at calculadora.vhd(23): used implicit default value for signal "barramentoEscritaDados" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 23
+Warning (10541): VHDL Signal Declaration warning at calculadora.vhd(24): used implicit default value for signal "habilitaBlocos" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 24
+Info (12128): Elaborating entity "Processador_Calculadora" for hierarchy "Processador_Calculadora:CPU" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 27
+Info (12128): Elaborating entity "Aula_Enderecamento" for hierarchy "Processador_Calculadora:CPU|Aula_Enderecamento:FD" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 27
+Warning (10541): VHDL Signal Declaration warning at Aula_Enderecamento.vhd(15): used implicit default value for signal "saidaRegistradores" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 15
+Warning (10541): VHDL Signal Declaration warning at Aula_Enderecamento.vhd(16): used implicit default value for signal "programCounter" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 16
+Warning (10541): VHDL Signal Declaration warning at Aula_Enderecamento.vhd(17): used implicit default value for signal "opCode" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 17
+Warning (10541): VHDL Signal Declaration warning at Aula_Enderecamento.vhd(26): used implicit default value for signal "barramentoEscritaDados" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 26
+Info (12128): Elaborating entity "ULA" for hierarchy "Processador_Calculadora:CPU|Aula_Enderecamento:FD|ULA:ULA" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 51
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "Processador_Calculadora:CPU|Aula_Enderecamento:FD|memoriaRAM:RAM" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 56
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "Processador_Calculadora:CPU|Aula_Enderecamento:FD|muxGenerico2x1:MUX_proxPC" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 61
+Info (12128): Elaborating entity "somaConstante" for hierarchy "Processador_Calculadora:CPU|Aula_Enderecamento:FD|somaConstante:incremento" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 64
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "Processador_Calculadora:CPU|Aula_Enderecamento:FD|memoriaROM:ROM" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 67
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Processador_Calculadora:CPU|Aula_Enderecamento:FD|registradorGenerico:PC" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 70
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "Processador_Calculadora:CPU|Aula_Enderecamento:FD|muxGenerico2x1:MUX_RAM_Imediato" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 73
+Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "Processador_Calculadora:CPU|Aula_Enderecamento:FD|bancoRegistradoresArqRegMem:Banco_Registradores" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 76
 Warning (10541): VHDL Signal Declaration warning at bancoRegistradoresArqRegMem.vhd(19): used implicit default value for signal "saida" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/bancoRegistradoresArqRegMem.vhd Line: 19
 Warning (10036): Verilog HDL or VHDL warning at bancoRegistradoresArqRegMem.vhd(29): object "registrador" assigned a value but never read File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/bancoRegistradoresArqRegMem.vhd Line: 29
-Info (12128): Elaborating entity "decodificadorInstrucoes" for hierarchy "decodificadorInstrucoes:decodInstrucao" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 92
-Info (12128): Elaborating entity "decodificador2x4" for hierarchy "decodificador2x4:decodificador" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 95
-Info (12128): Elaborating entity "interfaceLEDs" for hierarchy "interfaceLEDs:saidaLEDs" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 98
-Info (12128): Elaborating entity "interfaceCHAVES" for hierarchy "interfaceCHAVES:entradaChaves" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 101
+Info (12128): Elaborating entity "decodificadorInstrucoes" for hierarchy "Processador_Calculadora:CPU|Aula_Enderecamento:FD|decodificadorInstrucoes:decodInstrucao" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 97
+Info (12128): Elaborating entity "decodificador2x4" for hierarchy "Processador_Calculadora:CPU|Aula_Enderecamento:FD|decodificador2x4:decodificador" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 100
+Info (12128): Elaborating entity "Unidade_Controle" for hierarchy "Processador_Calculadora:CPU|Unidade_Controle:UC" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 30
+Warning (10541): VHDL Signal Declaration warning at Unidade_Controle.vhd(13): used implicit default value for signal "palavraControle" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Unidade_Controle.vhd Line: 13
+Info (12128): Elaborating entity "interfaceLEDs" for hierarchy "interfaceLEDs:saidaLEDs" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 30
+Info (12128): Elaborating entity "interfaceCHAVES" for hierarchy "interfaceCHAVES:entradaChaves" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 33
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 13
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 13
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 13
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 13
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 13
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 13
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 13
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 13
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+    Warning (13410): Pin "programCounter[0]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "programCounter[1]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "programCounter[2]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "programCounter[3]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "programCounter[4]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "programCounter[5]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "programCounter[6]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "programCounter[7]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "programCounter[8]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "saidaRegistradores[0]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 16
+    Warning (13410): Pin "saidaRegistradores[1]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 16
+    Warning (13410): Pin "saidaRegistradores[2]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 16
+    Warning (13410): Pin "saidaRegistradores[3]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 16
+    Warning (13410): Pin "saidaRegistradores[4]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 16
+    Warning (13410): Pin "saidaRegistradores[5]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 16
+    Warning (13410): Pin "saidaRegistradores[6]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 16
+    Warning (13410): Pin "saidaRegistradores[7]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 16
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 17
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 17
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 17
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 17
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 17
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 17
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 17
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 17
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 9 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 10
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/Aula_Enderecamento.vhd Line: 8
-Info (21057): Implemented 17 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 11
+    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/55129/Documents/7semestre/descomp/aula6/v2/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 9
+Info (21057): Implemented 34 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 8 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 4844 megabytes
-    Info: Processing ended: Thu Apr 22 17:54:46 2021
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:35
+    Info (21059): Implemented 25 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 46 warnings
+    Info: Peak virtual memory: 4845 megabytes
+    Info: Processing ended: Sat Apr 24 19:21:12 2021
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:30
 
 

@@ -1,7 +1,5 @@
-|Aula_Enderecamento
-CLOCK_50 => memoriaram:RAM.clk
-CLOCK_50 => registradorgenerico:PC.CLK
-CLOCK_50 => bancoregistradoresarqregmem:Banco_Registradores.clk
+|calculadora
+CLOCK_50 => processador_calculadora:CPU.CLOCK_50
 CLOCK_50 => interfaceleds:saidaLEDs.clk
 SW[0] => interfacechaves:entradaChaves.entrada[0]
 SW[1] => interfacechaves:entradaChaves.entrada[1]
@@ -11,6 +9,23 @@ SW[4] => interfacechaves:entradaChaves.entrada[4]
 SW[5] => interfacechaves:entradaChaves.entrada[5]
 SW[6] => interfacechaves:entradaChaves.entrada[6]
 SW[7] => interfacechaves:entradaChaves.entrada[7]
+programCounter[0] <= processador_calculadora:CPU.programCounter[0]
+programCounter[1] <= processador_calculadora:CPU.programCounter[1]
+programCounter[2] <= processador_calculadora:CPU.programCounter[2]
+programCounter[3] <= processador_calculadora:CPU.programCounter[3]
+programCounter[4] <= processador_calculadora:CPU.programCounter[4]
+programCounter[5] <= processador_calculadora:CPU.programCounter[5]
+programCounter[6] <= processador_calculadora:CPU.programCounter[6]
+programCounter[7] <= processador_calculadora:CPU.programCounter[7]
+programCounter[8] <= processador_calculadora:CPU.programCounter[8]
+saidaRegistradores[0] <= processador_calculadora:CPU.saidaRegistradores[0]
+saidaRegistradores[1] <= processador_calculadora:CPU.saidaRegistradores[1]
+saidaRegistradores[2] <= processador_calculadora:CPU.saidaRegistradores[2]
+saidaRegistradores[3] <= processador_calculadora:CPU.saidaRegistradores[3]
+saidaRegistradores[4] <= processador_calculadora:CPU.saidaRegistradores[4]
+saidaRegistradores[5] <= processador_calculadora:CPU.saidaRegistradores[5]
+saidaRegistradores[6] <= processador_calculadora:CPU.saidaRegistradores[6]
+saidaRegistradores[7] <= processador_calculadora:CPU.saidaRegistradores[7]
 LEDR[0] <= interfaceleds:saidaLEDs.saida[0]
 LEDR[1] <= interfaceleds:saidaLEDs.saida[1]
 LEDR[2] <= interfaceleds:saidaLEDs.saida[2]
@@ -21,7 +36,65 @@ LEDR[6] <= interfaceleds:saidaLEDs.saida[6]
 LEDR[7] <= interfaceleds:saidaLEDs.saida[7]
 
 
-|Aula_Enderecamento|ULA:ULA
+|calculadora|Processador_Calculadora:CPU
+CLOCK_50 => aula_enderecamento:FD.CLOCK_50
+CLOCK_50 => unidade_controle:UC.clk
+saidaRegistradores[0] <= aula_enderecamento:FD.saidaRegistradores[0]
+saidaRegistradores[1] <= aula_enderecamento:FD.saidaRegistradores[1]
+saidaRegistradores[2] <= aula_enderecamento:FD.saidaRegistradores[2]
+saidaRegistradores[3] <= aula_enderecamento:FD.saidaRegistradores[3]
+saidaRegistradores[4] <= aula_enderecamento:FD.saidaRegistradores[4]
+saidaRegistradores[5] <= aula_enderecamento:FD.saidaRegistradores[5]
+saidaRegistradores[6] <= aula_enderecamento:FD.saidaRegistradores[6]
+saidaRegistradores[7] <= aula_enderecamento:FD.saidaRegistradores[7]
+programCounter[0] <= aula_enderecamento:FD.programCounter[0]
+programCounter[1] <= aula_enderecamento:FD.programCounter[1]
+programCounter[2] <= aula_enderecamento:FD.programCounter[2]
+programCounter[3] <= aula_enderecamento:FD.programCounter[3]
+programCounter[4] <= aula_enderecamento:FD.programCounter[4]
+programCounter[5] <= aula_enderecamento:FD.programCounter[5]
+programCounter[6] <= aula_enderecamento:FD.programCounter[6]
+programCounter[7] <= aula_enderecamento:FD.programCounter[7]
+programCounter[8] <= aula_enderecamento:FD.programCounter[8]
+
+
+|calculadora|Processador_Calculadora:CPU|Aula_Enderecamento:FD
+CLOCK_50 => memoriaram:RAM.clk
+CLOCK_50 => registradorgenerico:PC.CLK
+CLOCK_50 => bancoregistradoresarqregmem:Banco_Registradores.clk
+palavraControle[0] => ~NO_FANOUT~
+palavraControle[1] => ~NO_FANOUT~
+palavraControle[2] => ~NO_FANOUT~
+palavraControle[3] => ~NO_FANOUT~
+palavraControle[4] => ~NO_FANOUT~
+palavraControle[5] => ~NO_FANOUT~
+palavraControle[6] => ~NO_FANOUT~
+palavraControle[7] => ~NO_FANOUT~
+saidaRegistradores[0] <= saidaRegistradores[0].DB_MAX_OUTPUT_PORT_TYPE
+saidaRegistradores[1] <= saidaRegistradores[1].DB_MAX_OUTPUT_PORT_TYPE
+saidaRegistradores[2] <= saidaRegistradores[2].DB_MAX_OUTPUT_PORT_TYPE
+saidaRegistradores[3] <= saidaRegistradores[3].DB_MAX_OUTPUT_PORT_TYPE
+saidaRegistradores[4] <= saidaRegistradores[4].DB_MAX_OUTPUT_PORT_TYPE
+saidaRegistradores[5] <= saidaRegistradores[5].DB_MAX_OUTPUT_PORT_TYPE
+saidaRegistradores[6] <= saidaRegistradores[6].DB_MAX_OUTPUT_PORT_TYPE
+saidaRegistradores[7] <= saidaRegistradores[7].DB_MAX_OUTPUT_PORT_TYPE
+programCounter[0] <= programCounter[0].DB_MAX_OUTPUT_PORT_TYPE
+programCounter[1] <= programCounter[1].DB_MAX_OUTPUT_PORT_TYPE
+programCounter[2] <= programCounter[2].DB_MAX_OUTPUT_PORT_TYPE
+programCounter[3] <= programCounter[3].DB_MAX_OUTPUT_PORT_TYPE
+programCounter[4] <= programCounter[4].DB_MAX_OUTPUT_PORT_TYPE
+programCounter[5] <= programCounter[5].DB_MAX_OUTPUT_PORT_TYPE
+programCounter[6] <= programCounter[6].DB_MAX_OUTPUT_PORT_TYPE
+programCounter[7] <= programCounter[7].DB_MAX_OUTPUT_PORT_TYPE
+programCounter[8] <= programCounter[8].DB_MAX_OUTPUT_PORT_TYPE
+opCode[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+opCode[1] <= opCode[1].DB_MAX_OUTPUT_PORT_TYPE
+opCode[2] <= opCode[2].DB_MAX_OUTPUT_PORT_TYPE
+opCode[3] <= opCode[3].DB_MAX_OUTPUT_PORT_TYPE
+opCode[4] <= opCode[4].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|Processador_Calculadora:CPU|Aula_Enderecamento:FD|ULA:ULA
 entradaA[0] => Add0.IN8
 entradaA[0] => Add1.IN16
 entradaA[0] => op_and[0].IN0
@@ -169,7 +242,7 @@ saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 flagZero <= Equal8.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Aula_Enderecamento|memoriaRAM:RAM
+|calculadora|Processador_Calculadora:CPU|Aula_Enderecamento:FD|memoriaRAM:RAM
 addr[0] => ram~8.DATAIN
 addr[0] => ram.WADDR
 addr[0] => ram.RADDR
@@ -246,7 +319,7 @@ dado_out[6] <= dado_out[6].DB_MAX_OUTPUT_PORT_TYPE
 dado_out[7] <= dado_out[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Aula_Enderecamento|muxGenerico2x1:MUX_proxPC
+|calculadora|Processador_Calculadora:CPU|Aula_Enderecamento:FD|muxGenerico2x1:MUX_proxPC
 entradaA_MUX[0] => saida_MUX.DATAA
 entradaA_MUX[1] => saida_MUX.DATAA
 entradaA_MUX[2] => saida_MUX.DATAA
@@ -285,7 +358,7 @@ saida_MUX[7] <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 saida_MUX[8] <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Aula_Enderecamento|somaConstante:incremento
+|calculadora|Processador_Calculadora:CPU|Aula_Enderecamento:FD|somaConstante:incremento
 entrada[0] => Add0.IN18
 entrada[1] => Add0.IN17
 entrada[2] => Add0.IN16
@@ -306,7 +379,7 @@ saida[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 saida[8] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Aula_Enderecamento|memoriaROM:ROM
+|calculadora|Processador_Calculadora:CPU|Aula_Enderecamento:FD|memoriaROM:ROM
 Endereco[0] => memROM.RADDR
 Endereco[1] => memROM.RADDR1
 Endereco[2] => memROM.RADDR2
@@ -332,7 +405,7 @@ Dado[12] <= memROM.DATAOUT12
 Dado[13] <= memROM.DATAOUT13
 
 
-|Aula_Enderecamento|registradorGenerico:PC
+|calculadora|Processador_Calculadora:CPU|Aula_Enderecamento:FD|registradorGenerico:PC
 DIN[0] => DOUT[0]~reg0.DATAIN
 DIN[1] => DOUT[1]~reg0.DATAIN
 DIN[2] => DOUT[2]~reg0.DATAIN
@@ -380,7 +453,7 @@ RST => DOUT[7]~reg0.ACLR
 RST => DOUT[8]~reg0.ACLR
 
 
-|Aula_Enderecamento|muxGenerico2x1:MUX_RAM_Imediato
+|calculadora|Processador_Calculadora:CPU|Aula_Enderecamento:FD|muxGenerico2x1:MUX_RAM_Imediato
 entradaA_MUX[0] => saida_MUX.DATAA
 entradaA_MUX[1] => saida_MUX.DATAA
 entradaA_MUX[2] => saida_MUX.DATAA
@@ -415,7 +488,7 @@ saida_MUX[6] <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 saida_MUX[7] <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Aula_Enderecamento|bancoRegistradoresArqRegMem:Banco_Registradores
+|calculadora|Processador_Calculadora:CPU|Aula_Enderecamento:FD|bancoRegistradoresArqRegMem:Banco_Registradores
 clk => ~NO_FANOUT~
 endereco[0] => ~NO_FANOUT~
 endereco[1] => ~NO_FANOUT~
@@ -439,7 +512,7 @@ saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Aula_Enderecamento|decodificadorInstrucoes:decodInstrucao
+|calculadora|Processador_Calculadora:CPU|Aula_Enderecamento:FD|decodificadorInstrucoes:decodInstrucao
 opCode[0] => Mux0.IN19
 opCode[0] => Mux1.IN19
 opCode[0] => Mux2.IN19
@@ -462,7 +535,7 @@ pontosControle[6] <= <GND>
 pontosControle[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Aula_Enderecamento|decodificador2x4:decodificador
+|calculadora|Processador_Calculadora:CPU|Aula_Enderecamento:FD|decodificador2x4:decodificador
 seletor[0] => Mux0.IN5
 seletor[0] => Mux1.IN5
 seletor[0] => Mux2.IN5
@@ -477,7 +550,24 @@ habilita[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 habilita[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Aula_Enderecamento|interfaceLEDs:saidaLEDs
+|calculadora|Processador_Calculadora:CPU|Unidade_Controle:UC
+clk => ~NO_FANOUT~
+opCode[0] => ~NO_FANOUT~
+opCode[1] => ~NO_FANOUT~
+opCode[2] => ~NO_FANOUT~
+opCode[3] => ~NO_FANOUT~
+opCode[4] => ~NO_FANOUT~
+palavraControle[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+palavraControle[1] <= palavraControle[1].DB_MAX_OUTPUT_PORT_TYPE
+palavraControle[2] <= palavraControle[2].DB_MAX_OUTPUT_PORT_TYPE
+palavraControle[3] <= palavraControle[3].DB_MAX_OUTPUT_PORT_TYPE
+palavraControle[4] <= palavraControle[4].DB_MAX_OUTPUT_PORT_TYPE
+palavraControle[5] <= palavraControle[5].DB_MAX_OUTPUT_PORT_TYPE
+palavraControle[6] <= palavraControle[6].DB_MAX_OUTPUT_PORT_TYPE
+palavraControle[7] <= palavraControle[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|interfaceLEDs:saidaLEDs
 entrada[0] => saida[0]~reg0.DATAIN
 entrada[1] => saida[1]~reg0.DATAIN
 entrada[2] => saida[2]~reg0.DATAIN
@@ -512,7 +602,7 @@ saida[6] <= saida[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Aula_Enderecamento|interfaceCHAVES:entradaChaves
+|calculadora|interfaceCHAVES:entradaChaves
 entrada[0] => saida[0].DATAIN
 entrada[1] => saida[1].DATAIN
 entrada[2] => saida[2].DATAIN
