@@ -32,8 +32,8 @@ signal habilitaBlocos : std_logic_vector(3 DOWNTO 0);
 signal clk : std_logic;
 
 -- Formato da instrucao
-alias opCodeLocal: std_logic_vector(3 DOWNTO 0) is Instrucao(addrWidth-1 downto addrWidth-4);
-alias SelReg: std_logic_vector(2 DOWNTO 0) is Instrucao(addrWidth-5 downto addrWidth-7);
+alias opCodeLocal: std_logic_vector(4 DOWNTO 0) is Instrucao(addrWidth-1 downto addrWidth-5);
+alias SelReg: std_logic_vector(2 DOWNTO 0) is Instrucao(addrWidth-6 downto addrWidth-8);
 alias enderecoRAM: std_logic_vector(addrWidth-1 DOWNTO 0) is Instrucao(addrWidth-1 downto 0);
 alias imediatoDado: std_logic_vector (dataWidth-1 DOWNTO 0) is Instrucao(dataWidth-1 downto 0);
 alias imediatoEndereco: std_logic_vector (addrWidth-1 DOWNTO 0) is Instrucao(addrWidth-1 downto 0);

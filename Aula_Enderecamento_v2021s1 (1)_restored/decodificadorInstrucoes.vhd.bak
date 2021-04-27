@@ -11,9 +11,9 @@ end entity;
 
 architecture comportamento of decodificadorInstrucoes is
   begin
-	 --with opCode select
-	 --pontosControle <= Ctrl_LW when opLW,
-		--		    Ctrl_SW when opSW,
-			--		 Ctrl_JMP when opJMP,
-				--	 Ctrl_NOP when others;
+	 with opCode select
+	 pontosControle <= Ctrl_LW when opLW,
+				    Ctrl_SW when opSW,
+					 Ctrl_JMP when opJMP,
+					 Ctrl_NOP when others;
 end architecture;

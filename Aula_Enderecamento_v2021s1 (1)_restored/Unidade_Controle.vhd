@@ -27,5 +27,8 @@ architecture arch_name of Unidade_Controle is
   -- Para instanciar, a atribuição de sinais (e generics) segue a ordem: (nomeSinalArquivoDefinicaoComponente => nomeSinalNesteArquivo)
   -- regA:  entity work.nome_do_componente generic map (DATA_WIDTH => DATA_WIDTH)
   --        port map (dataIN => dataIN, dataOUT =>  RegAmuxA, enable =>  habRegA, clk =>  clk, rst => rst);
+  
+  selMuxProxPC <= '1' when opCode = jmp or opCode = je or opCode = jsr or opCode = jlt or opCode = ret else '0';
+  selMuxULAImed <=
 
 end architecture;

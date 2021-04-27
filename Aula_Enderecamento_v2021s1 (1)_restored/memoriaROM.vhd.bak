@@ -19,9 +19,9 @@ architecture assincrona of memoriaROM is
         return blocoMemoria is variable tmp : blocoMemoria := (others => (others => '0'));
   begin
         -- Inicializa os endereços:
-        tmp(0) := load & load & "010000";  --Endereco 128 Le chave, deve modificar para 132
-        tmp(1) := load & load & "011000";  --Endereco 192 Escreve LEDs, deve modificar para 200
-        tmp(3) := jmp & "00000000000";
+        tmp(0) := opLW & RegA & "010000000";  --Endereco 128 Le chave, deve modificar para 132
+        tmp(1) := opSW & RegA & "011000000";  --Endereco 192 Escreve LEDs, deve modificar para 200
+        tmp(3) := opJMP & "0000000000";
         return tmp;
     end initMemory;
 

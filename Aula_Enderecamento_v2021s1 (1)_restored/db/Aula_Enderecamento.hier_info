@@ -403,6 +403,8 @@ Dado[10] <= memROM.DATAOUT10
 Dado[11] <= memROM.DATAOUT11
 Dado[12] <= memROM.DATAOUT12
 Dado[13] <= memROM.DATAOUT13
+Dado[14] <= memROM.DATAOUT14
+Dado[15] <= memROM.DATAOUT15
 
 
 |calculadora|Processador_Calculadora:CPU|Aula_Enderecamento:FD|registradorGenerico:PC
@@ -513,26 +515,19 @@ saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |calculadora|Processador_Calculadora:CPU|Aula_Enderecamento:FD|decodificadorInstrucoes:decodInstrucao
-opCode[0] => Mux0.IN19
-opCode[0] => Mux1.IN19
-opCode[0] => Mux2.IN19
-opCode[1] => Mux0.IN18
-opCode[1] => Mux1.IN18
-opCode[1] => Mux2.IN18
-opCode[2] => Mux0.IN17
-opCode[2] => Mux1.IN17
-opCode[2] => Mux2.IN17
-opCode[3] => Mux0.IN16
-opCode[3] => Mux1.IN16
-opCode[3] => Mux2.IN16
-pontosControle[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-pontosControle[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-pontosControle[2] <= <GND>
-pontosControle[3] <= <GND>
-pontosControle[4] <= <GND>
-pontosControle[5] <= <GND>
-pontosControle[6] <= <GND>
-pontosControle[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+opCode[0] => ~NO_FANOUT~
+opCode[1] => ~NO_FANOUT~
+opCode[2] => ~NO_FANOUT~
+opCode[3] => ~NO_FANOUT~
+opCode[4] => ~NO_FANOUT~
+pontosControle[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+pontosControle[1] <= pontosControle[1].DB_MAX_OUTPUT_PORT_TYPE
+pontosControle[2] <= pontosControle[2].DB_MAX_OUTPUT_PORT_TYPE
+pontosControle[3] <= pontosControle[3].DB_MAX_OUTPUT_PORT_TYPE
+pontosControle[4] <= pontosControle[4].DB_MAX_OUTPUT_PORT_TYPE
+pontosControle[5] <= pontosControle[5].DB_MAX_OUTPUT_PORT_TYPE
+pontosControle[6] <= pontosControle[6].DB_MAX_OUTPUT_PORT_TYPE
+pontosControle[7] <= pontosControle[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |calculadora|Processador_Calculadora:CPU|Aula_Enderecamento:FD|decodificador2x4:decodificador
