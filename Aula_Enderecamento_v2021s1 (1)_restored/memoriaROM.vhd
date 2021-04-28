@@ -20,8 +20,34 @@ architecture assincrona of memoriaROM is
   begin
         -- Inicializa os endereços:
         tmp(0) := load & load & "010000";  --Endereco 128 Le chave, deve modificar para 132
+		  -- store 0 posições ram p/cada posição válida
+		  
+		  -- inicio do laco tmp(10)
+		  -- le but 0
+		  -- se 1: jsr le arg
+		  -- 
+		  
+		  
+		  -- le but 1
+		  -- se 1: jsr le op
+		 
+		  -- jmp inicio do laco
+		  
         tmp(1) := load & load & "011000";  --Endereco 192 Escreve LEDs, deve modificar para 200
-        tmp(3) := jmp & "00000000000";
+        tmp(2) := jmp & "00000000000";
+--		  tmp(3) := soma & Reg0 &"00000001000";
+	--	  tmp(4) := soma & Reg1 & "00000001001";
+		--  tmp(5) := sub & Reg0 &"00000001000";
+		 -- tmp(6) := sub & Reg1 & "00000001001";
+		 -- tmp(7) := soma_im & Reg4 &"00000001000";
+		 -- tmp(8) := soma & Reg1 &"00000001000";
+		  
+		  -- le arg
+		  
+		  
+		  -- le op
+		  
+		  
         return tmp;
     end initMemory;
 

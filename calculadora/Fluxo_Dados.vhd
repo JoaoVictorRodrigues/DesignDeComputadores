@@ -32,6 +32,7 @@ architecture arch_name of Fluxo_Dados is
   signal saidaULA_muxULAImed_1 : std_logic_vector(DATA_WIDTH-1 downto 0);
   signal DadoLidoRAM_ULA_B : std_logic_vector(DATA_WIDTH-1 downto 0);
   signal saidaExtSinal_muxULAImed_0 : std_logic_vector(DATA_WIDTH-1 downto 0);
+  signal barramentoEnderecos : std_logic_vector (ADDR_WIDTH-1 DOWNTO 0);
   
   alias opCodeLocal :  std_logic_vector(3 downto 0) is Instrucao(15 downto 12);
   alias enderecoRAM :  std_logic_vector(ADDR_WIDTH-1 downto 0) is Instrucao(ADDR_WIDTH-1 downto 0);
@@ -79,6 +80,18 @@ begin
   estendeSinal:  entity work.estendeSinalGenerico   generic map (larguraDadoEntrada => 12, larguraDadoSaida => DATA_WIDTH)
           port map (estendeSinal_IN => imediato_entradaExtSinal, estendeSinal_OUT => saidaExtSinal_muxULAImed_0);
   
+  decodificador: entity work.decodificador2x4
+        port map (seletor => barramentoEnderecos(addrWidth-2 downto addrWidth-3), habilita => habilitaBlocos);
+  
+  saidaLEDs: entity work.interfaceLEDs
+        port map (clk => clk, entrada => barramentoEscritaDados(dataWidth-1 downto 0), saida => LEDR(dataWidth-1 downto 0), habilita => habilitaBlocos(3));
+
+  entradaChaves: entity work.interfaceCHAVES
+        port map (entrada => SW(dataWidth-1 downto 0), saida => barramentoLeituraDados(dataWidth-1 downto 0), habilita => habilitaBlocos(2));
+  
+  barramentoEnderecos <= imediatoEndereco;
+  
+  clk <= CLOCK_50;
   opCode <= opCodeLocal;
   saidaRegistradores <= Registradores_ULA_A;
   programCounter <= PC_ROM;

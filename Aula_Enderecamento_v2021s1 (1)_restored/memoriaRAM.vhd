@@ -11,8 +11,8 @@ entity memoriaRAM is
     (
         addr     : in std_logic_vector(addrWidth-1 downto 0);
         we       : in std_logic;
-		  re       : in std_logic;
-		  habilita : in std_logic; 
+		re       : in std_logic;
+		habilita : in std_logic; 
         clk      : in std_logic;
         dado_in  : in std_logic_vector(dataWidth-1 downto 0);
         dado_out : out std_logic_vector(dataWidth-1 downto 0)

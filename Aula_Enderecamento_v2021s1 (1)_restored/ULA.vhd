@@ -33,14 +33,14 @@ architecture comportamento of ULA is
 
 
 		saida <= soma when (seletor = "000") else
-			 subtracao when (seletor = "001") else
-			 entradaA when  (seletor = "010") else
-			 entradaB when  (seletor = "011") else
-			 op_xor when    (seletor = "100") else
-			 op_not when    (seletor = "101") else
-			 op_and when    (seletor = "110") else
-			 op_or when     (seletor = "111") else
-			 entradaA;      -- outra opcao: saida = entradaA
+			 	subtracao when (seletor = "001") else
+			--  entradaA when  (seletor = "010") else
+			--  entradaB when  (seletor = "011") else
+				op_and when    (seletor = "010") else
+			 	op_or  when    (seletor = "011") else
+				op_xor when    (seletor = "100") else
+			 	op_not when    (seletor = "101") else
+			 	entradaA;      -- outra opcao: saida = entradaA
 	  
 	  
 		flagZero <= '1' when unsigned(saida) = unsigned(zero) else '0';
