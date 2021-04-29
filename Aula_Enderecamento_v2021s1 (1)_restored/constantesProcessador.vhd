@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 package constantesProcessador is
 
 constant dataWidth: natural := 8;
-constant addrWidth: natural := 9;
+constant addrWidth: natural := 8;
 constant dataROMWidth: natural := 16;
 constant opCodeWidth: natural := 5;
 constant ptsCtrlWidth: natural := 8;
@@ -39,8 +39,16 @@ constant l_OR     : opCode_t := "10000";
 constant l_NOT    : opCode_t := "10001";
 constant l_XOR    : opCode_t := "10010";
 
-constant RegA : std_logic := '0';
-constant RegB : std_logic := '1';
+subtype reg_t is std_logic_vector(2 downto 0);
+
+constant Reg0 : reg_t := "000";
+constant Reg1 : reg_t := "001";
+constant Reg2 : reg_t := "010";
+constant Reg3 : reg_t := "011";
+constant Reg4 : reg_t := "100";
+constant Reg5 : reg_t := "101";
+constant Reg6 : reg_t := "110";
+constant Reg7 : reg_t := "111";
 
 -- Formato dos pontos de controle
 --alias selMUX_JMP_PC: std_logic is pontosControle(ptsCtrlWidth-1);
@@ -51,5 +59,27 @@ constant RegB : std_logic := '1';
 --alias ULAop: std_logic is pontosControle(ptsCtrlWidth-6);
 --alias habLeituraBarramento: std_logic is pontosControle(ptsCtrlWidth-7);
 --alias habEscritaBarramento: std_logic is pontosControle(ptsCtrlWidth-8);
+
+-- Constantes de Endereçamento
+subtype addr_t is std_logic_vector(addrWidth-1 downto 0);
+constant addrChave0 : addr_t := "01000000";
+constant addrChave1 : addr_t := "01000001";
+constant addrBotao0 : addr_t := "01000010";
+constant addrBotao1 : addr_t := "01000011";
+constant addrDisplay01 : addr_t := "10000000";
+constant addrDisplay23 : addr_t := "10000001";
+constant addrDisplay4  : addr_t := "10000010";
+constant addrDisplay5  : addr_t := "10000011";
+
+
+
+-- Chaves7_0: 0100_0000
+-- Chaves8_9: 0100_0001
+-- Botao0: 0100_0010
+-- Botao1: 0100_0011
+-- Display0_1:1000_0000
+-- Display2_3:1000_0001
+-- Display4: 1000_0010
+-- Display5: 1000_0011
 
 end package constantesProcessador;

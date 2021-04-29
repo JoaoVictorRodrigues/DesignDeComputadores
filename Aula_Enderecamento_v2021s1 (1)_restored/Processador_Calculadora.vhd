@@ -9,20 +9,13 @@ entity Processador is
     -- Input ports
     CLOCK_50     : in  std_logic;
     barramentoDadosEntrada: in  std_logic_vector(dataWidth-1 downto 0);
-    -- dataIn : in STD_LOGIC_VECTOR(7 downto 0);
-    -- KEY: in STD_LOGIC_VECTOR(3 DOWNTO 0);
-    -- SW: in STD_LOGIC_VECTOR(7 DOWNTO 0);
-
-
+   
     -- Output ports
     barramentoDadosSaida :  out  std_logic_vector(dataWidth-1 downto 0);
     barramentoEndereco  :  out  std_logic_vector(addrWidth-1 downto 0);
-	  writeRam   : out STD_LOGIC;
-	  readRam    : out STD_LOGIC
-    -- programCounter  :  out  std_logic_vector(addrWidth-1 downto 0);
-    -- opCode  :  out  std_logic_vector(4 downto 0);
-    -- LEDR  : out STD_LOGIC_VECTOR(7 DOWNTO 0) := (others => '0');
-    -- HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : OUT STD_LOGIC_VECTOR(6 downto 0)
+	 writeRam   : out STD_LOGIC;
+	 readRam    : out STD_LOGIC;
+	 PC_out: out std_logic_vector(addrWidth-1 downto 0)
   );
 end entity;
 
@@ -35,14 +28,10 @@ signal PC_ROM, Incr_MUX_ProxPC, Incr_PC, barramentoEnderecos : std_logic_vector 
 signal Instrucao : std_logic_vector(dataROMWidth-1 DOWNTO 0);
 signal pontosControle : std_logic_vector(ptsCtrlWidth-1 downto 0);
 signal habilitaBlocos : std_logic_vector(3 DOWNTO 0);
--- signal clk : std_logic;
 
 signal enableDisplaySignal : STD_LOGIC_VECTOR(5 DOWNTO 0);
 signal displaySignal0, displaySignal1, displaySignal2, displaySignal3, displaySignal4, displaySignal5 : STD_LOGIC_VECTOR(3 DOWNTO 0);
 signal progCount : std_logic_vector(addrWidth-1 downto 0);
--- signal saiAcumulador : std_logic_vector(DATA_WIDTH-1 downto 0);
--- signal pontosControle : std_logic_vector(7 downto 0);
--- signal opCode : std_logic_vector(4 downto 0);
 
 -- Formato da instrucao
 alias opCodeLocal: std_logic_vector(4 DOWNTO 0) is Instrucao(addrWidth-1 downto addrWidth-5);
@@ -85,10 +74,6 @@ Banco_Registradores: entity work.bancoRegistradoresArqRegMem   generic map (larg
               saida  => ULAentradaA);
 				
 ULAentradaB <= MUXRAMImediato_MUXULAImediato;
--- Para instanciar, a atribuição de sinais (e generics) segue a ordem: (nomeSinalArquivoDefinicaoComponente => nomeSinalNesteArquivo)
--- FD:  entity work.Aula_Enderecamento --generic map (DATA_WIDTH => dataWidth, ADDR_WIDTH => addrWidth)
---         port map (palavraControle => pontosControle, opCode => opCode, saidaRegistradores => saidaRegistradores, 
--- 		   programCounter => programCounter, CLOCK_50 =>  CLOCK_50);
 UC:  entity work.Unidade_Controle
         port map (palavraControle => pontosControle, opCode => opCodeLocal, clk =>  CLOCK_50);
 
@@ -96,4 +81,5 @@ writeRam <=  habEscritaBarramento;
 readRam  <=  habLeituraBarramento;
 barramentoEndereco <= imediatoEndereco;
 barramentoDadosSaida <= ULAentradaA;
+PC_out <= Pc_ROM;
 end architecture;

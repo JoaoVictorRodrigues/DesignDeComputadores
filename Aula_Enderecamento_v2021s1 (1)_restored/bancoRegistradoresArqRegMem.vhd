@@ -15,7 +15,7 @@ entity bancoRegistradoresArqRegMem is
         clk        : in std_logic;
         endereco       : in std_logic_vector((larguraEndBancoRegs-1) downto 0);
         dadoEscrita    : in std_logic_vector((larguraDados-1) downto 0);
-        habilitaEscrita: in std_logic := '0';
+        habilitaEscrita: in std_logic;
         saida          : out std_logic_vector((larguraDados -1) downto 0)
     );
 end entity;
@@ -37,4 +37,6 @@ begin
             end if;
         end if;
     end process;
+	 saida <= registrador(to_integer(unsigned(endereco)));
+	 
 end architecture;
