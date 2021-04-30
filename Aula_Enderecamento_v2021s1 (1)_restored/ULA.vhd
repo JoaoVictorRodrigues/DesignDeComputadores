@@ -40,7 +40,7 @@ architecture comportamento of ULA is
 			 	op_or  when    (seletor = "011") else
 				op_xor when    (seletor = "100") else
 			 	op_not when    (seletor = "101") else
-			 	entradaA;      -- outra opcao: saida = entradaA
+			 	entradaB;      -- outra opcao: saida = entradaA
 	  
 	  
 		flagZero <= '1' when unsigned(saida) = unsigned(zero) else '0';
