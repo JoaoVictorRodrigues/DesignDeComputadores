@@ -21,7 +21,10 @@ architecture assincrona of memoriaROM is
         -- Inicializa os endereços:
         tmp(0) := load & Reg0 & addrChave0;  --Endereco 128 Le chave, deve modificar para 132
 		  tmp(1) := store & Reg0 & addrDisplay01;
-		  tmp(2) := jmp & "000" & "00000000";  
+		  tmp(2) := load & reg0 & "00000010";
+		  tmp(3) := soma_im & reg0 & "00000010";
+		  tmp(4) := jmp & "000" & "00000000";
+  
 		  -- store 0 posições ram p/cada posição válida
 		  
 		  -- inicio do laco tmp(10)
