@@ -66,7 +66,7 @@ begin
 		 habilitaRAM => habilitaRAM ,habilitaChaves7_0 => habilitaChaves7_0, 
 		 habilitaChaves8_9 => habilitaChaves8_9, habilitaBotao0 => habilitaBotao0, 
 		--  habilitaBotao1 => habilitaBotao1 ,
-     habilitaDisplay0_1 => habilitaDisplay0_1, 
+		 habilitaDisplay0_1 => habilitaDisplay0_1, 
 		 habilitaDisplay2_3 => habilitaDisplay2_3, habilitaDisplay4 => habilitaDisplay4, 
 		 habilitaDisplay5 => habilitaDisplay5
 	 );

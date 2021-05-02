@@ -8,38 +8,37 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/simulation/qsim
+Z0 dC:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/simulation/qsim
 Ecalculadora
-Z0 w1619966283
-Z1 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
-Z2 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
-Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
-Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z5 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
-Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-Z9 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 18
-Z10 dC:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/simulation/qsim
+Z1 w1619987266
+Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
+Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
+Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
+Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z6 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
+Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
+!i122 32
+R0
 Z11 8Aula_Enderecamento.vho
 Z12 FAula_Enderecamento.vho
 l0
 L39 1
-VHnfVWoZ<jc;S<hQeBYck[2
-!s100 KK9HjAWVGNEd1>lR`ND:R1
+VUbb9Y1d=B@<K]>9gdAj;?3
+!s100 L7n_@ER2`><gPO53ol8<=3
 Z13 OV;C;2020.1;71
 32
-Z14 !s110 1619966285
+Z14 !s110 1619987268
 !i10b 1
-Z15 !s108 1619966284.000000
+Z15 !s108 1619987268.000000
 Z16 !s90 -work|work|Aula_Enderecamento.vho|
 Z17 !s107 Aula_Enderecamento.vho|
 !i113 1
 Z18 o-work work
 Z19 tExplicit 1 CvgOpt 0
 Astructure
-R1
 R2
 R3
 R4
@@ -48,12 +47,13 @@ R6
 R7
 R8
 R9
-DEx4 work 11 calculadora 0 22 HnfVWoZ<jc;S<hQeBYck[2
-!i122 18
-l171
-L51 1741
-VD<zF<Q952An78]SRc[Qae2
-!s100 kmEZ>AQK47efJza[ihW<V0
+R10
+DEx4 work 11 calculadora 0 22 Ubb9Y1d=B@<K]>9gdAj;?3
+!i122 32
+l339
+L55 3591
+VIK71MkZPZ>4lUV:3lM]d72
+!s100 lZ[<fK3l3FFdBRaK@HU>L1
 R13
 32
 R14
@@ -65,43 +65,43 @@ R17
 R18
 R19
 Ecalculadora_vhd_vec_tst
-Z20 w1619966281
-R7
+Z20 w1619987264
 R8
-!i122 19
-R10
-Z21 8Waveform.vwf.vht
-Z22 FWaveform.vwf.vht
+R9
+!i122 33
+R0
+Z21 8Waveform1.vwf.vht
+Z22 FWaveform1.vwf.vht
 l0
 L32 1
 VkW24?z3O]Yk:Q9:X@A[lA3
 !s100 CZd?BkA=G6K3?0I3PAik73
 R13
 32
-R14
+Z23 !s110 1619987269
 !i10b 1
-Z23 !s108 1619966285.000000
-Z24 !s90 -work|work|Waveform.vwf.vht|
-Z25 !s107 Waveform.vwf.vht|
+Z24 !s108 1619987269.000000
+Z25 !s90 -work|work|Waveform1.vwf.vht|
+Z26 !s107 Waveform1.vwf.vht|
 !i113 1
 R18
 R19
 Acalculadora_arch
-R7
 R8
-Z26 DEx4 work 23 calculadora_vhd_vec_tst 0 22 kW24?z3O]Yk:Q9:X@A[lA3
-!i122 19
-l55
-Z27 L34 152
-VBjbfZ?J:3hGBOnoon0:Q@0
-!s100 ^jd61Ib_YdC`6Co]b6XkS2
+R9
+Z27 DEx4 work 23 calculadora_vhd_vec_tst 0 22 kW24?z3O]Yk:Q9:X@A[lA3
+!i122 33
+l63
+Z28 L34 142
+Z29 V@HTm6@o;a4KEXDMkzbGgT2
+Z30 !s100 iINh5e?jAGbAhO^e@N?Bz1
 R13
 32
-R14
-!i10b 1
 R23
+!i10b 1
 R24
 R25
+R26
 !i113 1
 R18
 R19

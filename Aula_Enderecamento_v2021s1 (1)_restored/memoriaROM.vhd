@@ -19,10 +19,12 @@ architecture assincrona of memoriaROM is
         return blocoMemoria is variable tmp : blocoMemoria := (others => (others => '0'));
   begin
         -- Inicializa os endereços:
-        tmp(0) := load & Reg0 & addrChave0;  --Endereco 128 Le chave, deve modificar para 132
-		  tmp(1) := store & Reg0 & addrDisplay01;
-		  tmp(2) := load & reg0 & "00000010";
-		  tmp(3) := soma_im & reg0 & "00000010";
+        --tmp(0) := load & Reg0 & addrChave0;  --Endereco 128 Le chave, deve modificar para 132
+		  tmp(0) := mov & Reg0 & "00001010";
+		  tmp(1) := store & Reg0 & "00000001";
+		  tmp(2) := load & reg1 & "00000001";
+		  --tmp(1) := soma_im & reg0 & "00000011";
+		  tmp(3) := store & Reg1 & addrDisplay01;
 		  tmp(4) := jmp & "000" & "00000000";
   
 		  -- store 0 posições ram p/cada posição válida

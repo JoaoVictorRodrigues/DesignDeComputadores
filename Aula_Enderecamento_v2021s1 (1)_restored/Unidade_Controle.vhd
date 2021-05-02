@@ -8,6 +8,7 @@ entity Unidade_Controle is
     -- Input ports
     clk  :  in  std_logic;
 	 opCode  :  in  std_logic_vector(4 downto 0);
+	 flagZero: in std_logic;
 	 
     -- Output ports
     palavraControle  :  out std_logic_vector(7 downto 0)
@@ -28,9 +29,12 @@ architecture arch_name of Unidade_Controle is
   -- regA:  entity work.nome_do_componente generic map (DATA_WIDTH => DATA_WIDTH)
   --        port map (dataIN => dataIN, dataOUT =>  RegAmuxA, enable =>  habRegA, clk =>  clk, rst => rst);
   
-  selMuxProxPC <= '1' when opCode = jmp or opCode = je or opCode = jsr or opCode = jlt or opCode = ret else '0';
-  selMuxULAImed <= '1' when opCode = soma_im or opCode = sub_im else '0';
-  HabEscritaRegistradores <= '1' when opCode = load or opCode = soma or opCode = soma_im or opCode = subt or opCode = sub_im or opCode = soma_Car or opCode = sub_bor or opCode = mul or opCode = div or opCode = l_AND or opCode = l_NOT or opCode = l_OR or opCode = l_XOR else '0';
+  selMuxProxPC <= '1' when opCode = jmp or (opCode = je and flagZero = '1') or opCode = jsr or opCode = jlt or opCode = ret else '0';
+  
+  selMuxULAImed <= '1' when opCode = soma_im or opCode = sub_im or opCOde = mov else '0';
+  
+  HabEscritaRegistradores <= '1' when opCode = load or opCode = soma or opCode = soma_im or opCode = subt or opCode = sub_im or opCode = soma_Car or opCode = sub_bor or opCode = mul or opCode = div or opCode = l_AND or opCode = l_NOT or opCode = l_OR or opCode = l_XOR or opCode = mov else '0';
+  
   selOperacaoULA <= "000" when opCode = soma or opCode = soma_im or opCode = soma_Car or opCode = mul  else
                     "001" when opCode = subt  or opCode = sub_bor or opCode = sub_im or opCode = div else
                     "010" when opCode = l_AND else
@@ -39,6 +43,7 @@ architecture arch_name of Unidade_Controle is
                     "101" when opCode = l_NOT else
 						  "110" when opCode = load  else
 						  "111"; -- Entrada B para a saida 
+						  
   hableituraMEM <= '1' when opCode = load or opCode = soma or opCode = subt or opCode = soma_Car or opCode = sub_bor or opCode = mul or opCode = div;
   habEscritaMEM <= '1' when opCode = store else '0';
 end architecture;

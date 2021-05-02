@@ -1,9 +1,5 @@
 Analysis & Elaboration report for Aula_Enderecamento
-<<<<<<< HEAD
-Sun May 02 14:07:58 2021
-=======
-Sun May 02 14:19:59 2021
->>>>>>> main
+Sun May 02 19:23:14 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -21,7 +17,6 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   9. Parameter Settings for User Entity Instance: memoriaRAM:RAM
  10. Parameter Settings for User Entity Instance: interfaceCHAVES:entradaChaves0_7
  11. Parameter Settings for User Entity Instance: interfaceCHAVES:entradaChaves8_9
-<<<<<<< HEAD
  12. Parameter Settings for User Entity Instance: interfaceBOTOES:entradaBotao
  13. Parameter Settings for User Entity Instance: display0_1:disp0_1|registradorGenerico:reg
  14. Parameter Settings for User Entity Instance: display2_3:disp2_3|registradorGenerico:reg
@@ -41,21 +36,8 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  28. Port Connectivity Checks: "interfaceCHAVES:entradaChaves8_9"
  29. Port Connectivity Checks: "decodificadorEnderecos:Decoder"
  30. Port Connectivity Checks: "Processador:Processador|registradorGenerico:PC"
- 31. Port Connectivity Checks: "Processador:Processador|memoriaROM:ROM"
- 32. Port Connectivity Checks: "Processador:Processador|ULA:ULA"
- 33. Analysis & Elaboration Messages
-=======
- 12. Parameter Settings for User Entity Instance: display0_1:disp0_1|registradorGenerico:reg
- 13. Analysis & Elaboration Settings
- 14. Port Connectivity Checks: "display0_1:disp0_1|conversorHex7Seg:disp1"
- 15. Port Connectivity Checks: "display0_1:disp0_1|conversorHex7Seg:disp0"
- 16. Port Connectivity Checks: "display0_1:disp0_1|registradorGenerico:reg"
- 17. Port Connectivity Checks: "interfaceCHAVES:entradaChaves8_9"
- 18. Port Connectivity Checks: "decodificadorEnderecos:Decoder"
- 19. Port Connectivity Checks: "Processador:Processador|registradorGenerico:PC"
- 20. Port Connectivity Checks: "Processador:Processador|ULA:ULA"
- 21. Analysis & Elaboration Messages
->>>>>>> main
+ 31. Port Connectivity Checks: "Processador:Processador"
+ 32. Analysis & Elaboration Messages
 
 
 
@@ -82,11 +64,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-<<<<<<< HEAD
-; Analysis & Elaboration Status ; Successful - Sun May 02 14:07:58 2021       ;
-=======
-; Analysis & Elaboration Status ; Successful - Sun May 02 14:19:59 2021       ;
->>>>>>> main
+; Analysis & Elaboration Status ; Successful - Sun May 02 19:23:14 2021       ;
 ; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                 ; Aula_Enderecamento                          ;
 ; Top-level Entity Name         ; calculadora                                 ;
@@ -220,7 +198,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-<<<<<<< HEAD
 +-----------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: display2_3:disp2_3|registradorGenerico:reg ;
 +----------------+-------+----------------------------------------------------------------+
@@ -251,8 +228,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-=======
->>>>>>> main
 +---------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -342,7 +317,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-<<<<<<< HEAD
 +-------------------------------------------------------------------+
 ; Port Connectivity Checks: "display5:disp5|conversorHex7Seg:disp5" ;
 +----------+-------+----------+-------------------------------------+
@@ -416,8 +390,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------------+
 
 
-=======
->>>>>>> main
 +-----------------------------------------------------------------------+
 ; Port Connectivity Checks: "display0_1:disp0_1|conversorHex7Seg:disp1" ;
 +----------+-------+----------+-----------------------------------------+
@@ -477,13 +449,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Processador:Processador|ULA:ULA"                                                        ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Processador:Processador"                                                                 ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; flag_zero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +---------------------------------+
@@ -492,62 +464,57 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-<<<<<<< HEAD
-    Info: Processing started: Sun May 02 14:07:43 2021
-=======
-    Info: Processing started: Sun May 02 14:19:45 2021
->>>>>>> main
+    Info: Processing started: Sun May 02 19:22:55 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula_Enderecamento -c Aula_Enderecamento --analysis_and_elaboration
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
-    Info (12022): Found design unit 1: ULA-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/ULA.vhd Line: 18
-    Info (12023): Found entity 1: ULA File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/ULA.vhd Line: 6
+    Info (12022): Found design unit 1: ULA-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/ULA.vhd Line: 18
+    Info (12023): Found entity 1: ULA File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/ULA.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file somaconstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/somaConstante.vhd Line: 18
-    Info (12023): Found entity 1: somaConstante File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/somaConstante.vhd Line: 5
+    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/somaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/somaConstante.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/registradorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: registradorGenerico File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/registradorGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/registradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/registradorGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/muxGenerico2x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/muxGenerico2x1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/muxGenerico2x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file memoriarom.vhd
-    Info (12022): Found design unit 1: memoriaROM-assincrona File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/memoriaROM.vhd Line: 14
-    Info (12023): Found entity 1: memoriaROM File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/memoriaROM.vhd Line: 6
+    Info (12022): Found design unit 1: memoriaROM-assincrona File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/memoriaROM.vhd Line: 14
+    Info (12023): Found entity 1: memoriaROM File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/memoriaROM.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file memoriaram.vhd
-    Info (12022): Found design unit 1: memoriaRAM-rtl File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/memoriaRAM.vhd Line: 22
-    Info (12023): Found entity 1: memoriaRAM File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/memoriaRAM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaRAM-rtl File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/memoriaRAM.vhd Line: 22
+    Info (12023): Found entity 1: memoriaRAM File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/memoriaRAM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file interfaceleds.vhd
-    Info (12022): Found design unit 1: interfaceLEDs-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/interfaceLEDs.vhd Line: 16
-    Info (12023): Found entity 1: interfaceLEDs File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/interfaceLEDs.vhd Line: 4
+    Info (12022): Found design unit 1: interfaceLEDs-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/interfaceLEDs.vhd Line: 16
+    Info (12023): Found entity 1: interfaceLEDs File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/interfaceLEDs.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file interfacechaves.vhd
-    Info (12022): Found design unit 1: interfaceCHAVES-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/interfaceCHAVES.vhd Line: 15
-    Info (12023): Found entity 1: interfaceCHAVES File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/interfaceCHAVES.vhd Line: 4
+    Info (12022): Found design unit 1: interfaceCHAVES-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/interfaceCHAVES.vhd Line: 15
+    Info (12023): Found entity 1: interfaceCHAVES File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/interfaceCHAVES.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
-    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/conversorHex7Seg.vhd Line: 17
-    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/conversorHex7Seg.vhd Line: 4
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/conversorHex7Seg.vhd Line: 4
 Info (12021): Found 1 design units, including 0 entities, in source file constantesprocessador.vhd
-    Info (12022): Found design unit 1: constantesProcessador File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/constantesProcessador.vhd Line: 5
+    Info (12022): Found design unit 1: constantesProcessador File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/constantesProcessador.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradoresarqregmem.vhd
-    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/bancoRegistradoresArqRegMem.vhd Line: 23
-    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/bancoRegistradoresArqRegMem.vhd Line: 5
+    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/bancoRegistradoresArqRegMem.vhd Line: 23
+    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/bancoRegistradoresArqRegMem.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file calculadora.vhd
-    Info (12022): Found design unit 1: calculadora-arch_name File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 21
-    Info (12023): Found entity 1: calculadora File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 6
+    Info (12022): Found design unit 1: calculadora-arch_name File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 21
+    Info (12023): Found entity 1: calculadora File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file processador_calculadora.vhd
-    Info (12022): Found design unit 1: Processador-arch_name File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 23
-    Info (12023): Found entity 1: Processador File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 6
+    Info (12022): Found design unit 1: Processador-arch_name File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 24
+    Info (12023): Found entity 1: Processador File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file unidade_controle.vhd
-    Info (12022): Found design unit 1: Unidade_Controle-arch_name File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Unidade_Controle.vhd Line: 18
-    Info (12023): Found entity 1: Unidade_Controle File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Unidade_Controle.vhd Line: 6
+    Info (12022): Found design unit 1: Unidade_Controle-arch_name File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Unidade_Controle.vhd Line: 19
+    Info (12023): Found entity 1: Unidade_Controle File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Unidade_Controle.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file decodificadorenderecos.vhd
-    Info (12022): Found design unit 1: decodificadorEnderecos-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/decodificadorEnderecos.vhd Line: 27
-    Info (12023): Found entity 1: decodificadorEnderecos File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/decodificadorEnderecos.vhd Line: 5
+    Info (12022): Found design unit 1: decodificadorEnderecos-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/decodificadorEnderecos.vhd Line: 27
+    Info (12023): Found entity 1: decodificadorEnderecos File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/decodificadorEnderecos.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file display0_1.vhd
-    Info (12022): Found design unit 1: display0_1-arch_name File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display0_1.vhd Line: 21
-    Info (12023): Found entity 1: display0_1 File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display0_1.vhd Line: 5
+    Info (12022): Found design unit 1: display0_1-arch_name File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display0_1.vhd Line: 21
+    Info (12023): Found entity 1: display0_1 File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display0_1.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file display2_3.vhd
-<<<<<<< HEAD
     Info (12022): Found design unit 1: display2_3-arch_name File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display2_3.vhd Line: 21
     Info (12023): Found entity 1: display2_3 File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display2_3.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file display4.vhd
@@ -561,14 +528,15 @@ Info (12021): Found 2 design units, including 1 entities, in source file interfa
     Info (12023): Found entity 1: interfaceBOTOES File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/interfaceBOTOES.vhd Line: 4
 Info (12127): Elaborating entity "calculadora" for the top level hierarchy
 Info (12128): Elaborating entity "Processador" for hierarchy "Processador:Processador" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 48
-Info (12128): Elaborating entity "ULA" for hierarchy "Processador:Processador|ULA:ULA" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 53
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "Processador:Processador|muxGenerico2x1:MUX_proxPC" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 54
-Info (12128): Elaborating entity "somaConstante" for hierarchy "Processador:Processador|somaConstante:incremento" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 57
-Info (12128): Elaborating entity "memoriaROM" for hierarchy "Processador:Processador|memoriaROM:ROM" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 60
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Processador:Processador|registradorGenerico:PC" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 63
-Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "Processador:Processador|bancoRegistradoresArqRegMem:Banco_Registradores" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 69
-Info (12128): Elaborating entity "Unidade_Controle" for hierarchy "Processador:Processador|Unidade_Controle:UC" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 77
-Info (10041): Inferred latch for "palavraControle[1]" at Unidade_Controle.vhd(23) File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Unidade_Controle.vhd Line: 23
+Warning (10541): VHDL Signal Declaration warning at Processador_Calculadora.vhd(19): used implicit default value for signal "flag_Zero" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 19
+Info (12128): Elaborating entity "ULA" for hierarchy "Processador:Processador|ULA:ULA" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 55
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "Processador:Processador|muxGenerico2x1:MUX_proxPC" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 61
+Info (12128): Elaborating entity "somaConstante" for hierarchy "Processador:Processador|somaConstante:incremento" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 67
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "Processador:Processador|memoriaROM:ROM" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 70
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Processador:Processador|registradorGenerico:PC" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 73
+Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "Processador:Processador|bancoRegistradoresArqRegMem:Banco_Registradores" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 84
+Info (12128): Elaborating entity "Unidade_Controle" for hierarchy "Processador:Processador|Unidade_Controle:UC" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 92
+Info (10041): Inferred latch for "palavraControle[1]" at Unidade_Controle.vhd(24) File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Unidade_Controle.vhd Line: 24
 Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 57
 Info (12128): Elaborating entity "decodificadorEnderecos" for hierarchy "decodificadorEnderecos:Decoder" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 62
 Info (12128): Elaborating entity "interfaceCHAVES" for hierarchy "interfaceCHAVES:entradaChaves0_7" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 77
@@ -578,39 +546,10 @@ Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "display0_1:di
 Info (12128): Elaborating entity "display2_3" for hierarchy "display2_3:disp2_3" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 97
 Info (12128): Elaborating entity "display4" for hierarchy "display4:disp4" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 104
 Info (12128): Elaborating entity "display5" for hierarchy "display5:disp5" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 110
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4837 megabytes
-    Info: Processing ended: Sun May 02 14:07:58 2021
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:32
-=======
-    Info (12022): Found design unit 1: display2_3-arch_name File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display2_3.vhd Line: 21
-    Info (12023): Found entity 1: display2_3 File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display2_3.vhd Line: 5
-Info (12127): Elaborating entity "calculadora" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at calculadora.vhd(34): object "habilitaBotao0" assigned a value but never read File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 34
-Warning (10036): Verilog HDL or VHDL warning at calculadora.vhd(35): object "habilitaBotao1" assigned a value but never read File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 35
-Warning (10036): Verilog HDL or VHDL warning at calculadora.vhd(37): object "habilitaDisplay2_3" assigned a value but never read File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 37
-Warning (10036): Verilog HDL or VHDL warning at calculadora.vhd(38): object "habilitaDisplay4" assigned a value but never read File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 38
-Warning (10036): Verilog HDL or VHDL warning at calculadora.vhd(39): object "habilitaDisplay5" assigned a value but never read File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 39
-Info (12128): Elaborating entity "Processador" for hierarchy "Processador:Processador" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 47
-Info (12128): Elaborating entity "ULA" for hierarchy "Processador:Processador|ULA:ULA" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 53
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "Processador:Processador|muxGenerico2x1:MUX_proxPC" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 54
-Info (12128): Elaborating entity "somaConstante" for hierarchy "Processador:Processador|somaConstante:incremento" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 60
-Info (12128): Elaborating entity "memoriaROM" for hierarchy "Processador:Processador|memoriaROM:ROM" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 63
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Processador:Processador|registradorGenerico:PC" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 66
-Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "Processador:Processador|bancoRegistradoresArqRegMem:Banco_Registradores" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 77
-Info (12128): Elaborating entity "Unidade_Controle" for hierarchy "Processador:Processador|Unidade_Controle:UC" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 85
-Info (10041): Inferred latch for "palavraControle[1]" at Unidade_Controle.vhd(23) File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Unidade_Controle.vhd Line: 23
-Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 56
-Info (12128): Elaborating entity "decodificadorEnderecos" for hierarchy "decodificadorEnderecos:Decoder" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 61
-Info (12128): Elaborating entity "interfaceCHAVES" for hierarchy "interfaceCHAVES:entradaChaves0_7" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 75
-Info (12128): Elaborating entity "display0_1" for hierarchy "display0_1:disp0_1" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 85
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "display0_1:disp0_1|conversorHex7Seg:disp0" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display0_1.vhd Line: 35
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4828 megabytes
-    Info: Processing ended: Sun May 02 14:19:59 2021
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:30
->>>>>>> main
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4836 megabytes
+    Info: Processing ended: Sun May 02 19:23:14 2021
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:36
 
 
