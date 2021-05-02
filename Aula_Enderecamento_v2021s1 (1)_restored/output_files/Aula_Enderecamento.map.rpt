@@ -1,9 +1,5 @@
-Analysis & Elaboration report for Aula_Enderecamento
-<<<<<<< HEAD
-Sun May 02 14:07:58 2021
-=======
-Sun May 02 14:19:59 2021
->>>>>>> main
+Analysis & Synthesis report for Aula_Enderecamento
+Sun May 02 19:40:48 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -11,51 +7,45 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: Processador:Processador|muxGenerico2x1:MUX_proxPC
-  5. Parameter Settings for User Entity Instance: Processador:Processador|somaConstante:incremento
-  6. Parameter Settings for User Entity Instance: Processador:Processador|registradorGenerico:PC
-  7. Parameter Settings for User Entity Instance: Processador:Processador|muxGenerico2x1:MUX_RAM_Imediato
-  8. Parameter Settings for User Entity Instance: Processador:Processador|bancoRegistradoresArqRegMem:Banco_Registradores
-  9. Parameter Settings for User Entity Instance: memoriaRAM:RAM
- 10. Parameter Settings for User Entity Instance: interfaceCHAVES:entradaChaves0_7
- 11. Parameter Settings for User Entity Instance: interfaceCHAVES:entradaChaves8_9
-<<<<<<< HEAD
- 12. Parameter Settings for User Entity Instance: interfaceBOTOES:entradaBotao
- 13. Parameter Settings for User Entity Instance: display0_1:disp0_1|registradorGenerico:reg
- 14. Parameter Settings for User Entity Instance: display2_3:disp2_3|registradorGenerico:reg
- 15. Parameter Settings for User Entity Instance: display4:disp4|registradorGenerico:reg
- 16. Parameter Settings for User Entity Instance: display5:disp5|registradorGenerico:reg
- 17. Analysis & Elaboration Settings
- 18. Port Connectivity Checks: "display5:disp5|conversorHex7Seg:disp5"
- 19. Port Connectivity Checks: "display5:disp5|registradorGenerico:reg"
- 20. Port Connectivity Checks: "display4:disp4|conversorHex7Seg:disp4"
- 21. Port Connectivity Checks: "display4:disp4|registradorGenerico:reg"
- 22. Port Connectivity Checks: "display2_3:disp2_3|conversorHex7Seg:disp3"
- 23. Port Connectivity Checks: "display2_3:disp2_3|conversorHex7Seg:disp2"
- 24. Port Connectivity Checks: "display2_3:disp2_3|registradorGenerico:reg"
- 25. Port Connectivity Checks: "display0_1:disp0_1|conversorHex7Seg:disp1"
- 26. Port Connectivity Checks: "display0_1:disp0_1|conversorHex7Seg:disp0"
- 27. Port Connectivity Checks: "display0_1:disp0_1|registradorGenerico:reg"
- 28. Port Connectivity Checks: "interfaceCHAVES:entradaChaves8_9"
- 29. Port Connectivity Checks: "decodificadorEnderecos:Decoder"
- 30. Port Connectivity Checks: "Processador:Processador|registradorGenerico:PC"
- 31. Port Connectivity Checks: "Processador:Processador|memoriaROM:ROM"
- 32. Port Connectivity Checks: "Processador:Processador|ULA:ULA"
- 33. Analysis & Elaboration Messages
-=======
- 12. Parameter Settings for User Entity Instance: display0_1:disp0_1|registradorGenerico:reg
- 13. Analysis & Elaboration Settings
- 14. Port Connectivity Checks: "display0_1:disp0_1|conversorHex7Seg:disp1"
- 15. Port Connectivity Checks: "display0_1:disp0_1|conversorHex7Seg:disp0"
- 16. Port Connectivity Checks: "display0_1:disp0_1|registradorGenerico:reg"
- 17. Port Connectivity Checks: "interfaceCHAVES:entradaChaves8_9"
- 18. Port Connectivity Checks: "decodificadorEnderecos:Decoder"
- 19. Port Connectivity Checks: "Processador:Processador|registradorGenerico:PC"
- 20. Port Connectivity Checks: "Processador:Processador|ULA:ULA"
- 21. Analysis & Elaboration Messages
->>>>>>> main
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Processador:Processador|muxGenerico2x1:MUX_proxPC
+ 12. Parameter Settings for User Entity Instance: Processador:Processador|somaConstante:incremento
+ 13. Parameter Settings for User Entity Instance: Processador:Processador|registradorGenerico:PC
+ 14. Parameter Settings for User Entity Instance: Processador:Processador|muxGenerico2x1:MUX_RAM_Imediato
+ 15. Parameter Settings for User Entity Instance: Processador:Processador|bancoRegistradoresArqRegMem:Banco_Registradores
+ 16. Parameter Settings for User Entity Instance: memoriaRAM:RAM
+ 17. Parameter Settings for User Entity Instance: interfaceCHAVES:entradaChaves0_7
+ 18. Parameter Settings for User Entity Instance: interfaceCHAVES:entradaChaves8_9
+ 19. Parameter Settings for User Entity Instance: interfaceBOTOES:entradaBotao
+ 20. Parameter Settings for User Entity Instance: display0_1:disp0_1|registradorGenerico:reg
+ 21. Parameter Settings for User Entity Instance: display2_3:disp2_3|registradorGenerico:reg
+ 22. Parameter Settings for User Entity Instance: display4:disp4|registradorGenerico:reg
+ 23. Parameter Settings for User Entity Instance: display5:disp5|registradorGenerico:reg
+ 24. Port Connectivity Checks: "display5:disp5|conversorHex7Seg:disp5"
+ 25. Port Connectivity Checks: "display5:disp5|registradorGenerico:reg"
+ 26. Port Connectivity Checks: "display4:disp4|conversorHex7Seg:disp4"
+ 27. Port Connectivity Checks: "display4:disp4|registradorGenerico:reg"
+ 28. Port Connectivity Checks: "display2_3:disp2_3|conversorHex7Seg:disp3"
+ 29. Port Connectivity Checks: "display2_3:disp2_3|conversorHex7Seg:disp2"
+ 30. Port Connectivity Checks: "display2_3:disp2_3|registradorGenerico:reg"
+ 31. Port Connectivity Checks: "display0_1:disp0_1|conversorHex7Seg:disp1"
+ 32. Port Connectivity Checks: "display0_1:disp0_1|conversorHex7Seg:disp0"
+ 33. Port Connectivity Checks: "display0_1:disp0_1|registradorGenerico:reg"
+ 34. Port Connectivity Checks: "interfaceCHAVES:entradaChaves8_9"
+ 35. Port Connectivity Checks: "decodificadorEnderecos:Decoder"
+ 36. Port Connectivity Checks: "Processador:Processador|registradorGenerico:PC"
+ 37. Port Connectivity Checks: "Processador:Processador|ULA:ULA"
+ 38. Post-Synthesis Netlist Statistics for Top Partition
+ 39. Elapsed Time Per Partition
+ 40. Analysis & Synthesis Messages
 
 
 
@@ -79,26 +69,116 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-<<<<<<< HEAD
-; Analysis & Elaboration Status ; Successful - Sun May 02 14:07:58 2021       ;
-=======
-; Analysis & Elaboration Status ; Successful - Sun May 02 14:19:59 2021       ;
->>>>>>> main
-; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                 ; Aula_Enderecamento                          ;
-; Top-level Entity Name         ; calculadora                                 ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun May 02 19:40:48 2021       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; Aula_Enderecamento                          ;
+; Top-level Entity Name           ; calculadora                                 ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 24                                          ;
+; Total pins                      ; 75                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; calculadora        ; Aula_Enderecamento ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
+; VHDL Show LMF Mapping Messages                                                  ; Off                ;                    ;
+; VHDL Version                                                                    ; VHDL_2008          ; VHDL_1993          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -110,11 +190,125 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                              ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                                       ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; ULA.vhd                          ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/ULA.vhd                         ;         ;
+; somaConstante.vhd                ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/somaConstante.vhd               ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/registradorGenerico.vhd         ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/muxGenerico2x1.vhd              ;         ;
+; memoriaROM.vhd                   ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/memoriaROM.vhd                  ;         ;
+; memoriaRAM.vhd                   ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/memoriaRAM.vhd                  ;         ;
+; interfaceCHAVES.vhd              ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/interfaceCHAVES.vhd             ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/conversorHex7Seg.vhd            ;         ;
+; constantesProcessador.vhd        ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/constantesProcessador.vhd       ;         ;
+; bancoRegistradoresArqRegMem.vhd  ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/bancoRegistradoresArqRegMem.vhd ;         ;
+; calculadora.vhd                  ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd                 ;         ;
+; Processador_Calculadora.vhd      ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd     ;         ;
+; Unidade_Controle.vhd             ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Unidade_Controle.vhd            ;         ;
+; decodificadorEnderecos.vhd       ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/decodificadorEnderecos.vhd      ;         ;
+; display0_1.vhd                   ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display0_1.vhd                  ;         ;
+; display2_3.vhd                   ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display2_3.vhd                  ;         ;
+; display4.vhd                     ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display4.vhd                    ;         ;
+; display5.vhd                     ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display5.vhd                    ;         ;
+; interfaceBOTOES.vhd              ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/interfaceBOTOES.vhd             ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 20             ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 35             ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 1              ;
+;     -- 5 input functions                    ; 0              ;
+;     -- 4 input functions                    ; 24             ;
+;     -- <=3 input functions                  ; 10             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 24             ;
+;                                             ;                ;
+; I/O pins                                    ; 75             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 24             ;
+; Total fan-out                               ; 294            ;
+; Average fan-out                             ; 1.41           ;
++---------------------------------------------+----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                  ;
++---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------+-----------------------------+--------------+
+; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                  ; Entity Name                 ; Library Name ;
++---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------+-----------------------------+--------------+
+; |calculadora                                            ; 35 (0)              ; 24 (0)                    ; 0                 ; 0          ; 75   ; 0            ; |calculadora                                                                         ; calculadora                 ; work         ;
+;    |Processador:Processador|                            ; 20 (0)              ; 16 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |calculadora|Processador:Processador                                                 ; Processador                 ; work         ;
+;       |ULA:ULA|                                         ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |calculadora|Processador:Processador|ULA:ULA                                         ; ULA                         ; work         ;
+;       |Unidade_Controle:UC|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |calculadora|Processador:Processador|Unidade_Controle:UC                             ; Unidade_Controle            ; work         ;
+;       |bancoRegistradoresArqRegMem:Banco_Registradores| ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |calculadora|Processador:Processador|bancoRegistradoresArqRegMem:Banco_Registradores ; bancoRegistradoresArqRegMem ; work         ;
+;       |memoriaROM:ROM|                                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |calculadora|Processador:Processador|memoriaROM:ROM                                  ; memoriaROM                  ; work         ;
+;       |muxGenerico2x1:MUX_proxPC|                       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |calculadora|Processador:Processador|muxGenerico2x1:MUX_proxPC                       ; muxGenerico2x1              ; work         ;
+;       |registradorGenerico:PC|                          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |calculadora|Processador:Processador|registradorGenerico:PC                          ; registradorGenerico         ; work         ;
+;       |somaConstante:incremento|                        ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |calculadora|Processador:Processador|somaConstante:incremento                        ; somaConstante               ; work         ;
+;    |decodificadorEnderecos:Decoder|                     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |calculadora|decodificadorEnderecos:Decoder                                          ; decodificadorEnderecos      ; work         ;
+;    |display0_1:disp0_1|                                 ; 14 (0)              ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |calculadora|display0_1:disp0_1                                                      ; display0_1                  ; work         ;
+;       |conversorHex7Seg:disp0|                          ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |calculadora|display0_1:disp0_1|conversorHex7Seg:disp0                               ; conversorHex7Seg            ; work         ;
+;       |conversorHex7Seg:disp1|                          ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |calculadora|display0_1:disp0_1|conversorHex7Seg:disp1                               ; conversorHex7Seg            ; work         ;
+;       |registradorGenerico:reg|                         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |calculadora|display0_1:disp0_1|registradorGenerico:reg                              ; registradorGenerico         ; work         ;
++---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------+-----------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                  ;
++-------------------------------------------------------+---------------------------------------------+
+; Register name                                         ; Reason for Removal                          ;
++-------------------------------------------------------+---------------------------------------------+
+; display5:disp5|registradorGenerico:reg|DOUT[0..3]     ; Stuck at GND due to stuck port clock_enable ;
+; display4:disp4|registradorGenerico:reg|DOUT[0..3]     ; Stuck at GND due to stuck port clock_enable ;
+; display2_3:disp2_3|registradorGenerico:reg|DOUT[0..7] ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 16                ;                                             ;
++-------------------------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 24    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |calculadora|Processador:Processador|ULA:ULA|saida ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -220,7 +414,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-<<<<<<< HEAD
 +-----------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: display2_3:disp2_3|registradorGenerico:reg ;
 +----------------+-------+----------------------------------------------------------------+
@@ -251,98 +444,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-=======
->>>>>>> main
-+---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                          ; Setting            ; Default Value      ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CEBA4F23C7        ;                    ;
-; Top-level entity name                                                           ; calculadora        ; Aula_Enderecamento ;
-; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
-; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
-; VHDL Show LMF Mapping Messages                                                  ; Off                ;                    ;
-; VHDL Version                                                                    ; VHDL_2008          ; VHDL_1993          ;
-; Use smart compilation                                                           ; Off                ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
-; Enable compact report table                                                     ; Off                ; Off                ;
-; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
-; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
-; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
-; Preserve fewer node names                                                       ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
-; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
-; State Machine Processing                                                        ; Auto               ; Auto               ;
-; Safe State Machine                                                              ; Off                ; Off                ;
-; Extract Verilog State Machines                                                  ; On                 ; On                 ;
-; Extract VHDL State Machines                                                     ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
-; Parallel Synthesis                                                              ; On                 ; On                 ;
-; DSP Block Balancing                                                             ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                              ; On                 ; On                 ;
-; Power-Up Don't Care                                                             ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
-; Remove Duplicate Registers                                                      ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
-; Optimization Technique                                                          ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                              ; 70                 ; 70                 ;
-; Auto Carry Chains                                                               ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
-; Auto ROM Replacement                                                            ; On                 ; On                 ;
-; Auto RAM Replacement                                                            ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
-; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
-; Strict RAM Replacement                                                          ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                           ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
-; Report Parameter Settings                                                       ; On                 ; On                 ;
-; Report Source Assignments                                                       ; On                 ; On                 ;
-; Report Connectivity Checks                                                      ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
-; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
-; HDL message level                                                               ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
-; Clock MUX Protection                                                            ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
-; Block Design Naming                                                             ; Auto               ; Auto               ;
-; SDC constraint protection                                                       ; Off                ; Off                ;
-; Synthesis Effort                                                                ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
-; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
-; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-
-
-<<<<<<< HEAD
 +-------------------------------------------------------------------+
 ; Port Connectivity Checks: "display5:disp5|conversorHex7Seg:disp5" ;
 +----------+-------+----------+-------------------------------------+
@@ -416,8 +517,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------------+
 
 
-=======
->>>>>>> main
 +-----------------------------------------------------------------------+
 ; Port Connectivity Checks: "display0_1:disp0_1|conversorHex7Seg:disp1" ;
 +----------+-------+----------+-----------------------------------------+
@@ -477,27 +576,57 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Processador:Processador|ULA:ULA"                                                        ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Processador:Processador|ULA:ULA"                                                         ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; flagcarry ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 24                          ;
+;     ENA               ; 16                          ;
+;     plain             ; 8                           ;
+; arriav_lcell_comb     ; 37                          ;
+;     arith             ; 8                           ;
+;         1 data inputs ; 8                           ;
+;     normal            ; 29                          ;
+;         0 data inputs ; 2                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 24                          ;
+;         6 data inputs ; 1                           ;
+; boundary_port         ; 75                          ;
+;                       ;                             ;
+; Max LUT depth         ; 2.20                        ;
+; Average LUT depth     ; 1.24                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-<<<<<<< HEAD
-    Info: Processing started: Sun May 02 14:07:43 2021
-=======
-    Info: Processing started: Sun May 02 14:19:45 2021
->>>>>>> main
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula_Enderecamento -c Aula_Enderecamento --analysis_and_elaboration
+    Info: Processing started: Sun May 02 19:40:24 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula_Enderecamento -c Aula_Enderecamento
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
     Info (12022): Found design unit 1: ULA-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/ULA.vhd Line: 18
@@ -547,53 +676,23 @@ Info (12021): Found 2 design units, including 1 entities, in source file display
     Info (12022): Found design unit 1: display0_1-arch_name File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display0_1.vhd Line: 21
     Info (12023): Found entity 1: display0_1 File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display0_1.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file display2_3.vhd
-<<<<<<< HEAD
-    Info (12022): Found design unit 1: display2_3-arch_name File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display2_3.vhd Line: 21
-    Info (12023): Found entity 1: display2_3 File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display2_3.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file display4.vhd
-    Info (12022): Found design unit 1: display4-arch_name File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display4.vhd Line: 20
-    Info (12023): Found entity 1: display4 File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display4.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file display5.vhd
-    Info (12022): Found design unit 1: display5-arch_name File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display5.vhd Line: 20
-    Info (12023): Found entity 1: display5 File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display5.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file interfacebotoes.vhd
-    Info (12022): Found design unit 1: interfaceBOTOES-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/interfaceBOTOES.vhd Line: 14
-    Info (12023): Found entity 1: interfaceBOTOES File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/interfaceBOTOES.vhd Line: 4
-Info (12127): Elaborating entity "calculadora" for the top level hierarchy
-Info (12128): Elaborating entity "Processador" for hierarchy "Processador:Processador" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 48
-Info (12128): Elaborating entity "ULA" for hierarchy "Processador:Processador|ULA:ULA" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 53
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "Processador:Processador|muxGenerico2x1:MUX_proxPC" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 54
-Info (12128): Elaborating entity "somaConstante" for hierarchy "Processador:Processador|somaConstante:incremento" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 57
-Info (12128): Elaborating entity "memoriaROM" for hierarchy "Processador:Processador|memoriaROM:ROM" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 60
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Processador:Processador|registradorGenerico:PC" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 63
-Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "Processador:Processador|bancoRegistradoresArqRegMem:Banco_Registradores" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 69
-Info (12128): Elaborating entity "Unidade_Controle" for hierarchy "Processador:Processador|Unidade_Controle:UC" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 77
-Info (10041): Inferred latch for "palavraControle[1]" at Unidade_Controle.vhd(23) File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Unidade_Controle.vhd Line: 23
-Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 57
-Info (12128): Elaborating entity "decodificadorEnderecos" for hierarchy "decodificadorEnderecos:Decoder" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 62
-Info (12128): Elaborating entity "interfaceCHAVES" for hierarchy "interfaceCHAVES:entradaChaves0_7" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 77
-Info (12128): Elaborating entity "interfaceBOTOES" for hierarchy "interfaceBOTOES:entradaBotao" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 87
-Info (12128): Elaborating entity "display0_1" for hierarchy "display0_1:disp0_1" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 90
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "display0_1:disp0_1|conversorHex7Seg:disp0" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display0_1.vhd Line: 35
-Info (12128): Elaborating entity "display2_3" for hierarchy "display2_3:disp2_3" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 97
-Info (12128): Elaborating entity "display4" for hierarchy "display4:disp4" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 104
-Info (12128): Elaborating entity "display5" for hierarchy "display5:disp5" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 110
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4837 megabytes
-    Info: Processing ended: Sun May 02 14:07:58 2021
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:32
-=======
     Info (12022): Found design unit 1: display2_3-arch_name File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display2_3.vhd Line: 21
     Info (12023): Found entity 1: display2_3 File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display2_3.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file display4.vhd
+    Info (12022): Found design unit 1: display4-arch_name File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display4.vhd Line: 20
+    Info (12023): Found entity 1: display4 File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display4.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file display5.vhd
+    Info (12022): Found design unit 1: display5-arch_name File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display5.vhd Line: 20
+    Info (12023): Found entity 1: display5 File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display5.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file interfacebotoes.vhd
+    Info (12022): Found design unit 1: interfaceBOTOES-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/interfaceBOTOES.vhd Line: 14
+    Info (12023): Found entity 1: interfaceBOTOES File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/interfaceBOTOES.vhd Line: 4
 Info (12127): Elaborating entity "calculadora" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at calculadora.vhd(34): object "habilitaBotao0" assigned a value but never read File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 34
-Warning (10036): Verilog HDL or VHDL warning at calculadora.vhd(35): object "habilitaBotao1" assigned a value but never read File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 35
-Warning (10036): Verilog HDL or VHDL warning at calculadora.vhd(37): object "habilitaDisplay2_3" assigned a value but never read File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 37
-Warning (10036): Verilog HDL or VHDL warning at calculadora.vhd(38): object "habilitaDisplay4" assigned a value but never read File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 38
-Warning (10036): Verilog HDL or VHDL warning at calculadora.vhd(39): object "habilitaDisplay5" assigned a value but never read File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 39
-Info (12128): Elaborating entity "Processador" for hierarchy "Processador:Processador" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 47
+Info (12128): Elaborating entity "Processador" for hierarchy "Processador:Processador" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 48
 Info (12128): Elaborating entity "ULA" for hierarchy "Processador:Processador|ULA:ULA" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 53
+Warning (10541): VHDL Signal Declaration warning at ULA.vhd(14): used implicit default value for signal "overflow" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/ULA.vhd Line: 14
+Warning (10036): Verilog HDL or VHDL warning at ULA.vhd(20): object "entradaAA" assigned a value but never read File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/ULA.vhd Line: 20
+Warning (10036): Verilog HDL or VHDL warning at ULA.vhd(21): object "entradaBB" assigned a value but never read File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/ULA.vhd Line: 21
 Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "Processador:Processador|muxGenerico2x1:MUX_proxPC" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 54
 Info (12128): Elaborating entity "somaConstante" for hierarchy "Processador:Processador|somaConstante:incremento" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 60
 Info (12128): Elaborating entity "memoriaROM" for hierarchy "Processador:Processador|memoriaROM:ROM" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 63
@@ -601,16 +700,72 @@ Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Processado
 Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "Processador:Processador|bancoRegistradoresArqRegMem:Banco_Registradores" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 77
 Info (12128): Elaborating entity "Unidade_Controle" for hierarchy "Processador:Processador|Unidade_Controle:UC" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Processador_Calculadora.vhd Line: 85
 Info (10041): Inferred latch for "palavraControle[1]" at Unidade_Controle.vhd(23) File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/Unidade_Controle.vhd Line: 23
-Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 56
-Info (12128): Elaborating entity "decodificadorEnderecos" for hierarchy "decodificadorEnderecos:Decoder" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 61
-Info (12128): Elaborating entity "interfaceCHAVES" for hierarchy "interfaceCHAVES:entradaChaves0_7" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 75
-Info (12128): Elaborating entity "display0_1" for hierarchy "display0_1:disp0_1" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 85
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 57
+Info (12128): Elaborating entity "decodificadorEnderecos" for hierarchy "decodificadorEnderecos:Decoder" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 62
+Info (12128): Elaborating entity "interfaceCHAVES" for hierarchy "interfaceCHAVES:entradaChaves0_7" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 77
+Info (12128): Elaborating entity "interfaceBOTOES" for hierarchy "interfaceBOTOES:entradaBotao" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 87
+Info (12128): Elaborating entity "display0_1" for hierarchy "display0_1:disp0_1" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 90
 Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "display0_1:disp0_1|conversorHex7Seg:disp0" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/display0_1.vhd Line: 35
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4828 megabytes
-    Info: Processing ended: Sun May 02 14:19:59 2021
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:30
->>>>>>> main
+Info (12128): Elaborating entity "display2_3" for hierarchy "display2_3:disp2_3" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 97
+Info (12128): Elaborating entity "display4" for hierarchy "display4:disp4" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 104
+Info (12128): Elaborating entity "display5" for hierarchy "display5:disp5" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 110
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276007): RAM logic "memoriaRAM:RAM|ram" is uninferred due to asynchronous read logic File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/memoriaRAM.vhd Line: 28
+    Info (276007): RAM logic "Processador:Processador|bancoRegistradoresArqRegMem:Banco_Registradores|registrador" is uninferred due to asynchronous read logic File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/bancoRegistradoresArqRegMem.vhd Line: 29
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13048): Converted tri-state node "barramentoLeituraDados[7]" into a selector File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramentoLeituraDados[6]" into a selector File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramentoLeituraDados[5]" into a selector File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramentoLeituraDados[4]" into a selector File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramentoLeituraDados[3]" into a selector File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramentoLeituraDados[2]" into a selector File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramentoLeituraDados[1]" into a selector File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramentoLeituraDados[0]" into a selector File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/muxGenerico2x1.vhd Line: 10
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 15
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 10
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 10
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 10
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/calculadora.vhd Line: 10
+Info (21057): Implemented 118 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 60 output pins
+    Info (21061): Implemented 43 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 46 warnings
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Sun May 02 19:40:48 2021
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:38
 
 

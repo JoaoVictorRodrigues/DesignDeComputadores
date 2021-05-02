@@ -9,17 +9,19 @@ entity ULA is
         entradaA, entradaB: 	in STD_LOGIC_VECTOR((dataWidth-1) downto 0);
 		  seletor: 					in STD_LOGIC_VECTOR(2 downto 0);
         saida:  					out STD_LOGIC_VECTOR((dataWidth-1) downto 0);
+		  --overflow:             out std_logic;
+		  --flagCarry:				out std_logic;
 		  flagZero:					out std_logic
-		  --flagCarry					out std_logic;
-		  --overflow              out std_logic
     );
 end entity;
 
 architecture comportamento of ULA is
 	constant zero : std_logic_vector(dataWidth-1 downto 0) := (others => '0');
+	 signal entradaAA : STD_LOGIC_VECTOR(dataWidth downto 0);
+	 signal entradaBB : STD_LOGIC_VECTOR(dataWidth downto 0);
 
-	 signal soma : STD_LOGIC_VECTOR((dataWidth-1) downto 0);
- 	 signal subtracao : STD_LOGIC_VECTOR((dataWidth-1) downto 0);
+	 signal soma : STD_LOGIC_VECTOR((dataWidth) downto 0);
+ 	 signal subtracao : STD_LOGIC_VECTOR((dataWidth) downto 0);
 	 signal op_and : STD_LOGIC_VECTOR((dataWidth-1) downto 0);
 	 signal op_or: STD_LOGIC_VECTOR((dataWidth-1) downto 0);
 	 signal op_xor: STD_LOGIC_VECTOR((dataWidth-1) downto 0);
@@ -30,6 +32,9 @@ architecture comportamento of ULA is
 	 
 	 
     begin
+	   entradaAA <= std_LOGIC_VECTOR('0' & entradaA);
+		entradaBB <= std_LOGIC_VECTOR('0' & entradaB);
+	   
 		soma 		<= STD_LOGIC_VECTOR(unsigned(entradaA) + unsigned(entradaB));
 		subtracao <= STD_LOGIC_VECTOR(unsigned(entradaA) - unsigned(entradaB));
 		op_and		<= entradaA and entradaB;

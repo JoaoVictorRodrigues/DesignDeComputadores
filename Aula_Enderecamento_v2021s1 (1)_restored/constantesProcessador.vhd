@@ -38,6 +38,7 @@ constant l_AND    : opCode_t := "01111";
 constant l_OR     : opCode_t := "10000";
 constant l_NOT    : opCode_t := "10001";
 constant l_XOR    : opCode_t := "10010";
+constant mov		: opcode_t := "10011";
 
 subtype reg_t is std_logic_vector(2 downto 0);
 
