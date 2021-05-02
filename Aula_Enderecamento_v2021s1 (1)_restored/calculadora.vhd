@@ -12,7 +12,7 @@ entity calculadora is
     -- Output ports
     PC: out std_logic_vector (addrWidth-1 downto 0);
 	 LEDR  : out STD_LOGIC_VECTOR(9 DOWNTO 0) := (others => '0');
-	 HEX0,HEX1 : out std_logic_vector(6 downto 0)
+	 HEX0,HEX1,HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0)
 	 );
 	 
 end entity;
@@ -27,12 +27,13 @@ architecture arch_name of calculadora is
   signal WR,RR: std_logic;
   signal selecao: std_logic_vector(1 downto 0);
   signal chaves8_9: std_logic_vector(dataWidth-1 downto 0);
+  signal botoes0_1: std_logic_vector(dataWidth-1 downto 0);
   
   signal habilitaRAM: std_logic;
   signal habilitaChaves7_0: std_logic;
   signal habilitaChaves8_9: std_logic;
   signal habilitaBotao0: std_logic;
-  signal habilitaBotao1: std_logic;
+  -- signal habilitaBotao1: std_logic;
   signal habilitaDisplay0_1: std_logic;
   signal habilitaDisplay2_3: std_logic;
   signal habilitaDisplay4: std_logic;
@@ -50,7 +51,7 @@ begin
                     barramentoEndereco => barramentoEnderecos,
                     writeRam => WR,
                     readRam => RR,
-						  PC_out => PC,
+						        PC_out => PC,
 							      CLOCK_50 => CLOCK_50);
   
   RAM: entity work.memoriaRAM
@@ -64,7 +65,8 @@ begin
 		 escrita=> WR,
 		 habilitaRAM => habilitaRAM ,habilitaChaves7_0 => habilitaChaves7_0, 
 		 habilitaChaves8_9 => habilitaChaves8_9, habilitaBotao0 => habilitaBotao0, 
-		 habilitaBotao1 => habilitaBotao1 ,habilitaDisplay0_1 => habilitaDisplay0_1, 
+		--  habilitaBotao1 => habilitaBotao1 ,
+     habilitaDisplay0_1 => habilitaDisplay0_1, 
 		 habilitaDisplay2_3 => habilitaDisplay2_3, habilitaDisplay4 => habilitaDisplay4, 
 		 habilitaDisplay5 => habilitaDisplay5
 	 );
@@ -82,12 +84,33 @@ begin
 		  
   chaves8_9(7 downto 2) <= (others => '0');
   
+  entradaBotao: entity work.interfaceBOTOES
+		  port map ( entrada => KEY(3 downto 0), saida => barramentoLeituraDados(dataWidth-1 downto 0), habilita => habilitaBotao0);
+  
   disp0_1: entity work.display0_1
 			port map(clk => CLOCK_50, 
 						barramentoEscritaDados => barramentoEscritaDados ,
 						habilita => habilitaDisplay0_1,
 						display0 => Hex0,
 						display1 => Hex1);
-		  
+						
+  disp2_3: entity work.display2_3
+			port map(clk => CLOCK_50, 
+						barramentoEscritaDados => barramentoEscritaDados ,
+						habilita => habilitaDisplay2_3,
+						display2 => Hex2,
+						display3 => Hex3); 
+						
+  disp4: entity work.display4
+			port map(clk => CLOCK_50, 
+						barramentoEscritaDados => barramentoEscritaDados ,
+						habilita => habilitaDisplay4,
+						display4 => Hex4);  	
+
+  disp5: entity work.display5
+			port map(clk => CLOCK_50, 
+						barramentoEscritaDados => barramentoEscritaDados ,
+						habilita => habilitaDisplay5,
+						display5 => Hex5);  	
   LEDR <= SW;
 end architecture;
