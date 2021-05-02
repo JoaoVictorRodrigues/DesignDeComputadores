@@ -34,8 +34,8 @@ signal displaySignal0, displaySignal1, displaySignal2, displaySignal3, displaySi
 signal progCount : std_logic_vector(addrWidth-1 downto 0);
 
 -- Formato da instrucao
-alias opCodeLocal: std_logic_vector(4 DOWNTO 0) is Instrucao(addrWidth-1 downto addrWidth-5);
-alias SelReg: std_logic_vector(2 DOWNTO 0) is Instrucao(addrWidth-6 downto addrWidth-8);
+alias opCodeLocal: std_logic_vector(4 DOWNTO 0) is Instrucao(dataROMWidth-1 downto dataROMWidth-5);
+alias SelReg: std_logic_vector(2 DOWNTO 0) is Instrucao(dataROMWidth-6 downto dataROMWidth-8);
 alias enderecoRAM: std_logic_vector(addrWidth-1 DOWNTO 0) is Instrucao(addrWidth-1 downto 0);
 alias imediatoDado: std_logic_vector (dataWidth-1 DOWNTO 0) is Instrucao(dataWidth-1 downto 0);
 alias imediatoEndereco: std_logic_vector (addrWidth-1 DOWNTO 0) is Instrucao(addrWidth-1 downto 0);
@@ -52,7 +52,10 @@ alias habEscritaBarramento: std_logic is pontosControle(ptsCtrlWidth-8);
 begin
 ULA: entity work.ULA port map (entradaA => ULAentradaA, entradaB => ULAentradaB, saida => ULA_MUXULAImed, seletor => ULAop);
 MUX_proxPC: entity work.muxGenerico2x1 generic map (larguraDados => addrWidth)
-            port map (entradaA_MUX => Incr_MUX_ProxPC, entradaB_MUX => imediatoEndereco, seletor_MUX => selMUX_JMP_PC, saida_MUX => Incr_PC);
+            port map (entradaA_MUX => Incr_MUX_ProxPC,
+				entradaB_MUX => imediatoEndereco,
+				seletor_MUX => selMUX_JMP_PC,
+				saida_MUX => Incr_PC);
 
 incremento: entity work.somaConstante generic map (larguraDados => addrWidth)
             port map (entrada => PC_ROM, saida => Incr_MUX_ProxPC);
@@ -61,7 +64,12 @@ ROM: entity work.memoriaROM
             port map (Endereco => PC_ROM, Dado => Instrucao);
 
 PC: entity work.registradorGenerico generic map (larguraDados => addrWidth)
-            port map (CLK => CLOCK_50, DIN => Incr_PC, DOUT => PC_ROM, ENABLE => '1', RST => '0');
+            port map (
+				DIN => Incr_PC,
+				DOUT => PC_ROM,
+				ENABLE => '1',
+				CLK => CLOCK_50,
+				RST => '0');
 
 MUX_RAM_Imediato: entity work.muxGenerico2x1
             port map (entradaA_MUX => barramentoDadosEntrada, entradaB_MUX => imediatoDado, seletor_MUX => selMUX_RAM_Imediato, saida_MUX => MUXRAMImediato_MUXULAImediato);

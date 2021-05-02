@@ -1,5 +1,5 @@
 Assembler report for Aula_Enderecamento
-Thu Apr 29 19:56:36 2021
+Sat May 01 20:50:38 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/output_files/Aula_Enderecamento.sof
+  5. Assembler Device Options: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/output_files/Aula_Enderecamento.sof
   6. Assembler Messages
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Apr 29 19:56:36 2021 ;
+; Assembler Status      ; Successful - Sat May 01 20:50:38 2021 ;
 ; Revision Name         ; Aula_Enderecamento                    ;
 ; Top-level Entity Name ; calculadora                           ;
 ; Family                ; Cyclone V                             ;
@@ -53,23 +53,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                                                                                   ;
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                                                                                   ;
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/output_files/Aula_Enderecamento.sof ;
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                                                              ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                                                              ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/output_files/Aula_Enderecamento.sof ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/output_files/Aula_Enderecamento.sof ;
-+----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                                                                                              ;
-+----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x004DFCFB                                                                                                                                                                           ;
-; Checksum       ; 0x004DFCFB                                                                                                                                                                           ;
-+----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/output_files/Aula_Enderecamento.sof ;
++----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                                                                         ;
++----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x004F34B6                                                                                                                                                      ;
+; Checksum       ; 0x004F34B6                                                                                                                                                      ;
++----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -78,13 +78,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Apr 29 19:56:30 2021
+    Info: Processing started: Sat May 01 20:50:32 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Aula_Enderecamento -c Aula_Enderecamento
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4819 megabytes
-    Info: Processing ended: Thu Apr 29 19:56:36 2021
+    Info: Peak virtual memory: 4818 megabytes
+    Info: Processing ended: Sat May 01 20:50:38 2021
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
 
 
