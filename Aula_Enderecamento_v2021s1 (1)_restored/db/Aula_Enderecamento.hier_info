@@ -267,6 +267,8 @@ saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 flagZero <= Equal7.DB_MAX_OUTPUT_PORT_TYPE
+flagCarry <= op_and[7].DB_MAX_OUTPUT_PORT_TYPE
+overflow <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |calculadora|Processador:Processador|muxGenerico2x1:MUX_proxPC
@@ -487,8 +489,8 @@ opCode[0] => Equal2.IN4
 opCode[0] => Equal3.IN3
 opCode[0] => Equal4.IN2
 opCode[0] => Equal5.IN4
-opCode[0] => Equal6.IN2
-opCode[0] => Equal7.IN4
+opCode[0] => Equal6.IN4
+opCode[0] => Equal7.IN2
 opCode[0] => Equal8.IN4
 opCode[0] => Equal9.IN4
 opCode[0] => Equal10.IN3
@@ -507,8 +509,8 @@ opCode[1] => Equal2.IN2
 opCode[1] => Equal3.IN2
 opCode[1] => Equal4.IN4
 opCode[1] => Equal5.IN2
-opCode[1] => Equal6.IN4
-opCode[1] => Equal7.IN3
+opCode[1] => Equal6.IN3
+opCode[1] => Equal7.IN4
 opCode[1] => Equal8.IN3
 opCode[1] => Equal9.IN3
 opCode[1] => Equal10.IN2
@@ -547,8 +549,13 @@ opCode[3] => Equal2.IN1
 opCode[3] => Equal3.IN1
 opCode[3] => Equal4.IN1
 opCode[3] => Equal5.IN3
+<<<<<<< HEAD
 opCode[3] => Equal6.IN3
 opCode[3] => Equal7.IN0
+=======
+opCode[3] => Equal6.IN0
+opCode[3] => Equal7.IN3
+>>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
 opCode[3] => Equal8.IN1
 opCode[3] => Equal9.IN1
 opCode[3] => Equal10.IN4
@@ -567,8 +574,13 @@ opCode[4] => Equal2.IN0
 opCode[4] => Equal3.IN0
 opCode[4] => Equal4.IN0
 opCode[4] => Equal5.IN0
+<<<<<<< HEAD
 opCode[4] => Equal6.IN0
 opCode[4] => Equal7.IN2
+=======
+opCode[4] => Equal6.IN2
+opCode[4] => Equal7.IN0
+>>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
 opCode[4] => Equal8.IN0
 opCode[4] => Equal9.IN0
 opCode[4] => Equal10.IN0
@@ -581,7 +593,10 @@ opCode[4] => Equal16.IN3
 opCode[4] => Equal17.IN4
 opCode[4] => Equal18.IN3
 opCode[4] => Equal19.IN0
+<<<<<<< HEAD
 flagZero => selMuxProxPC.IN1
+=======
+>>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
 palavraControle[0] <= Equal19.DB_MAX_OUTPUT_PORT_TYPE
 palavraControle[1] <= <VCC>
 palavraControle[2] <= selOperacaoULA.DB_MAX_OUTPUT_PORT_TYPE
