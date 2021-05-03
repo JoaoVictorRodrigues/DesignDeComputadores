@@ -1,7 +1,7 @@
 {
-	"common_dir" : "C:/intelFPGA_lite/20.1/",
+	"common_dir" : "/home/paulo/Dropbox/Insper/fpgaProjects/2021s1/Aula_Enderecamento_v2021s1_restored/",
 	"acds_version" : "Version 20.1.0",
-	"platform" : "windows",
-	"os" : "Windows 10",
-	"qpf" : "calculadora.qpf"
+	"platform" : "linux",
+	"os" : "Ubuntu 18.04.5",
+	"qpf" : "Aula_Enderecamento.qpf"
 }

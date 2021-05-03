@@ -5,12 +5,14 @@ use ieee.numeric_std.all;
 entity memoriaRAM is
    generic (
          dataWidth: natural := 8;
-         addrWidth: natural := 8
+         addrWidth: natural := 6
     );
     port
     (
         addr     : in std_logic_vector(addrWidth-1 downto 0);
-        we       : in std_logic := '1';
+        we       : in std_logic;
+		re       : in std_logic;
+		habilita : in std_logic; 
         clk      : in std_logic;
         dado_in  : in std_logic_vector(dataWidth-1 downto 0);
         dado_out : out std_logic_vector(dataWidth-1 downto 0)
@@ -28,12 +30,11 @@ begin
     process(clk)
     begin
         if(rising_edge(clk)) then
-            if(we = '1') then
+            if(we = '1' and habilita='1') then
                 ram(to_integer(unsigned(addr))) <= dado_in;
             end if;
         end if;
     end process;
-
-    -- A leitura é sempre assincrona:
-    dado_out <= ram(to_integer(unsigned(addr)));
+    -- A leitura é sempre assincrona e quando houver habilitacao:
+    dado_out <= ram(to_integer(unsigned(addr))) when (re = '1' and habilita='1') else (others => 'Z');
 end architecture;

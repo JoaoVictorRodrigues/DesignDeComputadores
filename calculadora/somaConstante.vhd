@@ -5,8 +5,8 @@ use ieee.numeric_std.all;  --Soma (esta biblioteca =ieee)
 entity somaConstante is
     generic
     (
-        larguraDados : natural := 32;
-        constante : natural := 4
+        larguraDados : natural := 8;
+        constante : natural := 1
     );
     port
     (
