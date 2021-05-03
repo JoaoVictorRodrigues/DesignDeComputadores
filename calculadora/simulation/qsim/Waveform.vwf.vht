@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "05/02/2021 18:32:23"
+-- Generated on "05/02/2021 21:55:54"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          calculadora
 -- 
@@ -48,15 +48,15 @@ SIGNAL SW : STD_LOGIC_VECTOR(9 DOWNTO 0);
 COMPONENT calculadora
 	PORT (
 	CLOCK_50 : IN STD_LOGIC;
-	HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX0 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX1 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX2 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX3 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX4 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX5 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
 	KEY : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	LEDR : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-	PC : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	LEDR : BUFFER STD_LOGIC_VECTOR(9 DOWNTO 0);
+	PC : BUFFER STD_LOGIC_VECTOR(7 DOWNTO 0);
 	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0)
 	);
 END COMPONENT;
@@ -92,45 +92,23 @@ END PROCESS t_prcs_CLOCK_50;
 t_prcs_KEY_3: PROCESS
 BEGIN
 	KEY(3) <= '0';
-	WAIT FOR 640000 ps;
-	KEY(3) <= '1';
 WAIT;
 END PROCESS t_prcs_KEY_3;
 -- KEY[2]
 t_prcs_KEY_2: PROCESS
 BEGIN
 	KEY(2) <= '0';
-	WAIT FOR 320000 ps;
-	KEY(2) <= '1';
-	WAIT FOR 320000 ps;
-	KEY(2) <= '0';
-	WAIT FOR 320000 ps;
-	KEY(2) <= '1';
 WAIT;
 END PROCESS t_prcs_KEY_2;
 -- KEY[1]
 t_prcs_KEY_1: PROCESS
 BEGIN
-	FOR i IN 1 TO 3
-	LOOP
-		KEY(1) <= '0';
-		WAIT FOR 160000 ps;
-		KEY(1) <= '1';
-		WAIT FOR 160000 ps;
-	END LOOP;
 	KEY(1) <= '0';
 WAIT;
 END PROCESS t_prcs_KEY_1;
 -- KEY[0]
 t_prcs_KEY_0: PROCESS
 BEGIN
-	FOR i IN 1 TO 6
-	LOOP
-		KEY(0) <= '0';
-		WAIT FOR 80000 ps;
-		KEY(0) <= '1';
-		WAIT FOR 80000 ps;
-	END LOOP;
 	KEY(0) <= '0';
 WAIT;
 END PROCESS t_prcs_KEY_0;
@@ -174,45 +152,23 @@ END PROCESS t_prcs_SW_4;
 t_prcs_SW_3: PROCESS
 BEGIN
 	SW(3) <= '0';
-	WAIT FOR 640000 ps;
-	SW(3) <= '1';
 WAIT;
 END PROCESS t_prcs_SW_3;
 -- SW[2]
 t_prcs_SW_2: PROCESS
 BEGIN
 	SW(2) <= '0';
-	WAIT FOR 320000 ps;
-	SW(2) <= '1';
-	WAIT FOR 320000 ps;
-	SW(2) <= '0';
-	WAIT FOR 320000 ps;
-	SW(2) <= '1';
 WAIT;
 END PROCESS t_prcs_SW_2;
 -- SW[1]
 t_prcs_SW_1: PROCESS
 BEGIN
-	FOR i IN 1 TO 3
-	LOOP
-		SW(1) <= '0';
-		WAIT FOR 160000 ps;
-		SW(1) <= '1';
-		WAIT FOR 160000 ps;
-	END LOOP;
 	SW(1) <= '0';
 WAIT;
 END PROCESS t_prcs_SW_1;
 -- SW[0]
 t_prcs_SW_0: PROCESS
 BEGIN
-	FOR i IN 1 TO 6
-	LOOP
-		SW(0) <= '0';
-		WAIT FOR 80000 ps;
-		SW(0) <= '1';
-		WAIT FOR 80000 ps;
-	END LOOP;
 	SW(0) <= '0';
 WAIT;
 END PROCESS t_prcs_SW_0;

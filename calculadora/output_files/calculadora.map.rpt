@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Calculadora
-Sun May 02 21:29:43 2021
+Sun May 02 21:52:02 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -72,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun May 02 21:29:43 2021       ;
+; Analysis & Synthesis Status     ; Successful - Sun May 02 21:52:02 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Calculadora                                 ;
 ; Top-level Entity Name           ; calculadora                                 ;
@@ -198,31 +198,31 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                       ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                                ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; ULA.vhd                          ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/ULA.vhd                         ;         ;
-; somaConstante.vhd                ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/somaConstante.vhd               ;         ;
-; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/registradorGenerico.vhd         ;         ;
-; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/muxGenerico2x1.vhd              ;         ;
-; memoriaROM.vhd                   ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/memoriaROM.vhd                  ;         ;
-; memoriaRAM.vhd                   ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/memoriaRAM.vhd                  ;         ;
-; interfaceCHAVES.vhd              ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/interfaceCHAVES.vhd             ;         ;
-; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/conversorHex7Seg.vhd            ;         ;
-; constantesProcessador.vhd        ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/constantesProcessador.vhd       ;         ;
-; bancoRegistradoresArqRegMem.vhd  ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/bancoRegistradoresArqRegMem.vhd ;         ;
-; calculadora.vhd                  ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd                 ;         ;
-; Processador_Calculadora.vhd      ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/Processador_Calculadora.vhd     ;         ;
-; Unidade_Controle.vhd             ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/Unidade_Controle.vhd            ;         ;
-; decodificadorEnderecos.vhd       ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/decodificadorEnderecos.vhd      ;         ;
-; display0_1.vhd                   ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/display0_1.vhd                  ;         ;
-; display2_3.vhd                   ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/display2_3.vhd                  ;         ;
-; display4.vhd                     ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/display4.vhd                    ;         ;
-; display5.vhd                     ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/display5.vhd                    ;         ;
-; interfaceBOTOES.vhd              ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/interfaceBOTOES.vhd             ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                  ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                           ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------+---------+
+; ULA.vhd                          ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/ULA.vhd                         ;         ;
+; somaConstante.vhd                ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/somaConstante.vhd               ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/registradorGenerico.vhd         ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/muxGenerico2x1.vhd              ;         ;
+; memoriaROM.vhd                   ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/memoriaROM.vhd                  ;         ;
+; memoriaRAM.vhd                   ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/memoriaRAM.vhd                  ;         ;
+; interfaceCHAVES.vhd              ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/interfaceCHAVES.vhd             ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/conversorHex7Seg.vhd            ;         ;
+; constantesProcessador.vhd        ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/constantesProcessador.vhd       ;         ;
+; bancoRegistradoresArqRegMem.vhd  ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/bancoRegistradoresArqRegMem.vhd ;         ;
+; calculadora.vhd                  ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd                 ;         ;
+; Processador_Calculadora.vhd      ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Processador_Calculadora.vhd     ;         ;
+; Unidade_Controle.vhd             ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Unidade_Controle.vhd            ;         ;
+; decodificadorEnderecos.vhd       ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/decodificadorEnderecos.vhd      ;         ;
+; display0_1.vhd                   ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/display0_1.vhd                  ;         ;
+; display2_3.vhd                   ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/display2_3.vhd                  ;         ;
+; display4.vhd                     ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/display4.vhd                    ;         ;
+; display5.vhd                     ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/display5.vhd                    ;         ;
+; interfaceBOTOES.vhd              ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/interfaceBOTOES.vhd             ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -623,145 +623,145 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun May 02 21:29:24 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Calculadora -c Calculadora
+    Info: Processing started: Sun May 02 21:51:42 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off calculadora -c Calculadora
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
-    Info (12022): Found design unit 1: ULA-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/ULA.vhd Line: 18
-    Info (12023): Found entity 1: ULA File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/ULA.vhd Line: 6
+    Info (12022): Found design unit 1: ULA-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/ULA.vhd Line: 18
+    Info (12023): Found entity 1: ULA File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/ULA.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file somaconstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/somaConstante.vhd Line: 18
-    Info (12023): Found entity 1: somaConstante File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/somaConstante.vhd Line: 5
+    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/somaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/somaConstante.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/registradorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: registradorGenerico File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/registradorGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/registradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/registradorGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/muxGenerico2x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/muxGenerico2x1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/muxGenerico2x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file memoriarom.vhd
-    Info (12022): Found design unit 1: memoriaROM-assincrona File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/memoriaROM.vhd Line: 14
-    Info (12023): Found entity 1: memoriaROM File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/memoriaROM.vhd Line: 6
+    Info (12022): Found design unit 1: memoriaROM-assincrona File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/memoriaROM.vhd Line: 14
+    Info (12023): Found entity 1: memoriaROM File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/memoriaROM.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file memoriaram.vhd
-    Info (12022): Found design unit 1: memoriaRAM-rtl File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/memoriaRAM.vhd Line: 22
-    Info (12023): Found entity 1: memoriaRAM File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/memoriaRAM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaRAM-rtl File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/memoriaRAM.vhd Line: 22
+    Info (12023): Found entity 1: memoriaRAM File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/memoriaRAM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file interfaceleds.vhd
-    Info (12022): Found design unit 1: interfaceLEDs-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/interfaceLEDs.vhd Line: 16
-    Info (12023): Found entity 1: interfaceLEDs File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/interfaceLEDs.vhd Line: 4
+    Info (12022): Found design unit 1: interfaceLEDs-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/interfaceLEDs.vhd Line: 16
+    Info (12023): Found entity 1: interfaceLEDs File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/interfaceLEDs.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file interfacechaves.vhd
-    Info (12022): Found design unit 1: interfaceCHAVES-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/interfaceCHAVES.vhd Line: 15
-    Info (12023): Found entity 1: interfaceCHAVES File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/interfaceCHAVES.vhd Line: 4
+    Info (12022): Found design unit 1: interfaceCHAVES-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/interfaceCHAVES.vhd Line: 15
+    Info (12023): Found entity 1: interfaceCHAVES File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/interfaceCHAVES.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
-    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/conversorHex7Seg.vhd Line: 17
-    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/conversorHex7Seg.vhd Line: 4
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/conversorHex7Seg.vhd Line: 4
 Info (12021): Found 1 design units, including 0 entities, in source file constantesprocessador.vhd
-    Info (12022): Found design unit 1: constantesProcessador File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/constantesProcessador.vhd Line: 5
+    Info (12022): Found design unit 1: constantesProcessador File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/constantesProcessador.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradoresarqregmem.vhd
-    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/bancoRegistradoresArqRegMem.vhd Line: 23
-    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/bancoRegistradoresArqRegMem.vhd Line: 5
+    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/bancoRegistradoresArqRegMem.vhd Line: 23
+    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/bancoRegistradoresArqRegMem.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file calculadora.vhd
-    Info (12022): Found design unit 1: calculadora-arch_name File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 21
-    Info (12023): Found entity 1: calculadora File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 6
+    Info (12022): Found design unit 1: calculadora-arch_name File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 21
+    Info (12023): Found entity 1: calculadora File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file processador_calculadora.vhd
-    Info (12022): Found design unit 1: Processador-arch_name File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/Processador_Calculadora.vhd Line: 24
-    Info (12023): Found entity 1: Processador File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/Processador_Calculadora.vhd Line: 6
+    Info (12022): Found design unit 1: Processador-arch_name File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Processador_Calculadora.vhd Line: 24
+    Info (12023): Found entity 1: Processador File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Processador_Calculadora.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file unidade_controle.vhd
-    Info (12022): Found design unit 1: Unidade_Controle-arch_name File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/Unidade_Controle.vhd Line: 19
-    Info (12023): Found entity 1: Unidade_Controle File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/Unidade_Controle.vhd Line: 6
+    Info (12022): Found design unit 1: Unidade_Controle-arch_name File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Unidade_Controle.vhd Line: 19
+    Info (12023): Found entity 1: Unidade_Controle File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Unidade_Controle.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file decodificadorenderecos.vhd
-    Info (12022): Found design unit 1: decodificadorEnderecos-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/decodificadorEnderecos.vhd Line: 27
-    Info (12023): Found entity 1: decodificadorEnderecos File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/decodificadorEnderecos.vhd Line: 5
+    Info (12022): Found design unit 1: decodificadorEnderecos-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/decodificadorEnderecos.vhd Line: 27
+    Info (12023): Found entity 1: decodificadorEnderecos File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/decodificadorEnderecos.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file display0_1.vhd
-    Info (12022): Found design unit 1: display0_1-arch_name File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/display0_1.vhd Line: 21
-    Info (12023): Found entity 1: display0_1 File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/display0_1.vhd Line: 5
+    Info (12022): Found design unit 1: display0_1-arch_name File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/display0_1.vhd Line: 21
+    Info (12023): Found entity 1: display0_1 File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/display0_1.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file display2_3.vhd
-    Info (12022): Found design unit 1: display2_3-arch_name File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/display2_3.vhd Line: 21
-    Info (12023): Found entity 1: display2_3 File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/display2_3.vhd Line: 5
+    Info (12022): Found design unit 1: display2_3-arch_name File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/display2_3.vhd Line: 21
+    Info (12023): Found entity 1: display2_3 File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/display2_3.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file display4.vhd
-    Info (12022): Found design unit 1: display4-arch_name File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/display4.vhd Line: 20
-    Info (12023): Found entity 1: display4 File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/display4.vhd Line: 5
+    Info (12022): Found design unit 1: display4-arch_name File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/display4.vhd Line: 20
+    Info (12023): Found entity 1: display4 File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/display4.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file display5.vhd
-    Info (12022): Found design unit 1: display5-arch_name File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/display5.vhd Line: 20
-    Info (12023): Found entity 1: display5 File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/display5.vhd Line: 5
+    Info (12022): Found design unit 1: display5-arch_name File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/display5.vhd Line: 20
+    Info (12023): Found entity 1: display5 File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/display5.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file interfacebotoes.vhd
-    Info (12022): Found design unit 1: interfaceBOTOES-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/interfaceBOTOES.vhd Line: 14
-    Info (12023): Found entity 1: interfaceBOTOES File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/interfaceBOTOES.vhd Line: 4
+    Info (12022): Found design unit 1: interfaceBOTOES-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/interfaceBOTOES.vhd Line: 14
+    Info (12023): Found entity 1: interfaceBOTOES File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/interfaceBOTOES.vhd Line: 4
 Info (12127): Elaborating entity "calculadora" for the top level hierarchy
-Info (12128): Elaborating entity "Processador" for hierarchy "Processador:Processador" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 48
-Warning (10541): VHDL Signal Declaration warning at Processador_Calculadora.vhd(19): used implicit default value for signal "flag_Zero" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/Processador_Calculadora.vhd Line: 19
-Info (12128): Elaborating entity "ULA" for hierarchy "Processador:Processador|ULA:ULA" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/Processador_Calculadora.vhd Line: 55
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "Processador:Processador|muxGenerico2x1:MUX_proxPC" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/Processador_Calculadora.vhd Line: 61
-Info (12128): Elaborating entity "somaConstante" for hierarchy "Processador:Processador|somaConstante:incremento" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/Processador_Calculadora.vhd Line: 67
-Info (12128): Elaborating entity "memoriaROM" for hierarchy "Processador:Processador|memoriaROM:ROM" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/Processador_Calculadora.vhd Line: 70
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Processador:Processador|registradorGenerico:PC" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/Processador_Calculadora.vhd Line: 73
-Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "Processador:Processador|bancoRegistradoresArqRegMem:Banco_Registradores" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/Processador_Calculadora.vhd Line: 84
-Info (12128): Elaborating entity "Unidade_Controle" for hierarchy "Processador:Processador|Unidade_Controle:UC" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/Processador_Calculadora.vhd Line: 92
-Info (10041): Inferred latch for "palavraControle[1]" at Unidade_Controle.vhd(24) File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/Unidade_Controle.vhd Line: 24
-Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 57
-Info (12128): Elaborating entity "decodificadorEnderecos" for hierarchy "decodificadorEnderecos:Decoder" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 62
-Info (12128): Elaborating entity "interfaceCHAVES" for hierarchy "interfaceCHAVES:entradaChaves0_7" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 77
-Info (12128): Elaborating entity "interfaceBOTOES" for hierarchy "interfaceBOTOES:entradaBotao" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 87
-Info (12128): Elaborating entity "display0_1" for hierarchy "display0_1:disp0_1" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 90
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "display0_1:disp0_1|conversorHex7Seg:disp0" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/display0_1.vhd Line: 35
-Info (12128): Elaborating entity "display2_3" for hierarchy "display2_3:disp2_3" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 97
-Info (12128): Elaborating entity "display4" for hierarchy "display4:disp4" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 104
-Info (12128): Elaborating entity "display5" for hierarchy "display5:disp5" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 110
+Info (12128): Elaborating entity "Processador" for hierarchy "Processador:Processador" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 48
+Warning (10541): VHDL Signal Declaration warning at Processador_Calculadora.vhd(19): used implicit default value for signal "flag_Zero" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Processador_Calculadora.vhd Line: 19
+Info (12128): Elaborating entity "ULA" for hierarchy "Processador:Processador|ULA:ULA" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Processador_Calculadora.vhd Line: 55
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "Processador:Processador|muxGenerico2x1:MUX_proxPC" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Processador_Calculadora.vhd Line: 61
+Info (12128): Elaborating entity "somaConstante" for hierarchy "Processador:Processador|somaConstante:incremento" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Processador_Calculadora.vhd Line: 67
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "Processador:Processador|memoriaROM:ROM" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Processador_Calculadora.vhd Line: 70
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Processador:Processador|registradorGenerico:PC" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Processador_Calculadora.vhd Line: 73
+Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "Processador:Processador|bancoRegistradoresArqRegMem:Banco_Registradores" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Processador_Calculadora.vhd Line: 84
+Info (12128): Elaborating entity "Unidade_Controle" for hierarchy "Processador:Processador|Unidade_Controle:UC" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Processador_Calculadora.vhd Line: 92
+Info (10041): Inferred latch for "palavraControle[1]" at Unidade_Controle.vhd(24) File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Unidade_Controle.vhd Line: 24
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 57
+Info (12128): Elaborating entity "decodificadorEnderecos" for hierarchy "decodificadorEnderecos:Decoder" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 62
+Info (12128): Elaborating entity "interfaceCHAVES" for hierarchy "interfaceCHAVES:entradaChaves0_7" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 77
+Info (12128): Elaborating entity "interfaceBOTOES" for hierarchy "interfaceBOTOES:entradaBotao" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 87
+Info (12128): Elaborating entity "display0_1" for hierarchy "display0_1:disp0_1" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 90
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "display0_1:disp0_1|conversorHex7Seg:disp0" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/display0_1.vhd Line: 35
+Info (12128): Elaborating entity "display2_3" for hierarchy "display2_3:disp2_3" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 97
+Info (12128): Elaborating entity "display4" for hierarchy "display4:disp4" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 104
+Info (12128): Elaborating entity "display5" for hierarchy "display5:disp5" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 110
 Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276007): RAM logic "memoriaRAM:RAM|ram" is uninferred due to asynchronous read logic File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/memoriaRAM.vhd Line: 28
-    Info (276007): RAM logic "Processador:Processador|bancoRegistradoresArqRegMem:Banco_Registradores|registrador" is uninferred due to asynchronous read logic File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/bancoRegistradoresArqRegMem.vhd Line: 29
+    Info (276007): RAM logic "memoriaRAM:RAM|ram" is uninferred due to asynchronous read logic File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/memoriaRAM.vhd Line: 28
+    Info (276007): RAM logic "Processador:Processador|bancoRegistradoresArqRegMem:Banco_Registradores|registrador" is uninferred due to asynchronous read logic File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/bancoRegistradoresArqRegMem.vhd Line: 29
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13048): Converted tri-state node "barramentoLeituraDados[7]" into a selector File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "barramentoLeituraDados[6]" into a selector File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "barramentoLeituraDados[5]" into a selector File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "barramentoLeituraDados[4]" into a selector File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "barramentoLeituraDados[3]" into a selector File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "barramentoLeituraDados[2]" into a selector File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "barramentoLeituraDados[1]" into a selector File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "barramentoLeituraDados[0]" into a selector File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramentoLeituraDados[7]" into a selector File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramentoLeituraDados[6]" into a selector File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramentoLeituraDados[5]" into a selector File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramentoLeituraDados[4]" into a selector File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramentoLeituraDados[3]" into a selector File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramentoLeituraDados[2]" into a selector File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramentoLeituraDados[1]" into a selector File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramentoLeituraDados[0]" into a selector File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/muxGenerico2x1.vhd Line: 10
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
-    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 15
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 10
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 10
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 10
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Calculadora/calculadora.vhd Line: 10
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 10
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 10
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 10
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd Line: 10
 Info (21057): Implemented 118 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 60 output pins
     Info (21061): Implemented 43 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 44 warnings
-    Info: Peak virtual memory: 4851 megabytes
-    Info: Processing ended: Sun May 02 21:29:43 2021
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:36
+    Info: Peak virtual memory: 4849 megabytes
+    Info: Processing ended: Sun May 02 21:52:02 2021
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:35
 
 
