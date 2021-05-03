@@ -1,5 +1,9 @@
 EDA Netlist Writer report for Aula_Enderecamento
+<<<<<<< HEAD
+Sun May 02 17:27:46 2021
+=======
 Sun May 02 19:42:11 2021
+>>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +41,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
+<<<<<<< HEAD
+; EDA Netlist Writer Status ; Successful - Sun May 02 17:27:46 2021 ;
+=======
 ; EDA Netlist Writer Status ; Successful - Sun May 02 19:42:11 2021 ;
+>>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
 ; Revision Name             ; Aula_Enderecamento                    ;
 ; Top-level Entity Name     ; calculadora                           ;
 ; Family                    ; Cyclone V                             ;
@@ -66,6 +74,15 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
+<<<<<<< HEAD
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                                                                      ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                                                                                 ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/simulation/qsim//Aula_Enderecamento.vho ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+=======
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Simulation Generated Files                                                                                                                                    ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -73,6 +90,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/simulation/modelsim/Aula_Enderecamento.vho ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+>>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
 
 
 +-----------------------------+
@@ -81,6 +99,30 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+<<<<<<< HEAD
+    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Sun May 02 17:27:45 2021
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/simulation/qsim/" Aula_Enderecamento -c Aula_Enderecamento
+Info (119006): Selected device 5CEBA4F23C7 for design "Aula_Enderecamento"
+Info (204019): Generated file Aula_Enderecamento.vho in folder "C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4717 megabytes
+    Info: Processing ended: Sun May 02 17:27:46 2021
+    Info: Elapsed time: 00:00:01
+=======
     Info: Processing started: Sun May 02 19:42:09 2021
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Aula_Enderecamento -c Aula_Enderecamento
 Info (204019): Generated file Aula_Enderecamento.vho in folder "C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/simulation/modelsim/" for EDA simulation tool
@@ -88,6 +130,7 @@ Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4717 megabytes
     Info: Processing ended: Sun May 02 19:42:11 2021
     Info: Elapsed time: 00:00:02
+>>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
     Info: Total CPU time (on all processors): 00:00:01
 
 

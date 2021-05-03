@@ -1,5 +1,9 @@
 Flow report for Aula_Enderecamento
+<<<<<<< HEAD
+Sun May 02 19:23:14 2021
+=======
 Sun May 02 19:42:11 2021
+>>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -38,6 +42,26 @@ https://fpgasoftware.intel.com/eula.
 
 
 
+<<<<<<< HEAD
++---------------------------------------------------------------------------+
+; Flow Summary                                                              ;
++-----------------------------+---------------------------------------------+
+; Flow Status                 ; Successful - Sun May 02 19:23:14 2021       ;
+; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name               ; Aula_Enderecamento                          ;
+; Top-level Entity Name       ; calculadora                                 ;
+; Family                      ; Cyclone V                                   ;
+; Device                      ; 5CEBA4F23C7                                 ;
+; Timing Models               ; Final                                       ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
+=======
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
@@ -61,6 +85,7 @@ https://fpgasoftware.intel.com/eula.
 ; Total PLLs                      ; 0 / 4 ( 0 % )                               ;
 ; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
 +---------------------------------+---------------------------------------------+
+>>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
 
 
 +-----------------------------------------+
@@ -68,7 +93,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
+<<<<<<< HEAD
+; Start date & time ; 05/02/2021 19:22:56 ;
+=======
 ; Start date & time ; 05/02/2021 19:40:25 ;
+>>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Aula_Enderecamento  ;
 +-------------------+---------------------+
@@ -79,7 +108,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+--------------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value      ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+--------------------+-------------+-----------------------------------+
+<<<<<<< HEAD
+; COMPILER_SIGNATURE_ID               ; 91767350987.161999417604176            ; --                 ; --          ; --                                ;
+=======
 ; COMPILER_SIGNATURE_ID               ; 110073159321232.161999522502948        ; --                 ; --          ; --                                ;
+>>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                 ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                 ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                 ; --          ; eda_board_design_signal_integrity ;
@@ -102,6 +135,25 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+--------------------+-------------+-----------------------------------+
 
 
+<<<<<<< HEAD
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                          ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Elaboration ; 00:00:19     ; 1.0                     ; 4836 MB             ; 00:00:36                           ;
+; Total                  ; 00:00:19     ; --                      ; --                  ; 00:00:36                           ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                      ;
++------------------------+------------------+------------+------------+----------------+
+; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++------------------------+------------------+------------+------------+----------------+
+; Analysis & Elaboration ; joaov            ; Windows 10 ; 10.0       ; x86_64         ;
++------------------------+------------------+------------+------------+----------------+
+=======
 +--------------------------------------------------------------------------------------------------------------------------+
 ; Flow Elapsed Time                                                                                                        ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
@@ -127,6 +179,7 @@ https://fpgasoftware.intel.com/eula.
 ; Timing Analyzer      ; JOSE-INSPER      ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; JOSE-INSPER      ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
+>>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
 
 
 ------------

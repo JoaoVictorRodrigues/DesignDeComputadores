@@ -8,6 +8,7 @@ entity Unidade_Controle is
     -- Input ports
     clk  :  in  std_logic;
 	 opCode  :  in  std_logic_vector(4 downto 0);
+	 flagZero: in std_logic;
 	 
     -- Output ports
     palavraControle  :  out std_logic_vector(7 downto 0)
@@ -37,6 +38,7 @@ architecture arch_name of Unidade_Controle is
                     "101" when opCode = l_NOT else
 						  "110" when opCode = store else
 						  "111"; -- Entrada B para a saida 
+						  
   hableituraMEM <= '1' when opCode = load or opCode = soma or opCode = subt or opCode = soma_Car or opCode = sub_bor or opCode = mul or opCode = div;
   habEscritaMEM <= '1' when opCode = store else '0';
 end architecture;

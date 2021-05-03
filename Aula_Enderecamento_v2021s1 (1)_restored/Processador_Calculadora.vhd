@@ -15,7 +15,8 @@ entity Processador is
     barramentoEndereco  :  out  std_logic_vector(addrWidth-1 downto 0);
 	 writeRam   : out STD_LOGIC;
 	 readRam    : out STD_LOGIC;
-	 PC_out: out std_logic_vector(addrWidth-1 downto 0)
+	 PC_out: out std_logic_vector(addrWidth-1 downto 0);
+	 flag_Zero: out std_logic
   );
 end entity;
 
@@ -28,7 +29,8 @@ signal PC_ROM, Incr_MUX_ProxPC, Incr_PC, barramentoEnderecos : std_logic_vector 
 signal Instrucao : std_logic_vector(dataROMWidth-1 DOWNTO 0);
 signal pontosControle : std_logic_vector(ptsCtrlWidth-1 downto 0);
 signal habilitaBlocos : std_logic_vector(3 DOWNTO 0);
-
+signal flagZeroSignal: std_logic;
+ 
 signal enableDisplaySignal : STD_LOGIC_VECTOR(5 DOWNTO 0);
 signal displaySignal0, displaySignal1, displaySignal2, displaySignal3, displaySignal4, displaySignal5 : STD_LOGIC_VECTOR(3 DOWNTO 0);
 signal progCount : std_logic_vector(addrWidth-1 downto 0);
@@ -50,7 +52,12 @@ alias habEscritaBarramento: std_logic is pontosControle(ptsCtrlWidth-8);
   
   
 begin
-ULA: entity work.ULA port map (entradaA => ULAentradaA, entradaB => ULAentradaB, saida => ULA_MUXULAImed, seletor => ULAop);
+ULA: entity work.ULA port map (entradaA => ULAentradaA, 
+											entradaB => ULAentradaB, 
+											saida => ULA_MUXULAImed, 
+											seletor => ULAop,
+											flagZero => flagZeroSignal
+											);
 MUX_proxPC: entity work.muxGenerico2x1 generic map (larguraDados => addrWidth)
             port map (entradaA_MUX => Incr_MUX_ProxPC,
 				entradaB_MUX => imediatoEndereco,
@@ -83,7 +90,7 @@ Banco_Registradores: entity work.bancoRegistradoresArqRegMem   generic map (larg
 				
 ULAentradaB <= MUXRAMImediato_MUXULAImediato;
 UC:  entity work.Unidade_Controle
-        port map (palavraControle => pontosControle, opCode => opCodeLocal, clk =>  CLOCK_50);
+        port map (palavraControle => pontosControle, opCode => opCodeLocal, clk =>  CLOCK_50, flagZero =>flagZeroSignal);
 
 writeRam <=  habEscritaBarramento;
 readRam  <=  habLeituraBarramento;
