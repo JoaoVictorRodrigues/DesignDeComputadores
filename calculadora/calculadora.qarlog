@@ -1,0 +1,36 @@
+Quartus Prime Archive log --	C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.qarlog
+
+Archive:	C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.qar
+Date:		Sun May 02 23:45:46 2021
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Calculadora.qsf
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Calculadora.sdc
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Processador_Calculadora.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/ULA.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Unidade_Controle.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/Waveform.vwf
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/assignment_defaults.qdf
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/bancoRegistradoresArqRegMem.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.qpf
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/calculadora.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/constantesProcessador.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/conversorHex7Seg.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/decodificadorEnderecos.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/display0_1.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/display2_3.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/display4.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/display5.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/interfaceBOTOES.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/interfaceCHAVES.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/interfaceLEDs.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/memoriaRAM.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/memoriaROM.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/muxGenerico2x1.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/registradorGenerico.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/calculadora/somaConstante.vhd
+	======= Total: 25 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
