@@ -1,12 +1,8 @@
-# do Aula_Enderecamento.do
+# do calculadora.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-<<<<<<< HEAD
-# Start time: 17:27:48 on May 02,2021
-=======
-# Start time: 18:31:49 on May 02,2021
->>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
-# vcom -work work Aula_Enderecamento.vho 
+# Start time: 21:55:57 on May 02,2021
+# vcom -work work Calculadora.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -19,35 +15,20 @@
 # -- Loading package cyclonev_components
 # -- Compiling entity calculadora
 # -- Compiling architecture structure of calculadora
-<<<<<<< HEAD
-# End time: 17:27:49 on May 02,2021, Elapsed time: 0:00:01
+# End time: 21:55:57 on May 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:27:49 on May 02,2021
-# vcom -work work Waveform1.vwf.vht 
-=======
-# End time: 18:31:49 on May 02,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:31:49 on May 02,2021
+# Start time: 21:55:57 on May 02,2021
 # vcom -work work Waveform.vwf.vht 
->>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity calculadora_vhd_vec_tst
 # -- Compiling architecture calculadora_arch of calculadora_vhd_vec_tst
-<<<<<<< HEAD
-# End time: 17:27:49 on May 02,2021, Elapsed time: 0:00:00
+# End time: 21:55:58 on May 02,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.calculadora_vhd_vec_tst 
-# Start time: 17:27:49 on May 02,2021
-=======
-# End time: 18:31:49 on May 02,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.calculadora_vhd_vec_tst 
-# Start time: 18:31:49 on May 02,2021
->>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
+# Start time: 21:55:58 on May 02,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -65,15 +46,8 @@
 # Loading cyclonev.cyclonev_io_ibuf(arch)
 # Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-<<<<<<< HEAD
-# ** Warning: Design size of 32286 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 17815 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#34
-# End time: 17:27:50 on May 02,2021, Elapsed time: 0:00:01
-=======
-# ** Warning: Design size of 17861 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
-# Expect performance to be adversely affected.
-# after#34
-# End time: 18:31:50 on May 02,2021, Elapsed time: 0:00:01
->>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
+# End time: 21:55:59 on May 02,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
