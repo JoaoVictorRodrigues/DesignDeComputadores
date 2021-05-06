@@ -1,32 +1,36 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;   -- Biblioteca IEEE para funções aritméticas
+use work.constantesProcessador.all;
 
 entity ULA is
-    generic
-    (
-        larguraDados : natural := 8
-    );
     port
     (
-        entradaA, entradaB: 	in STD_LOGIC_VECTOR((larguraDados-1) downto 0);
+        entradaA, entradaB: 	in STD_LOGIC_VECTOR((dataWidth-1) downto 0);
 		  seletor: 					in STD_LOGIC_VECTOR(2 downto 0);
-        saida:  					out STD_LOGIC_VECTOR((larguraDados-1) downto 0);
+        saida:  					out STD_LOGIC_VECTOR((dataWidth-1) downto 0);
+		  --overflow:             out std_logic;
+		  flagCarryOut:			out std_logic;
 		  flagZero:					out std_logic
     );
 end entity;
 
 architecture comportamento of ULA is
-	constant zero : std_logic_vector(larguraDados-1 downto 0) := (others => '0');
+	constant zero : std_logic_vector(dataWidth-1 downto 0) := (others => '0');
 
-	 signal soma : STD_LOGIC_VECTOR((larguraDados-1) downto 0);
- 	 signal subtracao : STD_LOGIC_VECTOR((larguraDados-1) downto 0);
-	 signal op_and : STD_LOGIC_VECTOR((larguraDados-1) downto 0);
-	 signal op_or: STD_LOGIC_VECTOR((larguraDados-1) downto 0);
-	 signal op_xor: STD_LOGIC_VECTOR((larguraDados-1) downto 0);
-	 signal op_not: STD_LOGIC_VECTOR((larguraDados-1) downto 0);
+	 signal soma : STD_LOGIC_VECTOR((dataWidth-1) downto 0);
+ 	 signal subtracao : STD_LOGIC_VECTOR((dataWidth-1) downto 0);
+	 signal op_and : STD_LOGIC_VECTOR((dataWidth-1) downto 0);
+	 signal op_or: STD_LOGIC_VECTOR((dataWidth-1) downto 0);
+	 signal op_xor: STD_LOGIC_VECTOR((dataWidth-1) downto 0);
+	 signal op_not: STD_LOGIC_VECTOR((dataWidth-1) downto 0);
+	 
+	 alias A_7: std_logic is entradaA(7);
+	 alias B_7: std_logic is entradaB(7);
+	 
 	 
     begin
+	   
 		soma 		<= STD_LOGIC_VECTOR(unsigned(entradaA) + unsigned(entradaB));
 		subtracao <= STD_LOGIC_VECTOR(unsigned(entradaA) - unsigned(entradaB));
 		op_and		<= entradaA and entradaB;
@@ -36,16 +40,19 @@ architecture comportamento of ULA is
 
 
 		saida <= soma when (seletor = "000") else
-			 subtracao when (seletor = "001") else
-			 entradaA when  (seletor = "010") else
-			 entradaB when  (seletor = "011") else
-			 op_xor when    (seletor = "100") else
-			 op_not when    (seletor = "101") else
-			 op_and when    (seletor = "110") else
-			 op_or when     (seletor = "111") else
-			 entradaA;      -- outra opcao: saida = entradaA
+			 	subtracao when (seletor = "001") else
+				op_and when    (seletor = "010") else
+			 	op_or  when    (seletor = "011") else
+				op_xor when    (seletor = "100") else
+			 	op_not when    (seletor = "101") else
+				entradaA when  (seletor = "110") else
+			   entradaB when  (seletor = "111") else
+			 	entradaB;      -- outra opcao: saida = entradaA
 	  
 	  
 		flagZero <= '1' when unsigned(saida) = unsigned(zero) else '0';
+		flagCarryOut <= '1' when (A_7 and B_7) = '1' else '0';
+		
+		--flagCarry <= not (A_7 and B_7);
 	  
 end architecture;

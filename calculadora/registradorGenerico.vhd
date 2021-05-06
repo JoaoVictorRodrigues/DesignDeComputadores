@@ -1,8 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- MODIFICAR PARA 4 REGISTRADORES
-
 entity registradorGenerico is
     generic (
         larguraDados : natural := 8

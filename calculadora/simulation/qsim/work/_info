@@ -1,0 +1,170 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/simulation/qsim
+Ecalculadora
+<<<<<<< HEAD
+Z1 w1619987266
+Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
+Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
+Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
+Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z6 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
+Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
+!i122 32
+R0
+=======
+Z0 w1619991107
+Z1 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
+Z2 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
+Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z9 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
+!i122 76
+Z10 dC:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/Aula_Enderecamento_v2021s1 (1)_restored/simulation/qsim
+>>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
+Z11 8Aula_Enderecamento.vho
+Z12 FAula_Enderecamento.vho
+l0
+L39 1
+VUbb9Y1d=B@<K]>9gdAj;?3
+!s100 L7n_@ER2`><gPO53ol8<=3
+Z13 OV;C;2020.1;71
+32
+<<<<<<< HEAD
+Z14 !s110 1619987268
+!i10b 1
+Z15 !s108 1619987268.000000
+=======
+Z14 !s110 1619991109
+!i10b 1
+Z15 !s108 1619991109.000000
+>>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
+Z16 !s90 -work|work|Aula_Enderecamento.vho|
+Z17 !s107 Aula_Enderecamento.vho|
+!i113 1
+Z18 o-work work
+Z19 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+<<<<<<< HEAD
+R10
+DEx4 work 11 calculadora 0 22 Ubb9Y1d=B@<K]>9gdAj;?3
+!i122 32
+l339
+L55 3591
+VIK71MkZPZ>4lUV:3lM]d72
+!s100 lZ[<fK3l3FFdBRaK@HU>L1
+=======
+DEx4 work 11 calculadora 0 22 Ubb9Y1d=B@<K]>9gdAj;?3
+!i122 76
+l217
+L55 2125
+VbnNgPDjY^L=Z1T[]jm?Ff3
+!s100 JiTaDGTQeMUB=TU8`RS[Q2
+>>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
+R13
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R18
+R19
+Ecalculadora_vhd_vec_tst
+<<<<<<< HEAD
+Z20 w1619987264
+R8
+R9
+!i122 33
+R0
+Z21 8Waveform1.vwf.vht
+Z22 FWaveform1.vwf.vht
+=======
+Z20 w1619991106
+R7
+R8
+!i122 77
+R10
+Z21 8Waveform.vwf.vht
+Z22 FWaveform.vwf.vht
+>>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
+l0
+L32 1
+VkW24?z3O]Yk:Q9:X@A[lA3
+!s100 CZd?BkA=G6K3?0I3PAik73
+R13
+32
+Z23 !s110 1619987269
+!i10b 1
+<<<<<<< HEAD
+Z24 !s108 1619987269.000000
+Z25 !s90 -work|work|Waveform1.vwf.vht|
+Z26 !s107 Waveform1.vwf.vht|
+=======
+R15
+Z23 !s90 -work|work|Waveform.vwf.vht|
+Z24 !s107 Waveform.vwf.vht|
+>>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
+!i113 1
+R18
+R19
+Acalculadora_arch
+R8
+<<<<<<< HEAD
+R9
+Z27 DEx4 work 23 calculadora_vhd_vec_tst 0 22 kW24?z3O]Yk:Q9:X@A[lA3
+!i122 33
+l63
+Z28 L34 142
+Z29 V@HTm6@o;a4KEXDMkzbGgT2
+Z30 !s100 iINh5e?jAGbAhO^e@N?Bz1
+R13
+32
+=======
+Z25 DEx4 work 23 calculadora_vhd_vec_tst 0 22 kW24?z3O]Yk:Q9:X@A[lA3
+!i122 77
+l63
+Z26 L34 186
+Z27 VEgLR][=QRjR73K6;_X3=D1
+Z28 !s100 _`:BEz?97k0MKYJUV^kY30
+R13
+32
+R14
+!i10b 1
+R15
+>>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
+R23
+!i10b 1
+R24
+<<<<<<< HEAD
+R25
+R26
+=======
+>>>>>>> 9b878947d680cd8d2ed93e8ae19d24164df842b0
+!i113 1
+R18
+R19
