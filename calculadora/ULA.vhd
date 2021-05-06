@@ -10,7 +10,7 @@ entity ULA is
 		  seletor: 					in STD_LOGIC_VECTOR(2 downto 0);
         saida:  					out STD_LOGIC_VECTOR((dataWidth-1) downto 0);
 		  --overflow:             out std_logic;
-		  --flagCarry:				out std_logic;
+		  flagCarryOut:			out std_logic;
 		  flagZero:					out std_logic
     );
 end entity;
@@ -25,8 +25,8 @@ architecture comportamento of ULA is
 	 signal op_xor: STD_LOGIC_VECTOR((dataWidth-1) downto 0);
 	 signal op_not: STD_LOGIC_VECTOR((dataWidth-1) downto 0);
 	 
-	 --alias A_7: std_logic is entradaA(7);
-	 --alias B_7: std_logic is entradaB(7);
+	 alias A_7: std_logic is entradaA(7);
+	 alias B_7: std_logic is entradaB(7);
 	 
 	 
     begin
@@ -51,6 +51,7 @@ architecture comportamento of ULA is
 	  
 	  
 		flagZero <= '1' when unsigned(saida) = unsigned(zero) else '0';
+		flagCarryOut <= '1' when (A_7 and B_7) = '1' else '0';
 		
 		--flagCarry <= not (A_7 and B_7);
 	  
