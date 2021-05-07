@@ -1,0 +1,269 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "dataOUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[9]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[10]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[11]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[12]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[13]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[14]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[15]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[16]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[17]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[18]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[19]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[20]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[21]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[22]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[23]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[24]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[25]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[26]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[27]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[28]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[29]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[30]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOUT[31]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[7]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[8]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[9]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[10]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[11]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[12]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[13]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[14]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[15]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[16]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[17]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[18]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[19]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[20]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[21]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[22]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[23]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[24]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[25]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[26]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[27]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[28]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[29]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[30]",
+					"strict" : false
+				},
+				{
+					"name" : "countPC[31]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
