@@ -1,0 +1,24 @@
+Quartus Prime Archive log --	C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS1.qarlog
+
+Archive:	C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS1.qar
+Date:		Thu May 06 23:59:37 2021
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/BancoRegMIPS.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.qpf
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.qsf
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/RAMMIPS.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/ROM.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/RegistradorGenerico.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/ULA.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/Unidade_Controle.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/Waveform.vwf
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/initROM.mif
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/somadorGenerico.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 13 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

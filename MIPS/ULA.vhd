@@ -10,7 +10,7 @@ entity ULA is
     port
     (
       entradaA, entradaB:  in STD_LOGIC_VECTOR((larguraDados-1) downto 0);
-      seletor:  in STD_LOGIC_VECTOR(2 downto 0);
+      seletor:  in STD_LOGIC_VECTOR(3 downto 0);
       saida:    out STD_LOGIC_VECTOR((larguraDados-1) downto 0);
       flagZero: out std_logic
     );
@@ -34,14 +34,14 @@ architecture comportamento of ULA is
       op_xor    <= entradaA xor entradaB;
       op_not    <= not entradaA;
 
-      saida <= soma when (seletor = "000") else
-          subtracao when (seletor = "001") else
-          entradaA when  (seletor = "010") else
-          entradaB when  (seletor = "011") else
-          op_xor when    (seletor = "100") else
-          op_not when    (seletor = "101") else
-          op_and when    (seletor = "110") else
-          op_or when     (seletor = "111") else
+      saida <= soma when (seletor = "0000") else
+          subtracao when (seletor = "0001") else
+          entradaA when  (seletor = "0010") else
+          entradaB when  (seletor = "0011") else
+          op_xor when    (seletor = "0100") else
+          op_not when    (seletor = "0101") else
+          op_and when    (seletor = "0110") else
+          op_or when     (seletor = "0111") else
           entradaA;      -- outra opcao: saida = entradaA
 
       flagZero <= '1' when unsigned(saida) = unsigned(zero) else '0';
