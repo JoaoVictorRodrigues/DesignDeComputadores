@@ -132,14 +132,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "countPC[0]",
-					"strict" : false
-				},
-				{
-					"name" : "countPC[1]",
-					"strict" : false
-				},
-				{
 					"name" : "countPC[2]",
 					"strict" : false
 				},
