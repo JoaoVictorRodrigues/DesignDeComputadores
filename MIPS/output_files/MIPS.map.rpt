@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS
-Tue May 11 20:02:49 2021
+Thu May 13 17:55:36 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -15,28 +15,27 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
   9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |MIPS
- 12. Parameter Settings for User Entity Instance: ROMMIPS:rom
- 13. Parameter Settings for User Entity Instance: ULA:ULA
- 14. Parameter Settings for User Entity Instance: muxGenerico2x1:muxRdRt
- 15. Parameter Settings for User Entity Instance: bancoReg:bRegistradores
- 16. Parameter Settings for User Entity Instance: muxGenerico2x1:muxRtImedULA
- 17. Parameter Settings for User Entity Instance: registradorGenerico:PC
- 18. Parameter Settings for User Entity Instance: somaConstante:somador
- 19. Parameter Settings for User Entity Instance: estendeSinalGenerico:estendeSinal
- 20. Parameter Settings for User Entity Instance: somadorGenerico:shift2
- 21. Parameter Settings for User Entity Instance: muxGenerico2x1:muxBeq
- 22. Parameter Settings for User Entity Instance: Unidade_Controle:UC
- 23. Parameter Settings for User Entity Instance: RAMMIPS:RAM
- 24. Parameter Settings for User Entity Instance: muxGenerico2x1:muxUlaMemoria
- 25. Port Connectivity Checks: "RAMMIPS:RAM"
- 26. Port Connectivity Checks: "Unidade_Controle:UC"
- 27. Port Connectivity Checks: "somadorGenerico:shift2"
- 28. Port Connectivity Checks: "registradorGenerico:PC"
- 29. Post-Synthesis Netlist Statistics for Top Partition
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |MIPS
+ 11. Parameter Settings for User Entity Instance: ROMMIPS:rom
+ 12. Parameter Settings for User Entity Instance: ULA:ULA
+ 13. Parameter Settings for User Entity Instance: muxGenerico2x1:muxRdRt
+ 14. Parameter Settings for User Entity Instance: bancoReg:bRegistradores
+ 15. Parameter Settings for User Entity Instance: muxGenerico2x1:muxRtImedULA
+ 16. Parameter Settings for User Entity Instance: registradorGenerico:PC
+ 17. Parameter Settings for User Entity Instance: somaConstante:somador
+ 18. Parameter Settings for User Entity Instance: estendeSinalGenerico:estendeSinal
+ 19. Parameter Settings for User Entity Instance: somadorGenerico:shift2
+ 20. Parameter Settings for User Entity Instance: muxGenerico2x1:muxBeq
+ 21. Parameter Settings for User Entity Instance: Unidade_Controle:UC
+ 22. Parameter Settings for User Entity Instance: RAMMIPS:RAM
+ 23. Parameter Settings for User Entity Instance: muxGenerico2x1:muxUlaMemoria
+ 24. Port Connectivity Checks: "RAMMIPS:RAM"
+ 25. Port Connectivity Checks: "Unidade_Controle:UC"
+ 26. Port Connectivity Checks: "somadorGenerico:shift2"
+ 27. Port Connectivity Checks: "registradorGenerico:PC"
+ 28. Post-Synthesis Netlist Statistics for Top Partition
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
 
 
 
@@ -63,14 +62,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 11 20:02:49 2021       ;
+; Analysis & Synthesis Status     ; Successful - Thu May 13 17:55:35 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; MIPS                                        ;
 ; Top-level Entity Name           ; MIPS                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 156                                         ;
-; Total pins                      ; 65                                          ;
+; Total registers                 ; 126                                         ;
+; Total pins                      ; 129                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -189,65 +188,67 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                             ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+---------+
-; MIPS.vhd                         ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.vhd                 ;         ;
-; ULA.vhd                          ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/ULA.vhd                  ;         ;
-; ROM.vhd                          ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/ROM.vhd                  ;         ;
-; BancoRegMIPS.vhd                 ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/BancoRegMIPS.vhd         ;         ;
-; RegistradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/RegistradorGenerico.vhd  ;         ;
-; somadorGenerico.vhd              ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/somadorGenerico.vhd      ;         ;
-; Unidade_Controle.vhd             ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/Unidade_Controle.vhd     ;         ;
-; RAMMIPS.vhd                      ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/RAMMIPS.vhd              ;         ;
-; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/muxGenerico2x1.vhd       ;         ;
-; estendeSinalGenerico.vhd         ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/estendeSinalGenerico.vhd ;         ;
-; somaConstante.vhd                ; yes             ; User VHDL File  ; C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/somaConstante.vhd        ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                  ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
+; MIPS.vhd                         ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd                 ;         ;
+; ULA.vhd                          ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/ULA.vhd                  ;         ;
+; ROM.vhd                          ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/ROM.vhd                  ;         ;
+; BancoRegMIPS.vhd                 ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/BancoRegMIPS.vhd         ;         ;
+; RegistradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/RegistradorGenerico.vhd  ;         ;
+; somadorGenerico.vhd              ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/somadorGenerico.vhd      ;         ;
+; Unidade_Controle.vhd             ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/Unidade_Controle.vhd     ;         ;
+; RAMMIPS.vhd                      ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/RAMMIPS.vhd              ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/muxGenerico2x1.vhd       ;         ;
+; estendeSinalGenerico.vhd         ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/estendeSinalGenerico.vhd ;         ;
+; somaConstante.vhd                ; yes             ; User VHDL File  ; C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/somaConstante.vhd        ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                        ;
-+---------------------------------------------+----------------------+
-; Resource                                    ; Usage                ;
-+---------------------------------------------+----------------------+
-; Estimate of Logic utilization (ALMs needed) ; 183                  ;
-;                                             ;                      ;
-; Combinational ALUT usage for logic          ; 240                  ;
-;     -- 7 input functions                    ; 0                    ;
-;     -- 6 input functions                    ; 66                   ;
-;     -- 5 input functions                    ; 65                   ;
-;     -- 4 input functions                    ; 34                   ;
-;     -- <=3 input functions                  ; 75                   ;
-;                                             ;                      ;
-; Dedicated logic registers                   ; 156                  ;
-;                                             ;                      ;
-; I/O pins                                    ; 65                   ;
-;                                             ;                      ;
-; Total DSP Blocks                            ; 0                    ;
-;                                             ;                      ;
-; Maximum fan-out node                        ; ROMMIPS:rom|memROM~1 ;
-; Maximum fan-out                             ; 226                  ;
-; Total fan-out                               ; 1818                 ;
-; Average fan-out                             ; 3.46                 ;
-+---------------------------------------------+----------------------+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                     ;
++---------------------------------------------+-----------------------------------+
+; Resource                                    ; Usage                             ;
++---------------------------------------------+-----------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 155                               ;
+;                                             ;                                   ;
+; Combinational ALUT usage for logic          ; 245                               ;
+;     -- 7 input functions                    ; 0                                 ;
+;     -- 6 input functions                    ; 8                                 ;
+;     -- 5 input functions                    ; 67                                ;
+;     -- 4 input functions                    ; 23                                ;
+;     -- <=3 input functions                  ; 147                               ;
+;                                             ;                                   ;
+; Dedicated logic registers                   ; 126                               ;
+;                                             ;                                   ;
+; I/O pins                                    ; 129                               ;
+;                                             ;                                   ;
+; Total DSP Blocks                            ; 0                                 ;
+;                                             ;                                   ;
+; Maximum fan-out node                        ; Unidade_Controle:UC|controleULA~0 ;
+; Maximum fan-out                             ; 128                               ;
+; Total fan-out                               ; 1718                              ;
+; Average fan-out                             ; 2.73                              ;
++---------------------------------------------+-----------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                        ;
-+------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Entity Name         ; Library Name ;
-+------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+---------------------+--------------+
-; |MIPS                        ; 240 (0)             ; 156 (0)                   ; 0                 ; 0          ; 65   ; 0            ; |MIPS                         ; MIPS                ; work         ;
-;    |ROMMIPS:rom|             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS|ROMMIPS:rom             ; ROMMIPS             ; work         ;
-;    |ULA:ULA|                 ; 103 (103)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS|ULA:ULA                 ; ULA                 ; work         ;
-;    |Unidade_Controle:UC|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS|Unidade_Controle:UC     ; Unidade_Controle    ; work         ;
-;    |bancoReg:bRegistradores| ; 99 (99)             ; 126 (126)                 ; 0                 ; 0          ; 0    ; 0            ; |MIPS|bancoReg:bRegistradores ; bancoReg            ; work         ;
-;    |registradorGenerico:PC|  ; 0 (0)               ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |MIPS|registradorGenerico:PC  ; registradorGenerico ; work         ;
-;    |somaConstante:somador|   ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS|somaConstante:somador   ; somaConstante       ; work         ;
-+------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+---------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                  ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name         ; Library Name ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+---------------------+--------------+
+; |MIPS                             ; 245 (0)             ; 126 (0)                   ; 0                 ; 0          ; 129  ; 0            ; |MIPS                              ; MIPS                ; work         ;
+;    |ROMMIPS:rom|                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS|ROMMIPS:rom                  ; ROMMIPS             ; work         ;
+;    |ULA:ULA|                      ; 66 (66)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS|ULA:ULA                      ; ULA                 ; work         ;
+;    |Unidade_Controle:UC|          ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS|Unidade_Controle:UC          ; Unidade_Controle    ; work         ;
+;    |bancoReg:bRegistradores|      ; 97 (97)             ; 96 (96)                   ; 0                 ; 0          ; 0    ; 0            ; |MIPS|bancoReg:bRegistradores      ; bancoReg            ; work         ;
+;    |muxGenerico2x1:muxRtImedULA|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS|muxGenerico2x1:muxRtImedULA  ; muxGenerico2x1      ; work         ;
+;    |muxGenerico2x1:muxUlaMemoria| ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS|muxGenerico2x1:muxUlaMemoria ; muxGenerico2x1      ; work         ;
+;    |registradorGenerico:PC|       ; 0 (0)               ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |MIPS|registradorGenerico:PC       ; registradorGenerico ; work         ;
+;    |somaConstante:somador|        ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS|somaConstante:somador        ; somaConstante       ; work         ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -258,38 +259,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------+---------------------------------------------+
 ; registradorGenerico:PC|DOUT[0]           ; Merged with registradorGenerico:PC|DOUT[1]  ;
 ; registradorGenerico:PC|DOUT[1]           ; Stuck at GND due to stuck port clock_enable ;
-; bancoReg:bRegistradores|registrador~134  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~135  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~136  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~137  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~138  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~139  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~140  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~141  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~142  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~143  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~144  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~145  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~146  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~147  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~148  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~149  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~150  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~151  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~152  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~153  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~154  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~155  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~156  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~157  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~158  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~159  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~160  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~161  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~162  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~163  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~164  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~165  ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~166  ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~167  ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~168  ; Lost fanout                                 ;
@@ -418,6 +387,102 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; bancoReg:bRegistradores|registrador~291  ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~292  ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~293  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~294  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~295  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~296  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~297  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~298  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~299  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~300  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~301  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~302  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~303  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~304  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~305  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~306  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~307  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~308  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~309  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~310  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~311  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~312  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~313  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~314  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~315  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~316  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~317  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~318  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~319  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~320  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~321  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~322  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~323  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~324  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~325  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~326  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~327  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~328  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~329  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~330  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~331  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~332  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~333  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~334  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~335  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~336  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~337  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~338  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~339  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~340  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~341  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~342  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~343  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~344  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~345  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~346  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~347  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~348  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~349  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~350  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~351  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~352  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~353  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~354  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~355  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~356  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~357  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~358  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~359  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~360  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~361  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~362  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~363  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~364  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~365  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~366  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~367  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~368  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~369  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~370  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~371  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~372  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~373  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~374  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~375  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~376  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~377  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~378  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~379  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~380  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~381  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~382  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~383  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~384  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~385  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~386  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~387  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~388  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~389  ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~390  ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~391  ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~392  ; Lost fanout                                 ;
@@ -578,6 +643,102 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; bancoReg:bRegistradores|registrador~547  ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~548  ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~549  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~550  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~551  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~552  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~553  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~554  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~555  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~556  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~557  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~558  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~559  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~560  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~561  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~562  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~563  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~564  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~565  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~566  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~567  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~568  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~569  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~570  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~571  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~572  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~573  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~574  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~575  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~576  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~577  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~578  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~579  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~580  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~581  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~582  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~583  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~584  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~585  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~586  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~587  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~588  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~589  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~590  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~591  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~592  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~593  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~594  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~595  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~596  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~597  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~598  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~599  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~600  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~601  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~602  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~603  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~604  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~605  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~606  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~607  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~608  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~609  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~610  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~611  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~612  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~613  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~614  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~615  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~616  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~617  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~618  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~619  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~620  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~621  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~622  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~623  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~624  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~625  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~626  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~627  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~628  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~629  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~630  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~631  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~632  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~633  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~634  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~635  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~636  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~637  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~638  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~639  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~640  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~641  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~642  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~643  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~644  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~645  ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~646  ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~647  ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~648  ; Lost fanout                                 ;
@@ -738,6 +899,102 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; bancoReg:bRegistradores|registrador~803  ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~804  ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~805  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~806  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~807  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~808  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~809  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~810  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~811  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~812  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~813  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~814  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~815  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~816  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~817  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~818  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~819  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~820  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~821  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~822  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~823  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~824  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~825  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~826  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~827  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~828  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~829  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~830  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~831  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~832  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~833  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~834  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~835  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~836  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~837  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~838  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~839  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~840  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~841  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~842  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~843  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~844  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~845  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~846  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~847  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~848  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~849  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~850  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~851  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~852  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~853  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~854  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~855  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~856  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~857  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~858  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~859  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~860  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~861  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~862  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~863  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~864  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~865  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~866  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~867  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~868  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~869  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~870  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~871  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~872  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~873  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~874  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~875  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~876  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~877  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~878  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~879  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~880  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~881  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~882  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~883  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~884  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~885  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~886  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~887  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~888  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~889  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~890  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~891  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~892  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~893  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~894  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~895  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~896  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~897  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~898  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~899  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~900  ; Lost fanout                                 ;
+; bancoReg:bRegistradores|registrador~901  ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~902  ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~903  ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~904  ; Lost fanout                                 ;
@@ -898,265 +1155,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; bancoReg:bRegistradores|registrador~1059 ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~1060 ; Lost fanout                                 ;
 ; bancoReg:bRegistradores|registrador~1061 ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~70   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~326  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~550  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~582  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~806  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~838  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~614  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~870  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~551  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~615  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~807  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~871  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~552  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~616  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~808  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~872  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~553  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~617  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~809  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~873  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~554  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~618  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~810  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~874  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~555  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~619  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~811  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~875  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~556  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~620  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~812  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~876  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~557  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~621  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~813  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~877  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~558  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~622  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~814  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~878  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~559  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~623  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~815  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~879  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~560  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~624  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~816  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~880  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~561  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~625  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~817  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~881  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~562  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~626  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~818  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~882  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~563  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~627  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~819  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~883  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~564  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~628  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~820  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~884  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~565  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~629  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~821  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~885  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~566  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~630  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~822  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~886  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~567  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~631  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~823  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~887  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~568  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~632  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~824  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~888  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~569  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~633  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~825  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~889  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~570  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~634  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~826  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~890  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~571  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~635  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~827  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~891  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~572  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~636  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~828  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~892  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~573  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~637  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~829  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~893  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~574  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~638  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~830  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~894  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~575  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~639  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~831  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~895  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~576  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~640  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~832  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~896  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~577  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~641  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~833  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~897  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~578  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~642  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~834  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~898  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~579  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~643  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~835  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~899  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~580  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~644  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~836  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~900  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~581  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~645  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~837  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~901  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~71   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~327  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~583  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~839  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~72   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~328  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~584  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~840  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~73   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~329  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~585  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~841  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~74   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~330  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~586  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~842  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~75   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~331  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~587  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~843  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~76   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~332  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~588  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~844  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~77   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~333  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~589  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~845  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~78   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~334  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~590  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~846  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~79   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~335  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~591  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~847  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~80   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~336  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~592  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~848  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~81   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~337  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~593  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~849  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~82   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~338  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~594  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~850  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~83   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~339  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~595  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~851  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~84   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~340  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~596  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~852  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~85   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~341  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~597  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~853  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~86   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~342  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~598  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~854  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~87   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~343  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~599  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~855  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~88   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~344  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~600  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~856  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~89   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~345  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~601  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~857  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~90   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~346  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~602  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~858  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~91   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~347  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~603  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~859  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~92   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~348  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~604  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~860  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~93   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~349  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~605  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~861  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~94   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~350  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~606  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~862  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~95   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~351  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~607  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~863  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~96   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~352  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~608  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~864  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~97   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~353  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~609  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~865  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~98   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~354  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~610  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~866  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~99   ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~355  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~611  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~867  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~100  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~356  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~612  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~868  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~101  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~357  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~613  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~869  ; Stuck at GND due to stuck port data_in      ;
-; bancoReg:bRegistradores|registrador~102  ; Lost fanout                                 ;
-; bancoReg:bRegistradores|registrador~358  ; Lost fanout                                 ;
-; Total Number of Removed Registers = 900  ;                                             ;
+; bancoReg:bRegistradores|registrador~70   ; Stuck at GND due to stuck port clock_enable ;
+; bancoReg:bRegistradores|registrador~71   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~72   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~73   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~74   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~75   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~76   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~77   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~78   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~79   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~80   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~81   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~82   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~83   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~84   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~85   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~86   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~87   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~88   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~89   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~90   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~91   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~92   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~93   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~94   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~95   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~96   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~97   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~98   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~99   ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~100  ; Stuck at GND due to stuck port clock        ;
+; bancoReg:bRegistradores|registrador~101  ; Stuck at GND due to stuck port clock        ;
+; Total Number of Removed Registers = 930  ;                                             ;
 +------------------------------------------+---------------------------------------------+
 
 
@@ -1165,23 +1196,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 156   ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 94    ;
+; Total registers                              ; 126   ;
+; Number of registers using Synchronous Clear  ; 88    ;
+; Number of registers using Synchronous Load   ; 88    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 126   ;
+; Number of registers using Clock Enable       ; 96    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MIPS|ULA:ULA|saida[0]     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +----------------------------------------------------------------------+
@@ -1380,27 +1402,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 156                         ;
-;     ENA               ; 32                          ;
-;     ENA SLD           ; 94                          ;
+; arriav_ff             ; 126                         ;
+;     ENA               ; 8                           ;
+;     ENA SCLR SLD      ; 88                          ;
 ;     plain             ; 30                          ;
-; arriav_lcell_comb     ; 241                         ;
+; arriav_lcell_comb     ; 246                         ;
 ;     arith             ; 63                          ;
 ;         1 data inputs ; 30                          ;
 ;         4 data inputs ; 1                           ;
 ;         5 data inputs ; 32                          ;
-;     normal            ; 178                         ;
+;     normal            ; 183                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 33                          ;
-;         4 data inputs ; 33                          ;
-;         5 data inputs ; 33                          ;
-;         6 data inputs ; 66                          ;
-; boundary_port         ; 65                          ;
+;         2 data inputs ; 34                          ;
+;         3 data inputs ; 83                          ;
+;         4 data inputs ; 22                          ;
+;         5 data inputs ; 35                          ;
+;         6 data inputs ; 8                           ;
+; boundary_port         ; 129                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.10                        ;
-; Average LUT depth     ; 5.35                        ;
+; Average LUT depth     ; 5.40                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1419,73 +1440,105 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue May 11 20:02:32 2021
+    Info: Processing started: Thu May 13 17:55:18 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file mips.vhd
-    Info (12022): Found design unit 1: MIPS-arch_name File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.vhd Line: 27
-    Info (12023): Found entity 1: MIPS File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.vhd Line: 5
+    Info (12022): Found design unit 1: MIPS-arch_name File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 29
+    Info (12023): Found entity 1: MIPS File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
-    Info (12022): Found design unit 1: ULA-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/ULA.vhd Line: 19
-    Info (12023): Found entity 1: ULA File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/ULA.vhd Line: 5
+    Info (12022): Found design unit 1: ULA-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/ULA.vhd Line: 19
+    Info (12023): Found entity 1: ULA File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/ULA.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
-    Info (12022): Found design unit 1: ROMMIPS-assincrona File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/ROM.vhd Line: 14
-    Info (12023): Found entity 1: ROMMIPS File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/ROM.vhd Line: 5
+    Info (12022): Found design unit 1: ROMMIPS-assincrona File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/ROM.vhd Line: 14
+    Info (12023): Found entity 1: ROMMIPS File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/ROM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file bancoregmips.vhd
-    Info (12022): Found design unit 1: bancoReg-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/BancoRegMIPS.vhd Line: 30
-    Info (12023): Found entity 1: bancoReg File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/BancoRegMIPS.vhd Line: 7
+    Info (12022): Found design unit 1: bancoReg-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/BancoRegMIPS.vhd Line: 30
+    Info (12023): Found entity 1: bancoReg File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/BancoRegMIPS.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/RegistradorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: registradorGenerico File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/RegistradorGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/RegistradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/RegistradorGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file somadorgenerico.vhd
-    Info (12022): Found design unit 1: somadorGenerico-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/somadorGenerico.vhd Line: 17
-    Info (12023): Found entity 1: somadorGenerico File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/somadorGenerico.vhd Line: 5
+    Info (12022): Found design unit 1: somadorGenerico-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/somadorGenerico.vhd Line: 17
+    Info (12023): Found entity 1: somadorGenerico File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/somadorGenerico.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file unidade_controle.vhd
-    Info (12022): Found design unit 1: Unidade_Controle-arch_name File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/Unidade_Controle.vhd Line: 23
-    Info (12023): Found entity 1: Unidade_Controle File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/Unidade_Controle.vhd Line: 5
+    Info (12022): Found design unit 1: Unidade_Controle-arch_name File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/Unidade_Controle.vhd Line: 23
+    Info (12023): Found entity 1: Unidade_Controle File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/Unidade_Controle.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file rammips.vhd
-    Info (12022): Found design unit 1: RAMMIPS-assincrona File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/RAMMIPS.vhd Line: 18
-    Info (12023): Found entity 1: RAMMIPS File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/RAMMIPS.vhd Line: 5
+    Info (12022): Found design unit 1: RAMMIPS-assincrona File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/RAMMIPS.vhd Line: 18
+    Info (12023): Found entity 1: RAMMIPS File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/RAMMIPS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/muxGenerico2x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/muxGenerico2x1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/muxGenerico2x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file estendesinalgenerico.vhd
-    Info (12022): Found design unit 1: estendeSinalGenerico-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/estendeSinalGenerico.vhd Line: 19
-    Info (12023): Found entity 1: estendeSinalGenerico File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/estendeSinalGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: estendeSinalGenerico-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/estendeSinalGenerico.vhd Line: 19
+    Info (12023): Found entity 1: estendeSinalGenerico File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/estendeSinalGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file somaconstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/somaConstante.vhd Line: 18
-    Info (12023): Found entity 1: somaConstante File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/somaConstante.vhd Line: 5
+    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/somaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/somaConstante.vhd Line: 5
 Info (12127): Elaborating entity "MIPS" for the top level hierarchy
-Info (12128): Elaborating entity "ROMMIPS" for hierarchy "ROMMIPS:rom" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.vhd Line: 64
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.vhd Line: 73
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:muxRdRt" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.vhd Line: 84
-Info (12128): Elaborating entity "bancoReg" for hierarchy "bancoReg:bRegistradores" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.vhd Line: 94
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:muxRtImedULA" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.vhd Line: 109
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.vhd Line: 119
-Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somador" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.vhd Line: 130
-Info (12128): Elaborating entity "estendeSinalGenerico" for hierarchy "estendeSinalGenerico:estendeSinal" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.vhd Line: 139
-Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:shift2" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.vhd Line: 148
-Info (12128): Elaborating entity "Unidade_Controle" for hierarchy "Unidade_Controle:UC" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.vhd Line: 167
-Info (12128): Elaborating entity "RAMMIPS" for hierarchy "RAMMIPS:RAM" File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.vhd Line: 176
+Info (12128): Elaborating entity "ROMMIPS" for hierarchy "ROMMIPS:rom" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 66
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 75
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:muxRdRt" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 86
+Info (12128): Elaborating entity "bancoReg" for hierarchy "bancoReg:bRegistradores" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 96
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:muxRtImedULA" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 111
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 121
+Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somador" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 132
+Info (12128): Elaborating entity "estendeSinalGenerico" for hierarchy "estendeSinalGenerico:estendeSinal" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 141
+Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:shift2" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 150
+Info (12128): Elaborating entity "Unidade_Controle" for hierarchy "Unidade_Controle:UC" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 169
+Info (12128): Elaborating entity "RAMMIPS" for hierarchy "RAMMIPS:RAM" File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 178
 Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276007): RAM logic "bancoReg:bRegistradores|registrador" is uninferred due to asynchronous read logic File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/BancoRegMIPS.vhd Line: 54
-    Info (276004): RAM logic "ROMMIPS:rom|memROM" is uninferred due to inappropriate RAM size File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/ROM.vhd Line: 40
+    Info (276007): RAM logic "bancoReg:bRegistradores|registrador" is uninferred due to asynchronous read logic File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/BancoRegMIPS.vhd Line: 54
+    Info (276004): RAM logic "ROMMIPS:rom|memROM" is uninferred due to inappropriate RAM size File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/ROM.vhd Line: 52
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "countPC[0]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.vhd Line: 22
-    Warning (13410): Pin "countPC[1]" is stuck at GND File: C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.vhd Line: 22
+    Warning (13410): Pin "countPC[0]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 22
+    Warning (13410): Pin "countPC[1]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 22
+    Warning (13410): Pin "dataRead[0]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[1]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[2]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[3]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[4]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[5]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[6]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[7]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[8]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[9]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[10]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[11]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[12]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[13]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[14]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[15]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[16]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[17]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[18]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[19]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[20]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[21]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[22]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[23]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[24]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[25]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[26]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[27]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[28]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[29]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[30]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
+    Warning (13410): Pin "dataRead[31]" is stuck at GND File: C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd Line: 23
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 642 registers lost all their fanouts during netlist optimizations.
+Info (17049): 896 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 429 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 462 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 364 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4840 megabytes
-    Info: Processing ended: Tue May 11 20:02:49 2021
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:33
+    Info (21059): Implemented 128 output pins
+    Info (21061): Implemented 333 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
+    Info: Peak virtual memory: 4838 megabytes
+    Info: Processing ended: Thu May 13 17:55:36 2021
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:34
 
 

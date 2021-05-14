@@ -6,7 +6,7 @@ entity ROMMIPS IS
    generic (
           dataWidth: natural := 32;
           addrWidth: natural := 32;
-       memoryAddrWidth:  natural := 6 );   -- 64 posicoes de 32 bits cada
+			 memoryAddrWidth:  natural := 6 );   -- 64 posicoes de 32 bits cada
    port ( Endereco : IN  STD_LOGIC_VECTOR (addrWidth-1 DOWNTO 0);
           Dado     : OUT STD_LOGIC_VECTOR (dataWidth-1 DOWNTO 0) );
 end entity;
@@ -30,10 +30,22 @@ architecture assincrona OF ROMMIPS IS
     -- $t4 (#12) := 0x0D
     -- $t5 (#13) := 0x16
      
-    --    -- Carga para instruções do grupo A e B pipeline:
-    tmp(0) := "000000"&"01001"&"01000"&"01010"&"00000"&"100010"; -- sub $t1 $t0 $t2 (t0(reg8) = 5 e t1(reg9) = 3)
-       tmp(1) := "000000"&"10001"&"10010"&"01000"&"00000"&"100000"; --add $t0, $s1, $s2
-		  tmp(2) := "000000"&"10001"&"10010"&"01000"&"00000"&"100010"; --sub $t0, $s1, $s2
+    -- Carga para instruções do grupo A e B pipeline:
+    --tmp(0) := "000000"&"01001"&"01000"&"01010"&"00000"&"100010"; -- sub $t1 $t0 $t2 (t0(reg8) = 5 e t1(reg9) = 3)
+    --tmp(1) := "000000"&"10001"&"10010"&"01000"&"00000"&"100000"; -- add $t0, $s1, $s2
+	 --tmp(2) := "000000"&"10001"&"10010"&"01000"&"00000"&"100010"; -- sub $t0, $s1, $s2
+	 
+	 
+	 tmp(0) := x"AC010000"; -- sw at 0x00 zero
+	 tmp(1) := x"8C020000"; -- lw v0 0x00 zero
+    tmp(2) := x"00221820"; -- add v1 at v0
+	 tmp(3) := x"00221820"; -- add v1 at v0
+	 tmp(4) := x"00221820"; -- add v1 at v0
+	 tmp(5) := x"AC010000"; -- sw at 0x00 zero
+	 tmp(6) := x"8C020000"; -- lw v0 0x00 zero
+	 tmp(7) := x"AC010000"; -- sw at 0x00 zero
+	 tmp(8) := x"8C020000"; -- lw v0 0x00 zero
+	 
     RETURN tmp;
   END initMemory;
 

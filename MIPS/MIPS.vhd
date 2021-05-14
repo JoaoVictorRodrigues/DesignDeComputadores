@@ -18,8 +18,10 @@ entity MIPS is
     clk     : in  std_logic;
 
     -- Output ports
-    dataOUT :  out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
-	 countPC : out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0)
+    addrOUT :  out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
+	 countPC : out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
+	 dataRead: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
+	 dataWrite: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0)
   );
 end entity;
 
@@ -195,7 +197,9 @@ begin
 		saida_MUX => saidaMuxULARAM
 	 );
 	 
-	 dataOUT <= saidaULA;
+	 addrOUT <= saidaULA;
 	 countPC <= saidaPC;
+	 dataRead <= saidaRAM;
+	 dataWrite <= registerB;
 	 
 end architecture;
