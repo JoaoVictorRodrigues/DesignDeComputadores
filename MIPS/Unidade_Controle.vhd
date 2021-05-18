@@ -15,65 +15,62 @@ entity Unidade_Controle is
 	 flagZero: in std_logic := '0';
 	 
     -- Output ports
-    palavraControle  :  out std_logic_vector(10 downto 0)
+    palavraControle  :  out std_logic_vector(8 downto 0)
   );
 end entity;
 
 
 architecture arch_name of Unidade_Controle is
 
-  alias muxPC4 : std_logic is palavraControle(10);
-  alias muxRtRd : std_logic is palavraControle(9);
-	alias controleEscreveRegC : std_logic is palavraControle(8);
-	alias muxRtImed : std_logic is palavraControle(7);
-	alias controleULA : std_logic_vector(3 downto 0) is palavraControle(6 downto 3);
+  alias muxPC4 : std_logic is palavraControle(8);
+  alias muxRtRd : std_logic is palavraControle(7);
+	alias controleEscreveRegC : std_logic is palavraControle(6);
+	alias muxRtImed : std_logic is palavraControle(5);
+	alias controleULA : std_logic_vector(1 downto 0) is palavraControle(4 downto 3);
 	alias muxUlaMem : std_logic is palavraControle(2);
 	alias BEQ : std_logic is palavraControle(1);
-	-- alias muxHabLeMem : std_logic is palavraControle(1);
 	alias we : std_logic is palavraControle(0);
   
   constant tipo_r : std_logic_vector(5 downto 0) := "000000";
   signal   tipo_i : std_logic;
   constant tipo_j : std_logic_vector(5 downto 0) := "000010";
   
-  
-  constant add : std_logic_vector(5 downto 0) := "100000"; -- 0x20
-  constant sub : std_logic_vector(5 downto 0) := "100010"; -- 0x22
-  constant op_and : std_logic_vector(5 downto 0) := "100100";
-  constant op_or : std_logic_vector(5 downto 0) := "100101";
-  constant op_slt : std_logic_vector(5 downto 0) := "101010";
-  
+  -- Tipo R
+  -- constant add : std_logic_vector(5 downto 0) := "100000"; -- 0x20
+  -- constant sub : std_logic_vector(5 downto 0) := "100010"; -- 0x22
+  -- constant op_and : std_logic_vector(5 downto 0) := "100100";
+  -- constant op_or : std_logic_vector(5 downto 0) := "100101";
+  -- constant op_slt : std_logic_vector(5 downto 0) := "101010";
+  -- Tipo I
   constant load   : std_logic_vector(5 downto 0) := "100011";
-  constant opBEQ  : std_logic_vector(5 downto 0) := "000100";
+  constant op_BEQ  : std_logic_vector(5 downto 0) := "000100";
   constant store  : std_logic_vector(5 downto 0) := "101011";
+
   constant addi   : std_logic_vector(5 downto 0) := "001000";
   constant op_ori : std_logic_vector(5 downto 0) := "001101";
   constant op_andi: std_logic_vector(5 downto 0) := "001100";
   constant op_slti: std_logic_vector(5 downto 0) := "001010";
-  constant jmp		: std_logic_vector(5 downto 0) := "000010";
+  -- constant jmp		: std_logic_vector(5 downto 0) := "000010";
   
 
   begin
   
-  tipo_i <= '1' when opCode = opbeq or opCode = load or 
-					opCode = addi or opCode = op_ori or opCode = op_andi or opCode = op_slti else '0';
+  tipo_i <= '1' when opCode = op_BEQ or opCode = load or 
+					          opCode = addi or opCode = op_ori or 
+                    opCode = op_andi or opCode = op_slti else '0';
   
-  muxPC4 <= '1' when opCode = jmp else '0';
   muxRtImed <= tipo_i;
   muxRtRd <= not tipo_i;
+  muxPC4 <= '1' when opCode = tipo_j else '0';
   muxUlaMem <= '1' when opCode = load else '0';
   we <= '1' when opCode = load else '0';
-  --we <= '0' when opCode = store else '1';
-  -- HabEscMem <= '1' when opCode = store else '0';
-  BEQ <= '1'when opCode = opBEQ else '0';
-  
+  BEQ <= '1'when opCode = op_BEQ else '0';
   controleEscreveRegC <= '1' when opCode = tipo_r or opCode = load else '0';
   
-  controleULA <= "0001" when opCode = tipo_r AND funct = sub else
-					  "0000" when opCode = tipo_r AND funct = add else
-					  "0110" when opCode = tipo_r AND funct = op_and else
-					  "0100" when opCode = tipo_r AND funct = op_or else
-					  "0000" when opCode = tipo_r AND funct = op_slt else
-					  "0111";
+  controleULA <= "00" when opCode = load or opCode = store else 
+                 "01" when opCode = op_BEQ else
+                 "10" when opCode = tipo_r else
+                 "11";
+                 
   
 end architecture;
