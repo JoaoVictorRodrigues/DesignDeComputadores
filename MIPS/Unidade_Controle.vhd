@@ -15,18 +15,18 @@ entity Unidade_Controle is
 	 flagZero: in std_logic := '0';
 	 
     -- Output ports
-    palavraControle  :  out std_logic_vector(10 downto 0)
+    palavraControle  :  out std_logic_vector(9 downto 0)
   );
 end entity;
 
 
 architecture arch_name of Unidade_Controle is
 
-  alias muxPC4 : std_logic is palavraControle(10);
-  alias muxRtRd : std_logic is palavraControle(9);
-	alias controleEscreveRegC : std_logic is palavraControle(8);
-	alias muxRtImed : std_logic is palavraControle(7);
-	alias controleULA : std_logic_vector(3 downto 0) is palavraControle(6 downto 3);
+  alias muxPC4 : std_logic is palavraControle(9);
+  alias muxRtRd : std_logic is palavraControle(8);
+	alias controleEscreveRegC : std_logic is palavraControle(7);
+	alias muxRtImed : std_logic is palavraControle(6);
+	alias controleULA : std_logic_vector(2 downto 0) is palavraControle(5 downto 3);
 	alias muxUlaMem : std_logic is palavraControle(2);
 	alias BEQ : std_logic is palavraControle(1);
 	-- alias muxHabLeMem : std_logic is palavraControle(1);
@@ -69,11 +69,11 @@ architecture arch_name of Unidade_Controle is
   
   controleEscreveRegC <= '1' when opCode = tipo_r or opCode = load else '0';
   
-  controleULA <= "0001" when opCode = tipo_r AND funct = sub else
-					  "0000" when opCode = tipo_r AND funct = add else
-					  "0110" when opCode = tipo_r AND funct = op_and else
-					  "0100" when opCode = tipo_r AND funct = op_or else
-					  "0000" when opCode = tipo_r AND funct = op_slt else
-					  "0111";
+  controleULA <= "001" when opCode = tipo_r AND funct = sub else
+					  "000" when opCode = tipo_r AND funct = add else
+					  "110" when opCode = tipo_r AND funct = op_and else
+					  "100" when opCode = tipo_r AND funct = op_or else
+					  "000" when opCode = tipo_r AND funct = op_slt else
+					  "111";
   
 end architecture;

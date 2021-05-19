@@ -18,7 +18,7 @@ entity MIPS is
     clk     : in  std_logic;
 
     -- Output ports
-    addrOUT :  out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
+   addrOUT :  out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	countPC : out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	dataRead: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	dataWrite: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0)
@@ -33,7 +33,7 @@ architecture arch_name of MIPS is
 	signal saidaULA : std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	signal registerA, registerB : std_logic_vector(DATA_WIDTH_REG-1 downto 0);
 	signal instrucao : std_logic_vector(ADDR_WIDTH_ROM-1 downto 0);
-	signal pontosControle : std_logic_vector(10 downto 0);
+	signal pontosControle : std_logic_vector(9 downto 0);
 	signal imediatoExt : std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	signal saidaShift : std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	signal flagZeroSignal : std_logic;
@@ -49,20 +49,19 @@ architecture arch_name of MIPS is
 	alias OpCode : std_logic_vector(5 downto 0) is instrucao(31 downto 26);
 	alias imediatoPC : std_logic_vector(25 downto 0) is instrucao(25 downto 0);
 	alias enderecoA : std_logic_vector(4 downto 0) is instrucao(25 downto 21);
-   	alias enderecoB : std_logic_vector(4 downto 0) is instrucao(20 downto 16);
+   alias enderecoB : std_logic_vector(4 downto 0) is instrucao(20 downto 16);
 	alias imediato : std_logic_vector(15 downto 0) is instrucao(15 downto 0);
 	alias enderecoC : std_logic_vector(4 downto 0) is instrucao(15 downto 11);
 	alias shamt : std_logic_vector(4 downto 0) is instrucao(10 downto 6);
 	alias funct : std_logic_vector(5 downto 0) is instrucao(5 downto 0);
 	
-	alias muxPC4 : std_logic is pontosControle(10);
-  	alias muxRtRd : std_logic is pontosControle(9);
-	alias controleEscreveRegC : std_logic is pontosControle(8);
-	alias muxRtImed : std_logic is pontosControle(7);
-	alias controleULA : std_logic_vector(3 downto 0) is pontosControle(6 downto 3);
+	alias muxPC4 : std_logic is pontosControle(9);
+  	alias muxRtRd : std_logic is pontosControle(8);
+	alias controleEscreveRegC : std_logic is pontosControle(7);
+	alias muxRtImed : std_logic is pontosControle(6);
+	alias controleULA : std_logic_vector(2 downto 0) is pontosControle(5 downto 3);
 	alias muxUlaMem : std_logic is pontosControle(2);
 	alias BEQ : std_logic is pontosControle(1);
-	-- alias muxHabLeMem : std_logic is palavraControle(1);
 	alias we : std_logic is pontosControle(0);
 	
 
