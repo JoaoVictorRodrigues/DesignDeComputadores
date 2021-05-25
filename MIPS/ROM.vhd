@@ -21,42 +21,25 @@ architecture assincrona OF ROMMIPS IS
   FUNCTION initMemory
     RETURN blocoMemoria IS VARIABLE tmp : blocoMemoria := (OTHERS => (OTHERS => '0'));
   BEGIN
-    -- Valores iniciais no banco de registradores
-    -- $zero (#0) := 0x00
-    -- $t0 (#8)  := 0x00
-    -- $t1 (#9)  := 0x0A
-    -- $t2 (#10) := 0x0B
-    -- $t3 (#11) := 0x0C
-    -- $t4 (#12) := 0x0D
-    -- $t5 (#13) := 0x16
-     
-    -- Carga para instruções do grupo A e B pipeline:
-    -- tmp(0) := "000000"&"01001"&"01000"&"01010"&"00000"&"100010"; -- sub $t1 $t0 $t2 (t0(reg8) = 5 e t1(reg9) = 3)
-    -- tmp(1) := "000000"&"10001"&"10010"&"01000"&"00000"&"100000"; -- add $t0, $s1, $s2
-	  -- tmp(2) := "000000"&"10001"&"10010"&"01000"&"00000"&"100010"; -- sub $t0, $s1, $s2
-	 
-	 
-    -- tmp(0) := x"AC010000"; -- sw at 0x00 zero
-    -- tmp(1) := x"8C020000"; -- lw v0 0x00 zero
-    -- tmp(2) := x"00221820"; -- add v1 at v0
-    -- tmp(3) := x"00221820"; -- add v1 at v0
-    -- tmp(4) := x"00221820"; -- add v1 at v0
-    -- tmp(5) := x"AC010000"; -- sw at 0x00 zero
-    -- tmp(6) := x"8C020000"; -- lw v0 0x00 zero
-    -- tmp(7) := x"AC010000"; -- sw at 0x00 zero
-    -- tmp(8) := x"8C020000"; -- lw v0 0x00 zero
-
-    tmp(0) :=  x"AC090008"; 	--sw $t1 8($zero)     (m(8) := 0x0000000A)
-    tmp(1) :=  x"8C080008"; 	--lw $t0 8($zero)     ($t0  := 0x0000000A)
-    tmp(2) :=  x"012A4022"; 	--sub $t0 $t1 $t2     ($t0  := 0xFFFFFFFF)
-    tmp(3) :=  x"012A4024"; 	--and $t0 $t1 $t2     ($t0  := 0x0000000A)
-    tmp(4) :=  x"012A4025"; 	--or $t0 $t1 $t2      ($t0  := 0x0000000B)
-    tmp(5) :=	 x"012A402A"; 	--slt $t0 $t1 $t2     ($t0  := 0x00000001)
-    tmp(6) :=	 x"010A4020"; 	--add $t0 $t0 $t2     ($t0  := 0x0000000C)
-										--segunda execução:   ($t0 := 0x00000017)
-    tmp(7) :=  x"110BFFFE"; 	--beq $t0 $t3 0xFFFE  (pc := #6)
-										--segunda execução:   (pc := #8)
-    tmp(8) :=  x"08000000"; 	--j 0x000000          (pc := #0)
+          -- Valores iniciais no banco de registradores:
+      -- $t0   (#8) := 0x00
+      -- $t1   (#9) := 0x0A
+      -- $t2  (#10) := 0x0B
+      -- $t3  (#11) := 0x0C
+      -- $t4  (#12) := 0x0D
+      -- $t5  (#13) := 0x16
+	--tmp(0) :=  x"AC090008";
+   tmp(0) :=  x"AC090008"; --sw $t1 8($zero)     (m(8) := 0x0000000A)
+   tmp(1) :=  x"8C080008"; --lw $t0 8($zero)     ($t0  := 0x0000000A)
+   tmp(2) :=  x"012A4022"; --sub $t0 $t1 $t2     ($t0  := 0xFFFFFFFF)
+   tmp(3) :=  x"012A4024"; --and $t0 $t1 $t2     ($t0  := 0x0000000A)
+   tmp(4) :=  x"012A4025"; --or $t0 $t1 $t2      ($t0  := 0x0000000B)
+   tmp(5) :=  x"012A402A"; --slt $t0 $t1 $t2     ($t0  := 0x00000001)
+   tmp(6) :=  x"010A4020"; --add $t0 $t0 $t2     ($t0  := 0x0000000C)
+                       --segunda execução:   ($t0 := 0x00000017)
+   tmp(7) :=  x"110BFFFE"; --beq $t0 $t3 0xFFFE  (pc := #6)
+                       --segunda execução:   (pc := #8)
+   tmp(8):=  x"08000000"; --j 0x000000          (pc := #0)
 
 	 
     RETURN tmp;
