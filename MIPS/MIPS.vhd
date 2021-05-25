@@ -11,6 +11,7 @@ entity MIPS is
 		ADDR_WIDTH_REG : natural := 5;
 		contantePC : natural := 4;
 		OP_WIDTH : natural := 6
+
   );
 
   port   (
@@ -43,7 +44,7 @@ architecture arch_name of MIPS is
 	signal saidaULA : std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	signal registerA, registerB : std_logic_vector(DATA_WIDTH_REG-1 downto 0);
 	signal instrucao : std_logic_vector(ADDR_WIDTH_ROM-1 downto 0);
-	signal pontosControle : std_logic_vector(9 downto 0);
+	signal pontosControle : std_logic_vector(8 downto 0);
 	signal imediatoExt : std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	signal saidaShift : std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	signal flagZeroSignal : std_logic;
@@ -54,7 +55,7 @@ architecture arch_name of MIPS is
 	signal muxRdRtOut : std_logic_vector (ADDR_WIDTH_REG-1 downto 0);
 	signal entradaMuxProxPc : std_logic_vector (DATA_WIDTH_ROM-1 downto 0);
 	signal saidaMuxProxPc : std_logic_vector (DATA_WIDTH_ROM-1 downto 0);
-	
+	signal ulaCtrl : std_logic_vector(2 downto 0);
 	
 	alias OpCode : std_logic_vector(5 downto 0) is instrucao(31 downto 26);
 	alias imediatoPC : std_logic_vector(25 downto 0) is instrucao(25 downto 0);
@@ -65,11 +66,11 @@ architecture arch_name of MIPS is
 	alias shamt : std_logic_vector(4 downto 0) is instrucao(10 downto 6);
 	alias funct : std_logic_vector(5 downto 0) is instrucao(5 downto 0);
 	
-	alias muxPC4 : std_logic is pontosControle(9);
-  	alias muxRtRd : std_logic is pontosControle(8);
-	alias controleEscreveRegC : std_logic is pontosControle(7);
-	alias muxRtImed : std_logic is pontosControle(6);
-	alias controleULA : std_logic_vector(2 downto 0) is pontosControle(5 downto 3);
+	alias muxPC4 : std_logic is pontosControle(8);
+  alias muxRtRd : std_logic is pontosControle(7);
+	alias controleEscreveRegC : std_logic is pontosControle(6);
+	alias muxRtImed : std_logic is pontosControle(5);
+	alias ulaOP : std_logic_vector(1 downto 0) is pontosControle(4 downto 3);
 	alias muxUlaMem : std_logic is pontosControle(2);
 	alias BEQ : std_logic is pontosControle(1);
 	alias we : std_logic is pontosControle(0);
@@ -85,18 +86,23 @@ begin
       Dado => instrucao
     );
 
-    ULA : entity work.ULA generic map (
-      larguraDados => DATA_WIDTH_REG
-    )
-    port map (
-      entradaA => registerA,
-      entradaB => muxRtImedSignal,
-      seletor => controleULA,
-      saida => saidaULA,
-	  flagZero => flagZeroSignal
-    );
+	UC_ULA: entity work.UC_ULA
+		port map ( 
+			ulaOP => ulaOP,
+			funct => funct,
+			ulaCtrl => ulaCtrl
+	);
+
+    ULA : entity work.ULA generic map (larguraDados => DATA_WIDTH_REG)
+		port map (
+		entradaA => registerA,
+		entradaB => muxRtImedSignal,
+		seletor => ulaCtrl,
+		saida => saidaULA,
+		flagZero => flagZeroSignal
+	);
 	 
-	 muxRdRt : entity work.muxGenerico2x1 generic map (
+	muxRdRt : entity work.muxGenerico2x1 generic map (
 		larguraDados => ADDR_WIDTH_REG
 	 )
 	 port map (

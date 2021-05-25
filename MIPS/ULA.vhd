@@ -19,7 +19,6 @@ end entity;
 architecture comportamento of ULA is
 	constant zero : std_logic_vector(larguraDados-1 downto 0) := (others => '0');
 	
-
    signal soma 	  : STD_LOGIC_VECTOR((larguraDados-1) downto 0);
    signal subtracao : STD_LOGIC_VECTOR((larguraDados-1) downto 0);
    signal op_and	  : STD_LOGIC_VECTOR((larguraDados-1) downto 0);
@@ -459,7 +458,6 @@ architecture comportamento of ULA is
 		FlagOverflow <= (entrada30CO xor entrada31CO);
 		
 		signalLess <= (not signalSaida(31)) when (FlagOverflow = '1') else signalSaida(31);
-		
 
       saida <= signalSaida;
 		
