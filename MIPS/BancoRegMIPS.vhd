@@ -35,18 +35,12 @@ architecture comportamento of bancoReg is
 function initMemory
         return memoria_t is variable tmp : memoria_t := (others => (others => '0'));
   begin
-        tmp(1) := x"00000001"; --at
-        tmp(2) := x"00000002"; --v0
-        tmp(3) := x"000000FD"; --v1
-        tmp(4) := 32x"FC";     --a0
-        tmp(5) := x"00000001"; --a1
-        tmp(6) := x"00000002"; --a2
-        tmp(7) := x"00000005"; --a3
-        tmp(8) := x"00000005"; --t1
-        tmp(9) := x"00000003"; --t2
-        tmp(10) := x"00000002"; --t3
-        tmp(11) := x"000000FD"; --t4
-        tmp(12) := 32x"FC";    --t5
+        tmp(8)  := 32x"00";  -- $t0 = 0x00
+        tmp(9)  := 32x"0A";  -- $t1 = 0x0A
+        tmp(10) := 32x"0B";  -- $t2 = 0x0B
+        tmp(11) := 32x"0C";  -- $t3 = 0x0C
+        tmp(12) := 32x"0D";  -- $t4 = 0x0D
+        tmp(13) := 32x"16";  -- $t5 = 0x16
         return tmp;
     end initMemory;
 

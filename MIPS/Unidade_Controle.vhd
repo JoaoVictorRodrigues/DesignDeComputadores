@@ -12,7 +12,6 @@ entity Unidade_Controle is
     -- Input ports
 	 opCode :  in  std_logic_vector(OPC_WIDTH-1 downto 0);
 	 funct  :  in  std_logic_vector(OPC_WIDTH-1 downto 0);
-	 flagZero: in std_logic := '0';
 	 
     -- Output ports
     palavraControle  :  out std_logic_vector(8 downto 0)
@@ -57,13 +56,13 @@ architecture arch_name of Unidade_Controle is
   
   tipo_i <= '1' when opCode = op_BEQ or opCode = load or 
 					          opCode = addi or opCode = op_ori or 
-                    opCode = op_andi or opCode = op_slti else '0';
+                    opCode = op_andi or opCode = op_slti else '0'; -- or opCode = store
   
   muxRtImed <= tipo_i;
   muxRtRd <= not tipo_i;
   muxPC4 <= '1' when opCode = tipo_j else '0';
   muxUlaMem <= '1' when opCode = load else '0';
-  we <= '1' when opCode = load else '0';
+  we <= '1' when opCode = store else '0';
   BEQ <= '1'when opCode = op_BEQ else '0';
   controleEscreveRegC <= '1' when opCode = tipo_r or opCode = load else '0';
   
@@ -71,6 +70,13 @@ architecture arch_name of Unidade_Controle is
                  "01" when opCode = op_BEQ else
                  "10" when opCode = tipo_r else
                  "11";
-                 
+  
+  --controleULA <= "110" when opCode = tipo_r AND funct = sub else
+					 -- "010" when opCode = tipo_r AND funct = add else
+					 -- "000" when opCode = tipo_r AND funct = op_and else
+					 -- "001" when opCode = tipo_r AND funct = op_or else
+					 -- "111" when opCode = tipo_r AND funct = op_slt else
+					 -- "010" when oPcode = load else
+					 -- "000";
   
 end architecture;
