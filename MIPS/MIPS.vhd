@@ -21,7 +21,17 @@ entity MIPS is
    addrOUT :  out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	countPC : out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	dataRead: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
-	dataWrite: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0)
+	dataWrite: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
+	
+	muxPC4alt: out std_logic;
+	muxRtRdalt : out std_logic;
+	controleEscreveRegCalt : out std_logic;
+	muxRtImedalt : out std_logic;
+	controleULAalt : out std_logic_vector(2 downto 0);
+	muxUlaMemalt : out std_logic;
+	BEQalt : out std_logic;
+	wealt : out std_logic
+	
   );
 end entity;
 
@@ -196,7 +206,16 @@ begin
 			seletor_MUX => muxPC4,
 			saida_MUX => saidaMuxProxPc
 		);
-
+	
+	muxPC4alt <= pontosControle(9);
+	muxRtRdalt <= pontosControle(8);
+	controleEscreveRegCalt <= pontosControle(7);
+	muxRtImedalt <= pontosControle(6);
+	controleULAalt <= pontosControle(5 downto 3);
+	muxUlaMemalt <= pontosControle(2);
+	BEQalt <= pontosControle(1);
+	wealt <= pontosControle(0);
+	
 	addrOUT <= saidaULA;
 	countPC <= saidaPC;
 	dataRead <= saidaRAM;

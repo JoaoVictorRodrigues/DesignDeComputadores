@@ -1,5 +1,5 @@
 Archive Project report for MIPS
-Tue May 18 21:32:07 2021
+Thu May 20 17:25:26 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Tue May 18 21:32:07 2021 ;
+; Archive Project Status ; Successful - Thu May 20 17:25:26 2021 ;
 ; Revision Name          ; MIPS                                  ;
 ; Top-level Entity Name  ; MIPS                                  ;
 ; Family                 ; Cyclone V                             ;
@@ -60,9 +60,9 @@ Info: ----------------------------------------------------------
 Info: Generated report 'MIPS.archive.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4819 megabytes
-    Info: Processing ended: Tue May 18 21:32:07 2021
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4818 megabytes
+    Info: Processing ended: Thu May 20 17:25:26 2021
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -132,7 +132,7 @@ architecture comportamento of ULA is
 
     begin
 	 
-		signalCarryIn <= '1' when (seletor = "110") else '0';
+		signalCarryIn <= seletor(2);
 		
       entrada0 : entity work.ULA1Bit
 			port map(
@@ -456,7 +456,7 @@ architecture comportamento of ULA is
 			);
 		
 			
-		FlagOverflow <= not(entrada30CO and entrada31CO);
+		FlagOverflow <= (entrada30CO xor entrada31CO);
 		
 		signalLess <= (not signalSaida(31)) when (FlagOverflow = '1') else signalSaida(31);
 		
