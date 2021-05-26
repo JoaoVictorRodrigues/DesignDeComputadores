@@ -8,7 +8,7 @@ entity ULA1Bit is
       entradaA, entradaB, CarryIn:  in STD_LOGIC;
       seletor : in std_logic_vector (2 downto 0);
 		less:  in STD_LOGIC;
-      saida, CarryOut:    out STD_LOGIC
+      saida, CarryOut, set:    out STD_LOGIC
     );
 end entity;
 
@@ -39,5 +39,7 @@ architecture comportamento of ULA1Bit is
 					op_slt   when (seletor1 = "11") else
 					'1';
 		CarryOut <= op_carryOut;
+		
+		set <= ((entradaA xor inverte) xor CarryIn);
 
 end architecture;
