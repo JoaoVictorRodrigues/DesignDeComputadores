@@ -53,7 +53,7 @@ architecture arch_name of Unidade_Controle is
 
   begin
   
-  tipo_i <= '1' when opCode = op_BEQ or opCode = load or 
+  tipo_i <= '1' when opCode = load or 
 					          opCode = addi or opCode = op_ori or 
                     opCode = op_andi or opCode = op_slti or opCode = store else '0';
   

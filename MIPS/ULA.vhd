@@ -27,6 +27,7 @@ architecture comportamento of ULA is
 	
 	signal signalCarryIn : std_logic;
 	signal signalLess		: std_logic;
+	signal signalSet		: std_logic;
 	
 	signal entrada0CO : STD_logic;
 	signal entrada1CO : STD_logic;
@@ -139,7 +140,7 @@ architecture comportamento of ULA is
 				entradaB =>entradaB0,
 				CarryIn => signalCarryIn,
 				seletor => seletor,
-				less => '1',
+				less => signalLess,
 				saida => signalSaida(0),
 				CarryOut => entrada0CO
 			);
@@ -451,13 +452,14 @@ architecture comportamento of ULA is
 				seletor => seletor,
 				less => '0',
 				saida => signalSaida(31),
+				set => signalSet,
 				CarryOut => entrada31CO
 			);
 		
 			
 		FlagOverflow <= (entrada30CO xor entrada31CO);
 		
-		signalLess <= (signalSaida(31) xor FlagOverflow);
+		signalLess <= (signalSet xor FlagOverflow);
 
       saida <= signalSaida;
 		
