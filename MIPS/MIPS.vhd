@@ -28,7 +28,7 @@ entity MIPS is
 	muxRtRdalt : out std_logic;
 	controleEscreveRegCalt : out std_logic;
 	muxRtImedalt : out std_logic;
-	controleULAalt : out std_logic_vector(2 downto 0);
+	controleULAalt : out std_logic_vector(1 downto 0);
 	muxUlaMemalt : out std_logic;
 	BEQalt : out std_logic;
 	wealt : out std_logic
@@ -213,11 +213,11 @@ begin
 			saida_MUX => saidaMuxProxPc
 		);
 	
-	muxPC4alt <= pontosControle(9);
-	muxRtRdalt <= pontosControle(8);
-	controleEscreveRegCalt <= pontosControle(7);
-	muxRtImedalt <= pontosControle(6);
-	controleULAalt <= pontosControle(5 downto 3);
+	muxPC4alt <= pontosControle(8);
+	muxRtRdalt <= pontosControle(7);
+	controleEscreveRegCalt <= pontosControle(6);
+	muxRtImedalt <= pontosControle(5);
+	controleULAalt <= pontosControle(4 downto 3);
 	muxUlaMemalt <= pontosControle(2);
 	BEQalt <= pontosControle(1);
 	wealt <= pontosControle(0);

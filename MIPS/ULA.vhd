@@ -139,7 +139,7 @@ architecture comportamento of ULA is
 				entradaB =>entradaB0,
 				CarryIn => signalCarryIn,
 				seletor => seletor,
-				less => signalLess,
+				less => '1',
 				saida => signalSaida(0),
 				CarryOut => entrada0CO
 			);
@@ -457,7 +457,7 @@ architecture comportamento of ULA is
 			
 		FlagOverflow <= (entrada30CO xor entrada31CO);
 		
-		signalLess <= (not signalSaida(31)) when (FlagOverflow = '1') else signalSaida(31);
+		signalLess <= (signalSaida(31) xor FlagOverflow);
 
       saida <= signalSaida;
 		
