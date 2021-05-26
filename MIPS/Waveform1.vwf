@@ -21,6 +21,7 @@ after 2500 simTimestamp
 run -all
 quit -f
 
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -39,6 +40,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
@@ -436,46 +438,6 @@ SIGNAL("controleEscreveRegCalt")
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
 	PARENT = "";
-}
-
-SIGNAL("controleULAalt")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = BUS;
-	WIDTH = 3;
-	LSB_INDEX = 0;
-	DIRECTION = OUTPUT;
-	PARENT = "";
-}
-
-SIGNAL("controleULAalt[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "controleULAalt";
-}
-
-SIGNAL("controleULAalt[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "controleULAalt";
-}
-
-SIGNAL("controleULAalt[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "controleULAalt";
 }
 
 SIGNAL("countPC")
@@ -1518,6 +1480,36 @@ SIGNAL("wealt")
 	PARENT = "";
 }
 
+SIGNAL("controleULAalt")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 2;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("controleULAalt[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "controleULAalt";
+}
+
+SIGNAL("controleULAalt[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "controleULAalt";
+}
+
 TRANSITION_LIST("clk")
 {
 	NODE
@@ -1832,33 +1824,6 @@ TRANSITION_LIST("BEQalt")
 }
 
 TRANSITION_LIST("controleEscreveRegCalt")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("controleULAalt[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("controleULAalt[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("controleULAalt[0]")
 {
 	NODE
 	{
@@ -2768,6 +2733,24 @@ TRANSITION_LIST("muxUlaMemalt")
 }
 
 TRANSITION_LIST("wealt")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("controleULAalt[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("controleULAalt[0]")
 {
 	NODE
 	{
@@ -4148,12 +4131,12 @@ DISPLAY_LINE
 	RADIX = Binary;
 	TREE_INDEX = 137;
 	TREE_LEVEL = 0;
-	CHILDREN = 138, 139, 140;
+	CHILDREN = 138, 139;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "controleULAalt[2]";
+	CHANNEL = "controleULAalt[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 138;
@@ -4163,7 +4146,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "controleULAalt[1]";
+	CHANNEL = "controleULAalt[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 139;
@@ -4173,20 +4156,10 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "controleULAalt[0]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 140;
-	TREE_LEVEL = 1;
-	PARENT = 137;
-}
-
-DISPLAY_LINE
-{
 	CHANNEL = "muxUlaMemalt";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 141;
+	TREE_INDEX = 140;
 	TREE_LEVEL = 0;
 }
 
@@ -4195,7 +4168,7 @@ DISPLAY_LINE
 	CHANNEL = "BEQalt";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 142;
+	TREE_INDEX = 141;
 	TREE_LEVEL = 0;
 }
 
@@ -4204,7 +4177,7 @@ DISPLAY_LINE
 	CHANNEL = "wealt";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 143;
+	TREE_INDEX = 142;
 	TREE_LEVEL = 0;
 }
 

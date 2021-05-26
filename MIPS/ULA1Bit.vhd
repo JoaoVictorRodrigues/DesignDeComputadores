@@ -24,18 +24,17 @@ architecture comportamento of ULA1Bit is
 	
     begin
 		
-		inverte <= not entradaB when (CarryIn = '1') else entradaB;
+		inverte <= (not entradaB) when (seletor(2) = '1') else entradaB;
 		
       op_and    	 <= entradaA and entradaB;
       op_or     	 <= entradaA or entradaB;
-		operacao     <= not(CarryIn or (not(entradaA or inverte)));
-		op_carryOut  <= (CarryIn and (not(entradaA or inverte))) or (entradaA and inverte);
+		operacao     <= ((entradaA xor inverte) xor CarryIn);
+		op_carryOut  <= (CarryIn and (entradaA xor inverte)) or (entradaA and inverte);
 		op_slt       <= less;
 
 
       saida <= op_and   when (seletor1 = "00") else
 					op_or    when (seletor1 = "01") else
-					operacao when (seletor1 = "10") else
 					operacao when (seletor1 = "10") else
 					op_slt   when (seletor1 = "11") else
 					'1';

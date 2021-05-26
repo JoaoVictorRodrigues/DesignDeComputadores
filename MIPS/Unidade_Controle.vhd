@@ -49,17 +49,16 @@ architecture arch_name of Unidade_Controle is
   constant op_ori : std_logic_vector(5 downto 0) := "001101";
   constant op_andi: std_logic_vector(5 downto 0) := "001100";
   constant op_slti: std_logic_vector(5 downto 0) := "001010";
-  -- constant jmp		: std_logic_vector(5 downto 0) := "000010";
   
 
   begin
   
   tipo_i <= '1' when opCode = op_BEQ or opCode = load or 
 					          opCode = addi or opCode = op_ori or 
-                    opCode = op_andi or opCode = op_slti else '0'; -- or opCode = store
+                    opCode = op_andi or opCode = op_slti or opCode = store else '0';
   
   muxRtImed <= tipo_i;
-  muxRtRd <= not tipo_i;
+  muxRtRd <= '1' when OpCode = tipo_r else '0';
   muxPC4 <= '1' when opCode = tipo_j else '0';
   muxUlaMem <= '1' when opCode = load else '0';
   we <= '1' when opCode = store else '0';
@@ -70,13 +69,5 @@ architecture arch_name of Unidade_Controle is
                  "01" when opCode = op_BEQ else
                  "10" when opCode = tipo_r else
                  "11";
-  
-  --controleULA <= "110" when opCode = tipo_r AND funct = sub else
-					 -- "010" when opCode = tipo_r AND funct = add else
-					 -- "000" when opCode = tipo_r AND funct = op_and else
-					 -- "001" when opCode = tipo_r AND funct = op_or else
-					 -- "111" when opCode = tipo_r AND funct = op_slt else
-					 -- "010" when oPcode = load else
-					 -- "000";
   
 end architecture;
