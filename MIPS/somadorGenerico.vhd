@@ -2,6 +2,11 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;          -- Biblioteca IEEE para funções aritméticas
 
+
+--- Unidade responsável por realizar uam operação de soma
+--- Usado normalmente para somar uma constante a um endereço
+
+
 entity somadorGenerico is
     generic
     (

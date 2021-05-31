@@ -2,6 +2,9 @@ library ieee;
 use ieee.std_logic_1164.all;
 --use ieee.numeric_std.all;    -- Biblioteca IEEE para funções aritméticas
 
+--- Unidade que realiza a operações da ULA com um unico bit,
+--- Utilizada de forma combinada, uma para cada bit, para compor a ULA principal do sistema.
+
 entity ULA1Bit is
     port
     (

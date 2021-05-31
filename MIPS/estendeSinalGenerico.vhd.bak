@@ -1,9 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
---- Unidade responsável por extender um dado, para que ele seja corretamente operado
-
-
 entity estendeSinalGenerico is
     generic
     (

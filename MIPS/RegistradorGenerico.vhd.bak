@@ -1,9 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-
---- Unidade responsável por armazenar dados
-
 entity registradorGenerico is
     generic (
         larguraDados : natural := 8

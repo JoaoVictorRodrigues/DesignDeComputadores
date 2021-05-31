@@ -2,6 +2,12 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+--- Unidade de controle, ou UC, é responsável por ativar ou desativar os componenetes do processador,
+--- para que a instrução seja executada de forma correta.
+--- Recebe o OpCode vindo da instrução que a ROM manda, e realiza as ativações para realizar corretamente a instrução
+--- A saída é a palavra de controle, que contem os bits necessários para configura as unidades lógicas
+
+
 entity Unidade_Controle is
   generic (
 		
@@ -21,8 +27,8 @@ end entity;
 
 architecture arch_name of Unidade_Controle is
 
-  alias muxPC4 : std_logic is palavraControle(8);
-  alias muxRtRd : std_logic is palavraControle(7);
+	alias muxPC4 : std_logic is palavraControle(8);
+	alias muxRtRd : std_logic is palavraControle(7);
 	alias controleEscreveRegC : std_logic is palavraControle(6);
 	alias muxRtImed : std_logic is palavraControle(5);
 	alias controleULA : std_logic_vector(1 downto 0) is palavraControle(4 downto 3);
@@ -33,16 +39,10 @@ architecture arch_name of Unidade_Controle is
   constant tipo_r : std_logic_vector(5 downto 0) := "000000";
   signal   tipo_i : std_logic;
   constant tipo_j : std_logic_vector(5 downto 0) := "000010";
-  
-  -- Tipo R
-  -- constant add : std_logic_vector(5 downto 0) := "100000"; -- 0x20
-  -- constant sub : std_logic_vector(5 downto 0) := "100010"; -- 0x22
-  -- constant op_and : std_logic_vector(5 downto 0) := "100100";
-  -- constant op_or : std_logic_vector(5 downto 0) := "100101";
-  -- constant op_slt : std_logic_vector(5 downto 0) := "101010";
+
   -- Tipo I
   constant load   : std_logic_vector(5 downto 0) := "100011";
-  constant op_BEQ  : std_logic_vector(5 downto 0) := "000100";
+  constant op_BEQ : std_logic_vector(5 downto 0) := "000100";
   constant store  : std_logic_vector(5 downto 0) := "101011";
 
   constant addi   : std_logic_vector(5 downto 0) := "001000";
@@ -53,9 +53,8 @@ architecture arch_name of Unidade_Controle is
 
   begin
   
-  tipo_i <= '1' when opCode = load or 
-					          opCode = addi or opCode = op_ori or 
-                    opCode = op_andi or opCode = op_slti or opCode = store else '0';
+  tipo_i <= '1' when opCode = load or opCode = addi or opCode = op_ori or 
+							opCode = op_andi or opCode = op_slti or opCode = store else '0';
   
   muxRtImed <= tipo_i;
   muxRtRd <= '1' when OpCode = tipo_r else '0';

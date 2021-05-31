@@ -2,6 +2,11 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+--- Unidade de controle dedicada a ULA, responsável por decodificar os pontos de controle recebidos
+--- da UC principal e selecionar qual a operação ela deve executar.
+--- Dada a operação, a UC_ULA também recebe o campo funct para indicar qual a operação será executada
+
+
 entity UC_ULA is 
     generic (
         OPC_WIDTH : NATURAL := 6

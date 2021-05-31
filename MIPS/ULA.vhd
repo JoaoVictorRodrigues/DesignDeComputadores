@@ -2,6 +2,15 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;    -- Biblioteca IEEE para funções aritméticas
 
+
+--- ULA é a unidade responsável por realizar as operações do processador.
+--- Para esse projeto MIPS, a ULA realiza as operações: ADD, SUB, AND, OR, SLT
+--- Recebe na entrada A, um dado vindo dos regisradosres do banco, e na entrada B, há duas opções
+--- ou um dado também vindo do banco de registradores ou um dado vindo do imediato da instrução.
+--- A saída é o resultado de uma das operções listadas acima. Há também a flag zero, que indica
+--- se uma comparação é verdadeira ou não e também a flag OverFlow, que indica se o resultado
+--- da operação supera o tamanho de bits de dados da estrutura.
+
 entity ULA is
     generic
     (

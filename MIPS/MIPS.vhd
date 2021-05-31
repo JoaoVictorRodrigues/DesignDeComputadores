@@ -2,6 +2,10 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+
+--- Top level do projeto, esse arquivo reune e instancia todos os componentes necessários para
+--- o funcionamento do processador. 
+
 entity MIPS is
   generic   (
 		DATA_WIDTH_ROM : natural := 32;
@@ -14,11 +18,12 @@ entity MIPS is
 
   );
 
-  port   (
-    -- Input ports
-    clk     : in  std_logic;
-
-    -- Output ports
+  port(
+   -- Input ports
+   clk     : in  std_logic;
+	SW      : in  std_logic_vector(1 downto 0);
+	
+	-- Output ports
    addrOUT :  out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	countPC : out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	dataRead: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
@@ -31,7 +36,8 @@ entity MIPS is
 	controleULAalt : out std_logic_vector(1 downto 0);
 	muxUlaMemalt : out std_logic;
 	BEQalt : out std_logic;
-	wealt : out std_logic
+	wealt : out std_logic;
+	HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
 	
   );
 end entity;
@@ -67,7 +73,7 @@ architecture arch_name of MIPS is
 	alias funct : std_logic_vector(5 downto 0) is instrucao(5 downto 0);
 	
 	alias muxPC4 : std_logic is pontosControle(8);
-  alias muxRtRd : std_logic is pontosControle(7);
+	alias muxRtRd : std_logic is pontosControle(7);
 	alias controleEscreveRegC : std_logic is pontosControle(6);
 	alias muxRtImed : std_logic is pontosControle(5);
 	alias ulaOP : std_logic_vector(1 downto 0) is pontosControle(4 downto 3);
@@ -75,69 +81,93 @@ architecture arch_name of MIPS is
 	alias BEQ : std_logic is pontosControle(1);
 	alias we : std_logic is pontosControle(0);
 	
+	signal displaySignal: std_logic_vector(23 downto 0);
+	
 
 begin
-    rom : entity work.ROMMIPS generic map (
-      dataWidth => DATA_WIDTH_ROM,
-      addrWidth => ADDR_WIDTH_ROM
-    )
-    port map (
-      Endereco => saidaPC,
-      Dado => instrucao
-    );
 
+	--- Instancia ROM
+	--- Recebe dado enviado pelo PC
+	--- Envia a instrução referente a posição recebida
+	ROM : entity work.ROMMIPS generic map (dataWidth => DATA_WIDTH_ROM,addrWidth => ADDR_WIDTH_ROM)
+		port map (
+			Endereco => saidaPC,
+			Dado => instrucao
+		);
+	
+	--- Instancia ULA_UC
+	--- Recebe o codigo enviado pela UC e a funct das instruções do tipo R
+	--- Envia o código para o seletor da ULA, para que a operação lógica seja executada
 	UC_ULA: entity work.UC_ULA
 		port map ( 
 			ulaOP => ulaOP,
 			funct => funct,
 			ulaCtrl => ulaCtrl
-	);
-
-    ULA : entity work.ULA generic map (larguraDados => DATA_WIDTH_REG)
+		);
+		
+	--- Instancia ULA
+	--- Recebe na entrada A o dado escrito no registrador A
+	--- Recebe na entrada B o dado vindo do MUX Rt/ImedULA
+	--- assim como no seletor, o dado enviado pela ULA_UC
+	--- Envia o resultado da operação lógica e o sinal de flagZero, caso necessário
+	ULA : entity work.ULA generic map (larguraDados => DATA_WIDTH_REG)
 		port map (
-		entradaA => registerA,
-		entradaB => muxRtImedSignal,
-		seletor => ulaCtrl,
-		saida => saidaULA,
-		flagZero => flagZeroSignal
-	);
-	 
-	muxRdRt : entity work.muxGenerico2x1 generic map (
-		larguraDados => ADDR_WIDTH_REG
-	 )
-	 port map (
-		entradaA_MUX => enderecoB,
-		entradaB_MUX => enderecoC,
-		seletor_MUX => muxRtRd,
-		saida_MUX => muxRdRtOut
-	 );
+			entradaA => registerA,
+			entradaB => muxRtImedSignal,
+			seletor => ulaCtrl,
+			saida => saidaULA,
+			flagZero => flagZeroSignal
+		);
 
-    bRegistradores : entity work.bancoReg generic map (
-      larguraDados => DATA_WIDTH_REG,
-      larguraEndBancoRegs => ADDR_WIDTH_REG
-    )
-    port map (
-      clk => clk,
-      enderecoA => enderecoA,
-      enderecoB => enderecoB,
-      enderecoC => muxRdRtOut,
-      dadoEscritaC => saidaMuxULARAM,
-      escreveC => controleEscreveRegC,
-      saidaA => registerA,
-      saidaB => registerB
-    );
-	 
-	 muxRtImedULA : entity work.muxGenerico2x1 generic map (
-		larguraDados => DATA_WIDTH_REG
-	 )
-	 port map (
-		entradaA_MUX => registerB,
-		entradaB_MUX => imediatoExt,
-		seletor_MUX => muxRtImed,
-		saida_MUX => muxRtImedSignal
-	 );
-
-    PC : entity work.RegistradorGenerico generic map (larguraDados => DATA_WIDTH_ROM)
+	--- Instancia MUX RD/RT
+	--- MUX responsável por indicar se o dado escrito no registrador C será RT ou RD
+	--- Recebe na entrada A, RT e na entrada B, RD, além do sinal do seletor, vindo da UC
+	--- Envia o dado selecionado pelo código do seletor.
+	muxRdRt : entity work.muxGenerico2x1 generic map (larguraDados => ADDR_WIDTH_REG)
+		port map (
+			entradaA_MUX => enderecoB,
+			entradaB_MUX => enderecoC,
+			seletor_MUX => muxRtRd,
+			saida_MUX => muxRdRtOut
+		 );
+	
+	--- Instancia Banco de Registradores
+	--- Instancia três registradores de 5bits, que recebem os seguintes dados da instrução:
+			--- RegA  = RS;
+			--- RegB  = RT;
+			--- RegC  = RT ou RD;
+	--- Recebe os dados vindo da instrução, além dado vindo do MUX ULA/MEM, que é escrito em RegC,
+	--- além de um sinal de controle, que habilita ou não, a escrita em RegC
+	--- Envia os dados escritos no RegA e no RegB
+	bRegistradores : entity work.bancoReg generic map (larguraDados => DATA_WIDTH_REG,larguraEndBancoRegs => ADDR_WIDTH_REG)
+		port map (
+			clk => clk,
+			enderecoA => enderecoA,
+			enderecoB => enderecoB,
+			enderecoC => muxRdRtOut,
+			dadoEscritaC => saidaMuxULARAM,
+			escreveC => controleEscreveRegC,
+			saidaA => registerA,
+			saidaB => registerB
+		 );
+		 
+	--- Instancia MUX RT/Imed
+	--- MUX responsável por indicar se o dado mandado para a entrada B da ula será o valor de RegB,
+	--- ou o valor do imediato da instrução;
+	--- Recebe na entrada A, RegB e na entrada B, o imediato valor, além do sinal do seletor, vindo da UC
+	--- Envia o dado selecionado pelo código do seletor.
+	muxRtImedULA : entity work.muxGenerico2x1 generic map (larguraDados => DATA_WIDTH_REG)
+		 port map (
+			entradaA_MUX => registerB,
+			entradaB_MUX => imediatoExt,
+			seletor_MUX => muxRtImed,
+			saida_MUX => muxRtImedSignal
+		 );
+		 	 
+	--- Instancia PC
+	--- Recebe a instrução do MUX ProxPC, o sinal de clock
+	--- Envia qual será o próximo endereço que a ROM deve executar
+   PC : entity work.RegistradorGenerico generic map (larguraDados => DATA_WIDTH_ROM)
 		port map (
 			DIN => saidaMuxProxPc,
 			DOUT => saidaPC,
@@ -146,30 +176,39 @@ begin
 			RST => '0'
 		);
 	 
+	--- Instancia Somador
+	--- Responsável por definir o passo de execução da ROM
+	--- Recebe o endereço atual enviado pelo PC e soma 4 a ele
+	--- Envia o novo valor para MUX ProxPC
 	somador :  entity work.somaConstante generic map (larguraDados => DATA_WIDTH_REG,constante => 4)
 		port map( 
 			entrada => saidaPC,
 			saida => saidaSOMA
 		);
-	 
-	estendeSinal : entity work.estendeSinalGenerico generic map (
-		larguraDadoEntrada => imediato_width,
-		larguraDadoSaida => DATA_WIDTH_ROM
-	 )
-	 port map (
-		estendeSinal_IN => imediato,
-		estendeSinal_OUT => imediatoExt
-	 );
-	 
-	 shift2 : entity work.somadorGenerico generic map (
-		larguraDados => DATA_WIDTH_REG
-	 )
-	 port map (
-		entradaA => saidaSOMA,
-		entradaB => imediatoExt(29 downto 0) & "00",
-		saida => saidaShift
-	 );
-	 
+
+	--- Instancia Extende Sinal
+	--- Recebe o valor imediado de 16 bits
+	--- Envia O valore do imediato, agora extendido para 32 bits, completando os 16 bit mais significativos com 0
+	estendeSinal : entity work.estendeSinalGenerico generic map (larguraDadoEntrada => imediato_width,larguraDadoSaida => DATA_WIDTH_ROM)
+		port map (
+			estendeSinal_IN => imediato,
+			estendeSinal_OUT => imediatoExt
+		);
+	
+	--- Instancia shift2 
+	--- Recebe o sinal imediato extendido
+	--- Envia o sinal imediato agora shifitado 2 bits para a esquerda, completanto os dois bits menos significativos com "00"
+	shift2 : entity work.somadorGenerico generic map (larguraDados => DATA_WIDTH_REG)
+		port map (
+			entradaA => saidaSOMA,
+			entradaB => imediatoExt(29 downto 0) & "00",
+			saida => saidaShift
+		);
+	 --- Instancia MUX BEQ
+	 --- MUX responsável por indicar se o dado mandado para a entrada A do MUX ProxPC será o PC+4 ou o imediato shiftado
+	 --- Recebe PC + 4 na entrada A e imediato shiftado na entrada B além da seleção, que é composta 
+	 --- pela flag zero e o sinal vindo da UC
+	 --- Envia o dado selecionado pelo seletor
 	 muxBeq : entity work.muxGenerico2x1 generic map (larguraDados => DATA_WIDTH_REG)
 		 port map (
 			entradaA_MUX => saidaSOMA,
@@ -177,16 +216,21 @@ begin
 			seletor_MUX => (flagZeroSignal and BEQ),
 			saida_MUX => entradaMuxProxPc
 		 );
-		 
-	 UC : entity work.Unidade_Controle generic map (
-		OPC_WIDTH => OP_WIDTH
-	 )
-	 port map (
-		opCode => OpCode,
-		funct => funct,
-		palavraControle => pontosControle
-	 );
-	 
+	
+	--- Instancia UC (Unidade de controle)
+	--- Recepe OpCode da ROM
+	--- Envia palavra de controle gerindo os componenetes do sistema, ativando ou desativando-os
+	UC : entity work.Unidade_Controle generic map (OPC_WIDTH => OP_WIDTH)
+		port map (
+			opCode => OpCode,
+			funct => funct,
+			palavraControle => pontosControle
+		);
+	
+	--- Instancia RAM
+	--- Memória responsável por armazenar dados processados
+	--- Recebe o endereço resultante da operação da ULA e o dado vindo de RegB
+	--- Envia um dado lido para o MUX ULA/MEM
 	RAM : entity work.RAMMIPS generic map (dataWidth => DATA_WIDTH_ROM,addrWidth => ADDR_WIDTH_ROM)
 		port map (
 			clk => clk,
@@ -195,7 +239,11 @@ begin
 			Dado_out => saidaRAM,
 			we => we
 		);
-	 
+		
+	--- Instancia MUX ULA/MEM
+	--- MUX responsável por escolher se o dado escrito em RegC será o resultado da ULA ou o dado vindo da memória RAM
+	--- Recebe na entrada A, o resultado da ULA e na entrada B o dado lido da RAM, além do código de seleção da UC
+	--- Envia o dado selecionado pelo seletor para o RegC
 	muxUlaMemoria : entity work.muxGenerico2x1 generic map (larguraDados => DATA_WIDTH_REG)
 		port map (
 			entradaA_MUX => saidaULA,
@@ -204,7 +252,10 @@ begin
 			saida_MUX => saidaMuxULARAM
 		);
 	 
-
+	--- Instancia MUX ProxPc
+	--- Responsável por escolher se o PC vai receber PC+4 ou um desvio do tipo BEQ
+	--- Recebe na entrada A, a saida do MUX BEQ, e na entrada B, PC + 4, além do ponto de controle vindo da UC
+	--- Envia o dado referente a seleção da UC
 	muxProxPc : entity work.muxGenerico2x1 generic map (larguraDados => DATA_WIDTH_REG)
 		port map (
 			entradaA_MUX => entradaMuxProxPc,
@@ -226,5 +277,39 @@ begin
 	countPC <= saidaPC;
 	dataRead <= saidaRAM;
 	dataWrite <= registerB;
+	displaySignal <= saidaPC(23 downto 0) when SW = "00" else saidaULA(23 downto 0);
+	
+	
+	DISPLAY0 : entity work.conversorHex7Seg
+		port map(
+			dadoHex => displaySignal(3 downto 0),
+			saida7seg => HEX0
+		);
+		
+   DISPLAY1 : entity work.conversorHex7Seg 
+		port map(
+			dadoHex => displaySignal(7 downto 4),
+			saida7seg => HEX1
+		);
+	DISPLAY2 : entity work.conversorHex7Seg 
+		port map(
+			dadoHex => displaySignal(11 downto 8),
+			saida7seg => HEX2
+		);
+	DISPLAY3 : entity work.conversorHex7Seg 
+		port map(
+			dadoHex => displaySignal(15 downto 12),
+			saida7seg => HEX3
+		);
+	DISPLAY4 : entity work.conversorHex7Seg 
+		port map(
+			dadoHex => displaySignal(19 downto 16),
+			saida7seg => HEX4
+		);
+	DISPLAY5 : entity work.conversorHex7Seg 
+		port map(
+			dadoHex => displaySignal(23 downto 20),
+			saida7seg => HEX5
+		);
 	 
 end architecture;
