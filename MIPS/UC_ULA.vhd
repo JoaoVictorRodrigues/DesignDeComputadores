@@ -35,6 +35,8 @@ architecture arch_name of UC_ULA is
 						 "110" when ulaOP = "10" and funct = sub else
 						 "111" when ulaOP = "10" and funct = op_slt else
 						 "010" when ulaOP = "00" else
-						 "110" when ulaOP = "01" else "000";
+						 "110" when ulaOP = "01" else
+						 "001" when ulaOp = "11" else
+						 "000";
 
 end architecture;

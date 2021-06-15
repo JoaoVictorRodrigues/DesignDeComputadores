@@ -20,15 +20,16 @@ entity Unidade_Controle is
 	 funct  :  in  std_logic_vector(OPC_WIDTH-1 downto 0);
 	 
     -- Output ports
-    palavraControle  :  out std_logic_vector(8 downto 0)
+    palavraControle  :  out std_logic_vector(10 downto 0)
   );
 end entity;
 
 
 architecture arch_name of Unidade_Controle is
 
-	alias muxPC4 : std_logic is palavraControle(8);
-	alias muxRtRd : std_logic is palavraControle(7);
+	alias muxPC4 : std_logic is palavraControle(10);
+	alias muxRtRd : std_logic is palavraControle(9);
+	alias extensor : std_logic_vector(1 downto 0) is palavraControle(8 downto 7);
 	alias controleEscreveRegC : std_logic is palavraControle(6);
 	alias muxRtImed : std_logic is palavraControle(5);
 	alias controleULA : std_logic_vector(1 downto 0) is palavraControle(4 downto 3);
@@ -49,24 +50,33 @@ architecture arch_name of Unidade_Controle is
   constant op_ori : std_logic_vector(5 downto 0) := "001101";
   constant op_andi: std_logic_vector(5 downto 0) := "001100";
   constant op_slti: std_logic_vector(5 downto 0) := "001010";
+  constant op_lui : std_logic_vector(5 downto 0) := "001111";
   
 
   begin
   
   tipo_i <= '1' when opCode = load or opCode = addi or opCode = op_ori or 
-							opCode = op_andi or opCode = op_slti or opCode = store else '0';
+							opCode = op_andi or opCode = op_slti or opCode = store or
+							opCode = op_lui else '0';
   
-  muxRtImed <= tipo_i;
-  muxRtRd <= '1' when OpCode = tipo_r else '0';
   muxPC4 <= '1' when opCode = tipo_j else '0';
-  muxUlaMem <= '1' when opCode = load else '0';
-  we <= '1' when opCode = store else '0';
-  BEQ <= '1'when opCode = op_BEQ else '0';
-  controleEscreveRegC <= '1' when opCode = tipo_r or opCode = load else '0';
-  
+  muxRtRd <= '1' when OpCode = tipo_r else '0';
+  extensor <= "01" when opCode = op_lui else 
+				  "10" when opCode = op_ori else
+				  "00";
+  muxRtImed <= tipo_i;
   controleULA <= "00" when opCode = load or opCode = store else 
                  "01" when opCode = op_BEQ else
                  "10" when opCode = tipo_r else
-                 "11";
+					  "11" when opCode = op_ori else
+					  "00";
+  controleEscreveRegC <= '1' when opCode = tipo_r or opCode = load or opCode=op_lui else '0';
+  muxUlaMem <= '1' when opCode = load else '0';
+  BEQ <= '1'when opCode = op_BEQ else '0';
+  we <= '1' when opCode = store else '0';
+  
+  
+  
+  
   
 end architecture;

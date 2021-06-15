@@ -37,6 +37,7 @@ entity MIPS is
 	muxUlaMemalt : out std_logic;
 	BEQalt : out std_logic;
 	wealt : out std_logic;
+	Sinalextendido: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
 	
   );
@@ -50,7 +51,7 @@ architecture arch_name of MIPS is
 	signal saidaULA : std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	signal registerA, registerB : std_logic_vector(DATA_WIDTH_REG-1 downto 0);
 	signal instrucao : std_logic_vector(ADDR_WIDTH_ROM-1 downto 0);
-	signal pontosControle : std_logic_vector(8 downto 0);
+	signal pontosControle : std_logic_vector(10 downto 0);
 	signal imediatoExt : std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	signal saidaShift : std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	signal flagZeroSignal : std_logic;
@@ -72,8 +73,9 @@ architecture arch_name of MIPS is
 	alias shamt : std_logic_vector(4 downto 0) is instrucao(10 downto 6);
 	alias funct : std_logic_vector(5 downto 0) is instrucao(5 downto 0);
 	
-	alias muxPC4 : std_logic is pontosControle(8);
-	alias muxRtRd : std_logic is pontosControle(7);
+	alias muxPC4 : std_logic is pontosControle(10);
+	alias muxRtRd : std_logic is pontosControle(9);
+	alias extensor : std_logic_vector(1 downto 0) is pontosControle(8 downto 7);
 	alias controleEscreveRegC : std_logic is pontosControle(6);
 	alias muxRtImed : std_logic is pontosControle(5);
 	alias ulaOP : std_logic_vector(1 downto 0) is pontosControle(4 downto 3);
@@ -192,6 +194,7 @@ begin
 	estendeSinal : entity work.estendeSinalGenerico generic map (larguraDadoEntrada => imediato_width,larguraDadoSaida => DATA_WIDTH_ROM)
 		port map (
 			estendeSinal_IN => imediato,
+			seletor => extensor,
 			estendeSinal_OUT => imediatoExt
 		);
 	
@@ -278,6 +281,7 @@ begin
 	dataRead <= saidaRAM;
 	dataWrite <= registerB;
 	displaySignal <= saidaPC(23 downto 0) when SW = "00" else saidaULA(23 downto 0);
+	Sinalextendido <= imediatoExt;
 	
 	
 	DISPLAY0 : entity work.conversorHex7Seg

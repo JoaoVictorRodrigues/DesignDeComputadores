@@ -1,7 +1,7 @@
 Quartus Prime Archive log --	C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.qarlog
 
 Archive:	C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.qar
-Date:		Fri May 28 18:36:38 2021
+Date:		Thu Jun 03 16:12:38 2021
 Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 	=========== Files Selected: ===========
@@ -19,12 +19,20 @@ C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/Desig
 C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/Waveform.vwf
 C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/Waveform1.vwf
 C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/Waveform3.vwf
+C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/conversorHex7seg.vhd
 C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/estendeSinalGenerico.vhd
+C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/interfaceCHAVES.vhd
 C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/muxGenerico2x1.vhd
 C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/somaConstante.vhd
 C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/somadorGenerico.vhd
 c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
-	======= Total: 19 files to archive =======
+	======= Total: 21 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.
+
+
+******* Archived project restoration attempt on Mon Jun 14 17:58:58 2021
+Source archive file:	C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.qar
+Archive was extracted into	C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS_restored/
+		 - successfully.
