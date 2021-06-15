@@ -1,8 +1,8 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS -c MIPS --vector_source="C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/Waveform3.vwf" --testbench_file="C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/simulation/qsim/Waveform3.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS -c MIPS --vector_source="C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/Waveform3.vwf" --testbench_file="C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/simulation/qsim/Waveform3.vwf.vht"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/simulation/qsim/" MIPS -c MIPS</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/simulation/qsim/" MIPS -c MIPS</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS -c MIPS --vector_source="C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/Waveform3.vwf" --testbench_file="C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/simulation/qsim/Waveform3.vwf.vht"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS -c MIPS --vector_source="C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/Waveform3.vwf" --testbench_file="C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/simulation/qsim/Waveform3.vwf.vht"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/simulation/qsim/" MIPS -c MIPS</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/simulation/qsim/" MIPS -c MIPS</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vcom -work work MIPS.vho
@@ -20,11 +20,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
-
-
-
-
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -43,11 +38,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
-
-
-
-
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
 </simulation_settings>*/
@@ -2356,6 +2346,666 @@ SIGNAL("Sinalextendido[0]")
 	PARENT = "Sinalextendido";
 }
 
+SIGNAL("entradaAula")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 32;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("entradaAula[31]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[30]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[29]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[28]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[27]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[26]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[25]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[24]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[23]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[22]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[21]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[20]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[19]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[18]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[17]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[16]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[15]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[14]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[13]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[12]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[11]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[10]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[9]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[8]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaAula[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaAula";
+}
+
+SIGNAL("entradaBula")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 32;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("entradaBula[31]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[30]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[29]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[28]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[27]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[26]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[25]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[24]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[23]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[22]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[21]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[20]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[19]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[18]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[17]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[16]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[15]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[14]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[13]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[12]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[11]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[10]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[9]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[8]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
+SIGNAL("entradaBula[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "entradaBula";
+}
+
 TRANSITION_LIST("addrOUT[31]")
 {
 	NODE
@@ -4287,6 +4937,582 @@ TRANSITION_LIST("Sinalextendido[0]")
 	}
 }
 
+TRANSITION_LIST("entradaAula[31]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[30]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[29]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[28]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[27]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[26]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[25]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[24]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[23]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[22]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[21]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[20]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[19]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[18]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[17]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[16]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[15]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[14]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[13]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[12]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[11]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[10]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[9]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[8]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaAula[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[31]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[30]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[29]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[28]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[27]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[26]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[25]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[24]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[23]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[22]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[21]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[20]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[19]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[18]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[17]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[16]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[15]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[14]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[13]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[12]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[11]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[10]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[9]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[8]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("entradaBula[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
 DISPLAY_LINE
 {
 	CHANNEL = "clk";
@@ -5978,10 +7204,670 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
+	CHANNEL = "entradaAula";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 169;
+	TREE_LEVEL = 0;
+	CHILDREN = 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[31]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 170;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[30]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 171;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[29]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 172;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[28]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 173;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[27]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 174;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[26]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 175;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[25]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 176;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[24]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 177;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[23]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 178;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[22]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 179;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[21]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 180;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[20]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 181;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[19]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 182;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[18]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 183;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[17]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 184;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[16]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 185;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[15]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 186;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[14]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 187;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[13]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 188;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[12]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 189;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[11]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 190;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[10]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 191;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[9]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 192;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[8]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 193;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 194;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 195;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 196;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 197;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 198;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 199;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 200;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaAula[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 201;
+	TREE_LEVEL = 1;
+	PARENT = 169;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 202;
+	TREE_LEVEL = 0;
+	CHILDREN = 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[31]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 203;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[30]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 204;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[29]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 205;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[28]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 206;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[27]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 207;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[26]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 208;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[25]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 209;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[24]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 210;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[23]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 211;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[22]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 212;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[21]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 213;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[20]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 214;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[19]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 215;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[18]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 216;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[17]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 217;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[16]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 218;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[15]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 219;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[14]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 220;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[13]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 221;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[12]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 222;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[11]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 223;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[10]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 224;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[9]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 225;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[8]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 226;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 227;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 228;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 229;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 230;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 231;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 232;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 233;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "entradaBula[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 234;
+	TREE_LEVEL = 1;
+	PARENT = 202;
+}
+
+DISPLAY_LINE
+{
 	CHANNEL = "BEQalt";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 169;
+	TREE_INDEX = 235;
 	TREE_LEVEL = 0;
 }
 
@@ -5990,7 +7876,7 @@ DISPLAY_LINE
 	CHANNEL = "controleEscreveRegCalt";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 170;
+	TREE_INDEX = 236;
 	TREE_LEVEL = 0;
 }
 
@@ -5999,7 +7885,7 @@ DISPLAY_LINE
 	CHANNEL = "muxPC4alt";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 171;
+	TREE_INDEX = 237;
 	TREE_LEVEL = 0;
 }
 
@@ -6008,7 +7894,7 @@ DISPLAY_LINE
 	CHANNEL = "muxRtImedalt";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 172;
+	TREE_INDEX = 238;
 	TREE_LEVEL = 0;
 }
 
@@ -6017,7 +7903,7 @@ DISPLAY_LINE
 	CHANNEL = "muxRtRdalt";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 173;
+	TREE_INDEX = 239;
 	TREE_LEVEL = 0;
 }
 
@@ -6026,7 +7912,7 @@ DISPLAY_LINE
 	CHANNEL = "muxUlaMemalt";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 174;
+	TREE_INDEX = 240;
 	TREE_LEVEL = 0;
 }
 
@@ -6035,7 +7921,7 @@ DISPLAY_LINE
 	CHANNEL = "wealt";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 175;
+	TREE_INDEX = 241;
 	TREE_LEVEL = 0;
 }
 
@@ -6044,9 +7930,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX0";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 176;
+	TREE_INDEX = 242;
 	TREE_LEVEL = 0;
-	CHILDREN = 177, 178, 179, 180, 181, 182, 183;
+	CHILDREN = 243, 244, 245, 246, 247, 248, 249;
 }
 
 DISPLAY_LINE
@@ -6054,9 +7940,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX0[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 177;
+	TREE_INDEX = 243;
 	TREE_LEVEL = 1;
-	PARENT = 176;
+	PARENT = 242;
 }
 
 DISPLAY_LINE
@@ -6064,9 +7950,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX0[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 178;
+	TREE_INDEX = 244;
 	TREE_LEVEL = 1;
-	PARENT = 176;
+	PARENT = 242;
 }
 
 DISPLAY_LINE
@@ -6074,9 +7960,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX0[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 179;
+	TREE_INDEX = 245;
 	TREE_LEVEL = 1;
-	PARENT = 176;
+	PARENT = 242;
 }
 
 DISPLAY_LINE
@@ -6084,9 +7970,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX0[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 180;
+	TREE_INDEX = 246;
 	TREE_LEVEL = 1;
-	PARENT = 176;
+	PARENT = 242;
 }
 
 DISPLAY_LINE
@@ -6094,9 +7980,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX0[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 181;
+	TREE_INDEX = 247;
 	TREE_LEVEL = 1;
-	PARENT = 176;
+	PARENT = 242;
 }
 
 DISPLAY_LINE
@@ -6104,9 +7990,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX0[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 182;
+	TREE_INDEX = 248;
 	TREE_LEVEL = 1;
-	PARENT = 176;
+	PARENT = 242;
 }
 
 DISPLAY_LINE
@@ -6114,9 +8000,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX0[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 183;
+	TREE_INDEX = 249;
 	TREE_LEVEL = 1;
-	PARENT = 176;
+	PARENT = 242;
 }
 
 DISPLAY_LINE
@@ -6124,9 +8010,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX1";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 184;
+	TREE_INDEX = 250;
 	TREE_LEVEL = 0;
-	CHILDREN = 185, 186, 187, 188, 189, 190, 191;
+	CHILDREN = 251, 252, 253, 254, 255, 256, 257;
 }
 
 DISPLAY_LINE
@@ -6134,9 +8020,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX1[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 185;
+	TREE_INDEX = 251;
 	TREE_LEVEL = 1;
-	PARENT = 184;
+	PARENT = 250;
 }
 
 DISPLAY_LINE
@@ -6144,9 +8030,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX1[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 186;
+	TREE_INDEX = 252;
 	TREE_LEVEL = 1;
-	PARENT = 184;
+	PARENT = 250;
 }
 
 DISPLAY_LINE
@@ -6154,9 +8040,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX1[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 187;
+	TREE_INDEX = 253;
 	TREE_LEVEL = 1;
-	PARENT = 184;
+	PARENT = 250;
 }
 
 DISPLAY_LINE
@@ -6164,9 +8050,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX1[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 188;
+	TREE_INDEX = 254;
 	TREE_LEVEL = 1;
-	PARENT = 184;
+	PARENT = 250;
 }
 
 DISPLAY_LINE
@@ -6174,9 +8060,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX1[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 189;
+	TREE_INDEX = 255;
 	TREE_LEVEL = 1;
-	PARENT = 184;
+	PARENT = 250;
 }
 
 DISPLAY_LINE
@@ -6184,9 +8070,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX1[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 190;
+	TREE_INDEX = 256;
 	TREE_LEVEL = 1;
-	PARENT = 184;
+	PARENT = 250;
 }
 
 DISPLAY_LINE
@@ -6194,9 +8080,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX1[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 191;
+	TREE_INDEX = 257;
 	TREE_LEVEL = 1;
-	PARENT = 184;
+	PARENT = 250;
 }
 
 DISPLAY_LINE
@@ -6204,9 +8090,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX2";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 192;
+	TREE_INDEX = 258;
 	TREE_LEVEL = 0;
-	CHILDREN = 193, 194, 195, 196, 197, 198, 199;
+	CHILDREN = 259, 260, 261, 262, 263, 264, 265;
 }
 
 DISPLAY_LINE
@@ -6214,9 +8100,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX2[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 193;
+	TREE_INDEX = 259;
 	TREE_LEVEL = 1;
-	PARENT = 192;
+	PARENT = 258;
 }
 
 DISPLAY_LINE
@@ -6224,9 +8110,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX2[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 194;
+	TREE_INDEX = 260;
 	TREE_LEVEL = 1;
-	PARENT = 192;
+	PARENT = 258;
 }
 
 DISPLAY_LINE
@@ -6234,9 +8120,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX2[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 195;
+	TREE_INDEX = 261;
 	TREE_LEVEL = 1;
-	PARENT = 192;
+	PARENT = 258;
 }
 
 DISPLAY_LINE
@@ -6244,9 +8130,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX2[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 196;
+	TREE_INDEX = 262;
 	TREE_LEVEL = 1;
-	PARENT = 192;
+	PARENT = 258;
 }
 
 DISPLAY_LINE
@@ -6254,9 +8140,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX2[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 197;
+	TREE_INDEX = 263;
 	TREE_LEVEL = 1;
-	PARENT = 192;
+	PARENT = 258;
 }
 
 DISPLAY_LINE
@@ -6264,9 +8150,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX2[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 198;
+	TREE_INDEX = 264;
 	TREE_LEVEL = 1;
-	PARENT = 192;
+	PARENT = 258;
 }
 
 DISPLAY_LINE
@@ -6274,9 +8160,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX2[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 199;
+	TREE_INDEX = 265;
 	TREE_LEVEL = 1;
-	PARENT = 192;
+	PARENT = 258;
 }
 
 DISPLAY_LINE
@@ -6284,9 +8170,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX3";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 200;
+	TREE_INDEX = 266;
 	TREE_LEVEL = 0;
-	CHILDREN = 201, 202, 203, 204, 205, 206, 207;
+	CHILDREN = 267, 268, 269, 270, 271, 272, 273;
 }
 
 DISPLAY_LINE
@@ -6294,9 +8180,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX3[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 201;
+	TREE_INDEX = 267;
 	TREE_LEVEL = 1;
-	PARENT = 200;
+	PARENT = 266;
 }
 
 DISPLAY_LINE
@@ -6304,9 +8190,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX3[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 202;
+	TREE_INDEX = 268;
 	TREE_LEVEL = 1;
-	PARENT = 200;
+	PARENT = 266;
 }
 
 DISPLAY_LINE
@@ -6314,9 +8200,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX3[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 203;
+	TREE_INDEX = 269;
 	TREE_LEVEL = 1;
-	PARENT = 200;
+	PARENT = 266;
 }
 
 DISPLAY_LINE
@@ -6324,9 +8210,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX3[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 204;
+	TREE_INDEX = 270;
 	TREE_LEVEL = 1;
-	PARENT = 200;
+	PARENT = 266;
 }
 
 DISPLAY_LINE
@@ -6334,9 +8220,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX3[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 205;
+	TREE_INDEX = 271;
 	TREE_LEVEL = 1;
-	PARENT = 200;
+	PARENT = 266;
 }
 
 DISPLAY_LINE
@@ -6344,9 +8230,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX3[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 206;
+	TREE_INDEX = 272;
 	TREE_LEVEL = 1;
-	PARENT = 200;
+	PARENT = 266;
 }
 
 DISPLAY_LINE
@@ -6354,9 +8240,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX3[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 207;
+	TREE_INDEX = 273;
 	TREE_LEVEL = 1;
-	PARENT = 200;
+	PARENT = 266;
 }
 
 DISPLAY_LINE
@@ -6364,9 +8250,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX4";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 208;
+	TREE_INDEX = 274;
 	TREE_LEVEL = 0;
-	CHILDREN = 209, 210, 211, 212, 213, 214, 215;
+	CHILDREN = 275, 276, 277, 278, 279, 280, 281;
 }
 
 DISPLAY_LINE
@@ -6374,9 +8260,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX4[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 209;
+	TREE_INDEX = 275;
 	TREE_LEVEL = 1;
-	PARENT = 208;
+	PARENT = 274;
 }
 
 DISPLAY_LINE
@@ -6384,9 +8270,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX4[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 210;
+	TREE_INDEX = 276;
 	TREE_LEVEL = 1;
-	PARENT = 208;
+	PARENT = 274;
 }
 
 DISPLAY_LINE
@@ -6394,9 +8280,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX4[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 211;
+	TREE_INDEX = 277;
 	TREE_LEVEL = 1;
-	PARENT = 208;
+	PARENT = 274;
 }
 
 DISPLAY_LINE
@@ -6404,9 +8290,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX4[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 212;
+	TREE_INDEX = 278;
 	TREE_LEVEL = 1;
-	PARENT = 208;
+	PARENT = 274;
 }
 
 DISPLAY_LINE
@@ -6414,9 +8300,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX4[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 213;
+	TREE_INDEX = 279;
 	TREE_LEVEL = 1;
-	PARENT = 208;
+	PARENT = 274;
 }
 
 DISPLAY_LINE
@@ -6424,9 +8310,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX4[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 214;
+	TREE_INDEX = 280;
 	TREE_LEVEL = 1;
-	PARENT = 208;
+	PARENT = 274;
 }
 
 DISPLAY_LINE
@@ -6434,9 +8320,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX4[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 215;
+	TREE_INDEX = 281;
 	TREE_LEVEL = 1;
-	PARENT = 208;
+	PARENT = 274;
 }
 
 DISPLAY_LINE
@@ -6444,9 +8330,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX5";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 216;
+	TREE_INDEX = 282;
 	TREE_LEVEL = 0;
-	CHILDREN = 217, 218, 219, 220, 221, 222, 223;
+	CHILDREN = 283, 284, 285, 286, 287, 288, 289;
 }
 
 DISPLAY_LINE
@@ -6454,9 +8340,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX5[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 217;
+	TREE_INDEX = 283;
 	TREE_LEVEL = 1;
-	PARENT = 216;
+	PARENT = 282;
 }
 
 DISPLAY_LINE
@@ -6464,9 +8350,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX5[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 218;
+	TREE_INDEX = 284;
 	TREE_LEVEL = 1;
-	PARENT = 216;
+	PARENT = 282;
 }
 
 DISPLAY_LINE
@@ -6474,9 +8360,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX5[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 219;
+	TREE_INDEX = 285;
 	TREE_LEVEL = 1;
-	PARENT = 216;
+	PARENT = 282;
 }
 
 DISPLAY_LINE
@@ -6484,9 +8370,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX5[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 220;
+	TREE_INDEX = 286;
 	TREE_LEVEL = 1;
-	PARENT = 216;
+	PARENT = 282;
 }
 
 DISPLAY_LINE
@@ -6494,9 +8380,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX5[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 221;
+	TREE_INDEX = 287;
 	TREE_LEVEL = 1;
-	PARENT = 216;
+	PARENT = 282;
 }
 
 DISPLAY_LINE
@@ -6504,9 +8390,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX5[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 222;
+	TREE_INDEX = 288;
 	TREE_LEVEL = 1;
-	PARENT = 216;
+	PARENT = 282;
 }
 
 DISPLAY_LINE
@@ -6514,9 +8400,9 @@ DISPLAY_LINE
 	CHANNEL = "HEX5[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 223;
+	TREE_INDEX = 289;
 	TREE_LEVEL = 1;
-	PARENT = 216;
+	PARENT = 282;
 }
 
 DISPLAY_LINE
@@ -6524,9 +8410,9 @@ DISPLAY_LINE
 	CHANNEL = "SW";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 224;
+	TREE_INDEX = 290;
 	TREE_LEVEL = 0;
-	CHILDREN = 225, 226;
+	CHILDREN = 291, 292;
 }
 
 DISPLAY_LINE
@@ -6534,9 +8420,9 @@ DISPLAY_LINE
 	CHANNEL = "SW[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 225;
+	TREE_INDEX = 291;
 	TREE_LEVEL = 1;
-	PARENT = 224;
+	PARENT = 290;
 }
 
 DISPLAY_LINE
@@ -6544,9 +8430,9 @@ DISPLAY_LINE
 	CHANNEL = "SW[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 226;
+	TREE_INDEX = 292;
 	TREE_LEVEL = 1;
-	PARENT = 224;
+	PARENT = 290;
 }
 
 TIME_BAR

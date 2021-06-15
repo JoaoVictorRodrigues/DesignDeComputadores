@@ -70,7 +70,7 @@ architecture arch_name of Unidade_Controle is
                  "10" when opCode = tipo_r else
 					  "11" when opCode = op_ori else
 					  "00";
-  controleEscreveRegC <= '1' when opCode = tipo_r or opCode = load or opCode=op_lui else '0';
+  controleEscreveRegC <= '1' when opCode = tipo_r or opCode = load or opCode=op_lui or opCode=op_ori else '0';
   muxUlaMem <= '1' when opCode = load else '0';
   BEQ <= '1'when opCode = op_BEQ else '0';
   we <= '1' when opCode = store else '0';
