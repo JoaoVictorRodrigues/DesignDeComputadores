@@ -28,6 +28,8 @@ entity MIPS is
 	countPC : out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	dataRead: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	dataWrite: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
+	entradaAula: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
+	entradaBula: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	
 	muxPC4alt: out std_logic;
 	muxRtRdalt : out std_logic;
@@ -282,6 +284,8 @@ begin
 	dataWrite <= registerB;
 	displaySignal <= saidaPC(23 downto 0) when SW = "00" else saidaULA(23 downto 0);
 	Sinalextendido <= imediatoExt;
+	entradaAula <= registerA;
+	entradaBula <= muxRtImedSignal;
 	
 	
 	DISPLAY0 : entity work.conversorHex7Seg
