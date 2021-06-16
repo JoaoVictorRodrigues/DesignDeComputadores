@@ -31,14 +31,19 @@ entity MIPS is
 	entradaAula: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	entradaBula: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	
-	muxPC4alt: out std_logic;
-	muxRtRdalt : out std_logic;
-	controleEscreveRegCalt : out std_logic;
-	muxRtImedalt : out std_logic;
-	controleULAalt : out std_logic_vector(1 downto 0);
-	muxUlaMemalt : out std_logic;
-	BEQalt : out std_logic;
-	wealt : out std_logic;
+	
+	muxJRPC4OUT : out std_logic;
+	muxPC4OUT : out std_logic;
+	muxRtRdOUT : out std_logic_vector(1 downto 0);
+	extensorOUT : out std_logic_vector(1 downto 0);
+	controleEscreveRegCOUT : out std_logic;
+	muxRtImedOUT : out std_logic;
+	ulaOPOUT : out std_logic_vector(2 downto 0);
+	muxUlaMemOUT : out std_logic;
+	BEQOUT : out std_logic;
+	BNEOUT : out std_logic;
+	weOUT : out std_logic;
+	
 	Sinalextendido: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
 	
@@ -53,7 +58,7 @@ architecture arch_name of MIPS is
 	signal saidaULA : std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	signal registerA, registerB : std_logic_vector(DATA_WIDTH_REG-1 downto 0);
 	signal instrucao : std_logic_vector(ADDR_WIDTH_ROM-1 downto 0);
-	signal pontosControle : std_logic_vector(10 downto 0);
+	signal pontosControle : std_logic_vector(14 downto 0);
 	signal imediatoExt : std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	signal saidaShift : std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	signal flagZeroSignal : std_logic;
@@ -65,6 +70,7 @@ architecture arch_name of MIPS is
 	signal entradaMuxProxPc : std_logic_vector (DATA_WIDTH_ROM-1 downto 0);
 	signal saidaMuxProxPc : std_logic_vector (DATA_WIDTH_ROM-1 downto 0);
 	signal ulaCtrl : std_logic_vector(2 downto 0);
+	signal saidaMuxJR : std_logic_vector (DATA_WIDTH_ROM-1 downto 0);
 	
 	alias OpCode : std_logic_vector(5 downto 0) is instrucao(31 downto 26);
 	alias imediatoPC : std_logic_vector(25 downto 0) is instrucao(25 downto 0);
@@ -75,14 +81,16 @@ architecture arch_name of MIPS is
 	alias shamt : std_logic_vector(4 downto 0) is instrucao(10 downto 6);
 	alias funct : std_logic_vector(5 downto 0) is instrucao(5 downto 0);
 	
-	alias muxPC4 : std_logic is pontosControle(10);
-	alias muxRtRd : std_logic is pontosControle(9);
-	alias extensor : std_logic_vector(1 downto 0) is pontosControle(8 downto 7);
-	alias controleEscreveRegC : std_logic is pontosControle(6);
-	alias muxRtImed : std_logic is pontosControle(5);
-	alias ulaOP : std_logic_vector(1 downto 0) is pontosControle(4 downto 3);
-	alias muxUlaMem : std_logic is pontosControle(2);
-	alias BEQ : std_logic is pontosControle(1);
+	alias muxJRPC4 : std_logic is pontosControle(14);
+	alias muxPC4 : std_logic is pontosControle(13);
+	alias muxRtRd : std_logic_vector is pontosControle(12 downto 11);
+	alias extensor : std_logic_vector(1 downto 0) is pontosControle(10 downto 9);
+	alias controleEscreveRegC : std_logic is pontosControle(8);
+	alias muxRtImed : std_logic is pontosControle(7);
+	alias ulaOP : std_logic_vector(2 downto 0) is pontosControle(6 downto 4);
+	alias muxUlaMem : std_logic is pontosControle(3);
+	alias BEQ : std_logic is pontosControle(2);
+	alias BNE : std_logic is pontosControle(1);
 	alias we : std_logic is pontosControle(0);
 	
 	signal displaySignal: std_logic_vector(23 downto 0);
@@ -127,10 +135,12 @@ begin
 	--- MUX responsável por indicar se o dado escrito no registrador C será RT ou RD
 	--- Recebe na entrada A, RT e na entrada B, RD, além do sinal do seletor, vindo da UC
 	--- Envia o dado selecionado pelo código do seletor.
-	muxRdRt : entity work.muxGenerico2x1 generic map (larguraDados => ADDR_WIDTH_REG)
+	muxRdRt : entity work.muxGenerico4x1 generic map (larguraDados => ADDR_WIDTH_REG)
 		port map (
-			entradaA_MUX => enderecoB,
-			entradaB_MUX => enderecoC,
+			entrada0 => enderecoB,
+			entrada1 => enderecoC,
+			entrada2 => "11111", --$ra
+			entrada3 => "00000",
 			seletor_MUX => muxRtRd,
 			saida_MUX => muxRdRtOut
 		 );
@@ -173,7 +183,7 @@ begin
 	--- Envia qual será o próximo endereço que a ROM deve executar
    PC : entity work.RegistradorGenerico generic map (larguraDados => DATA_WIDTH_ROM)
 		port map (
-			DIN => saidaMuxProxPc,
+			DIN => saidaMuxJR,
 			DOUT => saidaPC,
 			ENABLE =>'1',
 			CLK => clk,
@@ -218,7 +228,7 @@ begin
 		 port map (
 			entradaA_MUX => saidaSOMA,
 			entradaB_MUX => saidaShift,
-			seletor_MUX => (flagZeroSignal and BEQ),
+			seletor_MUX => (flagZeroSignal and BEQ) or ((not flagZeroSignal) and BNE),
 			saida_MUX => entradaMuxProxPc
 		 );
 	
@@ -268,15 +278,27 @@ begin
 			seletor_MUX => muxPC4,
 			saida_MUX => saidaMuxProxPc
 		);
+		
+	mux_JR : entity work.muxGenerico2x1 generic map (larguraDados => DATA_WIDTH_REG)
+		port map (
+			entradaA_MUX => saidaMuxProxPc,
+			entradaB_MUX => registerA,
+			seletor_MUX => muxJRPC4,
+			saida_MUX => saidaMuxJR
+		);
+
 	
-	muxPC4alt <= pontosControle(8);
-	muxRtRdalt <= pontosControle(7);
-	controleEscreveRegCalt <= pontosControle(6);
-	muxRtImedalt <= pontosControle(5);
-	controleULAalt <= pontosControle(4 downto 3);
-	muxUlaMemalt <= pontosControle(2);
-	BEQalt <= pontosControle(1);
-	wealt <= pontosControle(0);
+	muxJRPC4OUT <= pontosControle(14);
+	muxPC4OUT <= pontosControle(13);
+	muxRtRdOUT <= pontosControle(12 downto 11);
+	extensorOUT <= pontosControle(10 downto 9);
+	controleEscreveRegCOUT <= pontosControle(8);
+	muxRtImedOUT <= pontosControle(7);
+	ulaOPOUT <= pontosControle(6 downto 4);
+	muxUlaMemOUT <= pontosControle(3);
+	BEQOUT <= pontosControle(2);
+	BNEOUT <= pontosControle(1);
+	weOUT <=  pontosControle(0);
 	
 	addrOUT <= saidaULA;
 	countPC <= saidaPC;
