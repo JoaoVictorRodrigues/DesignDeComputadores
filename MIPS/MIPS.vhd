@@ -44,8 +44,10 @@ entity MIPS is
 	BNEOUT : out std_logic;
 	weOUT : out std_logic;
 	
+	dataREGW : out std_logic_vector (DATA_WIDTH_ROM-1 downto 0);
+	
 	Sinalextendido: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
-	HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+	HEX0,HEX1,HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0)
 	
   );
 end entity;
@@ -53,12 +55,13 @@ end entity;
 
 architecture arch_name of MIPS is
 	
+	signal pontosControle : std_logic_vector(15 downto 0);
+	
 	signal saidaSOMA : std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	signal saidaPC : std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	signal saidaULA : std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	signal registerA, registerB : std_logic_vector(DATA_WIDTH_REG-1 downto 0);
 	signal instrucao : std_logic_vector(ADDR_WIDTH_ROM-1 downto 0);
-	signal pontosControle : std_logic_vector(14 downto 0);
 	signal imediatoExt : std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	signal saidaShift : std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	signal flagZeroSignal : std_logic;
@@ -81,14 +84,14 @@ architecture arch_name of MIPS is
 	alias shamt : std_logic_vector(4 downto 0) is instrucao(10 downto 6);
 	alias funct : std_logic_vector(5 downto 0) is instrucao(5 downto 0);
 	
-	alias muxJRPC4 : std_logic is pontosControle(14);
-	alias muxPC4 : std_logic is pontosControle(13);
-	alias muxRtRd : std_logic_vector is pontosControle(12 downto 11);
-	alias extensor : std_logic_vector(1 downto 0) is pontosControle(10 downto 9);
-	alias controleEscreveRegC : std_logic is pontosControle(8);
-	alias muxRtImed : std_logic is pontosControle(7);
-	alias ulaOP : std_logic_vector(2 downto 0) is pontosControle(6 downto 4);
-	alias muxUlaMem : std_logic is pontosControle(3);
+	alias muxJRPC4 : std_logic is pontosControle(15);
+	alias muxPC4 : std_logic is pontosControle(14);
+	alias muxRtRd : std_logic_vector is pontosControle(13 downto 12);
+	alias extensor : std_logic_vector(1 downto 0) is pontosControle(11 downto 10);
+	alias controleEscreveRegC : std_logic is pontosControle(9);
+	alias muxRtImed : std_logic is pontosControle(8);
+	alias ulaOP : std_logic_vector(2 downto 0) is pontosControle(7 downto 5);
+	alias muxUlaMem : std_logic_vector(1 downto 0) is pontosControle(4 downto 3);
 	alias BEQ : std_logic is pontosControle(2);
 	alias BNE : std_logic is pontosControle(1);
 	alias we : std_logic is pontosControle(0);
@@ -259,10 +262,12 @@ begin
 	--- MUX responsável por escolher se o dado escrito em RegC será o resultado da ULA ou o dado vindo da memória RAM
 	--- Recebe na entrada A, o resultado da ULA e na entrada B o dado lido da RAM, além do código de seleção da UC
 	--- Envia o dado selecionado pelo seletor para o RegC
-	muxUlaMemoria : entity work.muxGenerico2x1 generic map (larguraDados => DATA_WIDTH_REG)
+	muxUlaMemoria : entity work.muxGenerico4x1 generic map (larguraDados => DATA_WIDTH_REG)
 		port map (
-			entradaA_MUX => saidaULA,
-			entradaB_MUX => saidaRAM,
+			entrada0 => saidaULA,
+			entrada1 => saidaRAM,
+			entrada2 => saidaSOMA,
+			entrada3 => x"00000000",
 			seletor_MUX => muxUlaMem,
 			saida_MUX => saidaMuxULARAM
 		);
@@ -300,6 +305,8 @@ begin
 	BNEOUT <= pontosControle(1);
 	weOUT <=  pontosControle(0);
 	
+	dataREGW <= saidaMuxULARAM;
+	
 	addrOUT <= saidaULA;
 	countPC <= saidaPC;
 	dataRead <= saidaRAM;
@@ -313,7 +320,7 @@ begin
 	DISPLAY0 : entity work.conversorHex7Seg
 		port map(
 			dadoHex => displaySignal(3 downto 0),
-			saida7seg => HEX0
+			saida7seg => hex0
 		);
 		
    DISPLAY1 : entity work.conversorHex7Seg 

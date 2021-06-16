@@ -20,21 +20,21 @@ entity Unidade_Controle is
 	 funct  :  in  std_logic_vector(OPC_WIDTH-1 downto 0);
 	 
     -- Output ports
-    palavraControle  :  out std_logic_vector(14 downto 0)
+    palavraControle  :  out std_logic_vector(15 downto 0)
   );
 end entity;
 
 
 architecture arch_name of Unidade_Controle is
 
-	alias muxJRPC4 : std_logic is palavraControle(14);
-	alias muxPC4 : std_logic is palavraControle(13);
-	alias muxRtRd : std_logic_vector is palavraControle(12 downto 11);
-	alias extensor : std_logic_vector(1 downto 0) is palavraControle(10 downto 9);
-	alias controleEscreveRegC : std_logic is palavraControle(8);
-	alias muxRtImed : std_logic is palavraControle(7);
-	alias controleULA : std_logic_vector(2 downto 0) is palavraControle(6 downto 4);
-	alias muxUlaMem : std_logic is palavraControle(3);
+	alias muxJRPC4 : std_logic is palavraControle(15);
+	alias muxPC4 : std_logic is palavraControle(14);
+	alias muxRtRd : std_logic_vector is palavraControle(13 downto 12);
+	alias extensor : std_logic_vector(1 downto 0) is palavraControle(11 downto 10);
+	alias controleEscreveRegC : std_logic is palavraControle(9);
+	alias muxRtImed : std_logic is palavraControle(8);
+	alias controleULA : std_logic_vector(2 downto 0) is palavraControle(7 downto 5);
+	alias muxUlaMem : std_logic_vector(1 downto 0) is palavraControle(4 downto 3);
 	alias BEQ : std_logic is palavraControle(2);
 	alias BNE : std_logic is palavraControle(1);
 	alias we : std_logic is palavraControle(0);
@@ -89,7 +89,9 @@ architecture arch_name of Unidade_Controle is
 									  opCode = addi or opCode = op_andi or opCode = op_ori or
 									  opCode = op_slti or opCode = op_jal else '0';
 									  
-  muxUlaMem <= '1' when opCode = load else '0';
+  muxUlaMem <= "01" when opCode = load else 
+					"10" when opCode = op_jal else
+					"00";
   BEQ <= '1'when opCode = op_BEQ else '0';
   BNE <= '1'when opCode = op_bne else '0';
   we <= '1' when opCode = store else '0';

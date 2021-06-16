@@ -63,7 +63,7 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 # Board DE0-CV
 #============================================================
 
-# Inicio da configuração dos pinos.
+# Inicio da configuraÃ§Ã£o dos pinos.
 
 #============================================================
 # CLOCK
@@ -261,7 +261,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[8]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[9]
 
 #====================================================================
-# Fim da configuracao dos pinos utilizados em Design de Computadores.
+# Fim da configuraÃ§Ã£o dos pinos utilizados em Design de Computadores.
 #====================================================================
 
 set_global_assignment -name VHDL_FILE muxGenerico3x1.vhd
