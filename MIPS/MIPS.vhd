@@ -20,36 +20,36 @@ entity MIPS is
 
   port(
    -- Input ports
-   clk     : in  std_logic;
-	SW      : in  std_logic_vector(1 downto 0);
-	
+   	clk     : in  std_logic;
+   	SW      : in  std_logic_vector(1 downto 0);
+   	HEX0,HEX1,HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0);
+	   LEDR : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+	 
 	-- Output ports
-   addrOUT :  out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
-	countPC : out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
-	dataRead: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
-	dataWrite: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
-	entradaAula: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
-	entradaBula: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
+   	-- addrOUT :  out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
+	-- countPC : out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
+	-- dataRead: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
+	-- dataWrite: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
+	-- entradaAula: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
+	-- entradaBula: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	
 	
-	muxJRPC4OUT : out std_logic;
-	muxPC4OUT : out std_logic;
-	muxRtRdOUT : out std_logic_vector(1 downto 0);
-	extensorOUT : out std_logic_vector(1 downto 0);
-	controleEscreveRegCOUT : out std_logic;
-	muxRtImedOUT : out std_logic;
-	ulaOPOUT : out std_logic_vector(2 downto 0);
-	muxUlaMemOUT : out std_logic;
-	BEQOUT : out std_logic;
-	BNEOUT : out std_logic;
-	weOUT : out std_logic;
+	-- muxJRPC4OUT : out std_logic;
+	-- muxPC4OUT : out std_logic;
+	-- muxRtRdOUT : out std_logic_vector(1 downto 0);
+	-- extensorOUT : out std_logic_vector(1 downto 0);
+	-- controleEscreveRegCOUT : out std_logic;
+	-- muxRtImedOUT : out std_logic;
+	-- ulaOPOUT : out std_logic_vector(2 downto 0);
+	-- muxUlaMemOUT : out std_logic;
+	-- BEQOUT : out std_logic;
+	-- BNEOUT : out std_logic;
+	-- weOUT : out std_logic;
 	
-	dataREGW : out std_logic_vector (DATA_WIDTH_ROM-1 downto 0);
+	-- dataREGW : out std_logic_vector (DATA_WIDTH_ROM-1 downto 0);
 	
-	Sinalextendido: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
-	HEX0,HEX1,HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0)
-	
-  );
+	-- Sinalextendido: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
+);
 end entity;
 
 
@@ -293,37 +293,42 @@ begin
 		);
 
 	
-	muxJRPC4OUT <= pontosControle(14);
-	muxPC4OUT <= pontosControle(13);
-	muxRtRdOUT <= pontosControle(12 downto 11);
-	extensorOUT <= pontosControle(10 downto 9);
-	controleEscreveRegCOUT <= pontosControle(8);
-	muxRtImedOUT <= pontosControle(7);
-	ulaOPOUT <= pontosControle(6 downto 4);
-	muxUlaMemOUT <= pontosControle(3);
-	BEQOUT <= pontosControle(2);
-	BNEOUT <= pontosControle(1);
-	weOUT <=  pontosControle(0);
+	-- muxJRPC4OUT <= pontosControle(14);
+	-- muxPC4OUT <= pontosControle(13);
+	-- muxRtRdOUT <= pontosControle(12 downto 11);
+	-- extensorOUT <= pontosControle(10 downto 9);
+	-- controleEscreveRegCOUT <= pontosControle(8);
+	-- muxRtImedOUT <= pontosControle(7);
+	-- ulaOPOUT <= pontosControle(6 downto 4);
+	-- muxUlaMemOUT <= pontosControle(3);
+	-- BEQOUT <= pontosControle(2);
+	-- BNEOUT <= pontosControle(1);
+	-- weOUT <=  pontosControle(0);
 	
-	dataREGW <= saidaMuxULARAM;
+	-- dataREGW <= saidaMuxULARAM;
 	
-	addrOUT <= saidaULA;
-	countPC <= saidaPC;
-	dataRead <= saidaRAM;
-	dataWrite <= registerB;
-	displaySignal <= saidaPC(23 downto 0) when SW = "00" else saidaULA(23 downto 0);
-	Sinalextendido <= imediatoExt;
-	entradaAula <= registerA;
-	entradaBula <= muxRtImedSignal;
+	-- addrOUT <= saidaULA;
+	-- countPC <= saidaPC;
+	-- dataRead <= saidaRAM;
+	-- dataWrite <= registerB;
+	displaySignal <= saidaPC(23 downto 0);
+	-- Sinalextendido <= imediatoExt;
+	-- entradaAula <= registerA;
+	-- entradaBula <= muxRtImedSignal;
 	
-	
-	DISPLAY0 : entity work.conversorHex7Seg
+	LEDR(9) <= clk;
+   LEDR(8 downto 5) <= (OTHERS => '0');
+
+	DISPLAY0 : entity work.conversorHex7Seg 
 		port map(
 			dadoHex => displaySignal(3 downto 0),
-			saida7seg => hex0
+			apaga => '0',
+            negativo => '0',
+            overFlow => '0',
+			saida7seg => HEX0
 		);
-		
-   DISPLAY1 : entity work.conversorHex7Seg 
+
+   	DISPLAY1 : entity work.conversorHex7Seg 
 		port map(
 			dadoHex => displaySignal(7 downto 4),
 			saida7seg => HEX1
