@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sun May 02 21:31:04 2021
+Fitter Status : Successful - Wed Jun 16 15:27:24 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : Calculadora
 Top-level Entity Name : calculadora
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 19 / 18,480 ( < 1 % )
-Total registers : 27
+Logic utilization (in ALMs) : 39 / 18,480 ( < 1 % )
+Total registers : 16
 Total pins : 75 / 224 ( 33 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 3,153,920 ( 0 % )

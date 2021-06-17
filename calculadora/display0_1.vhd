@@ -8,7 +8,7 @@ entity display0_1 is
     -- Input ports
     clk     : in  std_logic;
     barramentoEscritaDados :in std_logic_vector(dataWidth-1 downto 0);
-	 habilita: in std_logic;
+	  habilita: in std_logic;
 
     -- Output ports
     display0 :  out  std_logic_vector(6 downto 0);

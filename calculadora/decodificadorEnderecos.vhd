@@ -5,12 +5,12 @@ use work.constantesProcessador.all;
 entity decodificadorEnderecos is
   port (
     barramentoEnderecos  : in std_logic_vector(7 downto 0);
-	 leitura: in std_logic;
-	 escrita: in std_logic;
+	leitura: in std_logic;
+	escrita: in std_logic;
 	 
-    habilitaRAM,habilitaChaves7_0, habilitaChaves8_9 : out std_logic;
-	 habilitaBotao0, habilitaBotao1,habilitaDisplay0_1: out std_logic;
-	 habilitaDisplay2_3, habilitaDisplay4, habilitaDisplay5: out std_logic
+	habilitaRAM,habilitaChaves7_0, habilitaChaves8_9 : out std_logic;
+	habilitaBotao0, habilitaBotao1,habilitaDisplay0_1: out std_logic;
+	habilitaDisplay2_3, habilitaDisplay4, habilitaDisplay5: out std_logic
   );
 end entity;
 
@@ -25,7 +25,7 @@ end entity;
 -- Display5: 1000_0011
 
 architecture comportamento of decodificadorEnderecos is
-
+	
 	signal posicaoZero : std_logic;
 	signal posicaoUM : std_logic;
 	signal posicaoDois : std_logic;
@@ -34,8 +34,11 @@ architecture comportamento of decodificadorEnderecos is
 	--Bloco3: std_logic;
 
   begin
-  
-   posicaoZero <= not (barramentoEnderecos(5) or barramentoEnderecos(4) or barramentoEnderecos(3) or barramentoEnderecos(2) or barramentoEnderecos(1) or barramentoEnderecos(0)); 
+	posZer <= nor(barramentoEnderecos(31 downto 29) and barramentoEnderecos(27 downto 0)) and barramentoEnderecos(28)
+	posZer <= nor(barramentoEnderecos(31 downto 29) and barramentoEnderecos(27 downto 0)) and barramentoEnderecos(28)
+	posZer <= nor(barramentoEnderecos(31 downto 29) and barramentoEnderecos(27 downto 0)) and barramentoEnderecos(28)
+	
+   	posicaoZero <= not (barramentoEnderecos(5) or barramentoEnderecos(4) or barramentoEnderecos(3) or barramentoEnderecos(2) or barramentoEnderecos(1) or barramentoEnderecos(0)); 
 	posicaoUM   <= not (barramentoEnderecos(5) or barramentoEnderecos(4) or barramentoEnderecos(3) or barramentoEnderecos(2) or barramentoEnderecos(1) or (not barramentoEnderecos(0))); 
 	posicaoDois <= not (barramentoEnderecos(5) or barramentoEnderecos(4) or barramentoEnderecos(3) or barramentoEnderecos(2) or (not barramentoEnderecos(1)) or barramentoEnderecos(0)); 
 	posicaoTres <= not (barramentoEnderecos(5) or barramentoEnderecos(4) or barramentoEnderecos(3) or barramentoEnderecos(2) or (not barramentoEnderecos(1)) or (not barramentoEnderecos(0))); 

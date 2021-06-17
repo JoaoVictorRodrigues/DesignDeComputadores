@@ -9,7 +9,7 @@ entity Unidade_Controle is
     clk  :  in  std_logic;
 	 opCode  :  in  std_logic_vector(4 downto 0);
 	 flagZero: in std_logic;
-	 carryOut: in std_logic;
+	 --carryOut: in std_logic;
 	 
     -- Output ports
     palavraControle  :  out std_logic_vector(7 downto 0)
