@@ -11,7 +11,7 @@ entity decodificadorEnderecos is
     --  habilitaRAM,habilitaChaves7_0, habilitaChaves8_9 : out std_logic;
 	--  habilitaBotao0, habilitaBotao1,
 	 habilitaDisplay0, habilitaDisplay1, habilitaDisplay2: out std_logic;
-	 habilitaDisplay3, habilitaDisplay4, habilitaDisplay5: out std_logic;
+	 habilitaDisplay3, habilitaDisplay4, habilitaDisplay5: out std_logic
   );
 end entity;
 
@@ -35,12 +35,12 @@ architecture comportamento of decodificadorEnderecos is
 	--Bloco3: std_logic;
 
   begin
-	posZer <= nor(barramentoEnderecos(29 downto 0)
-	posZer <= nor(barramentoEnderecos(29 downto 1)) and (barramentoEnderecos(1))
-	posZer <= nor(barramentoEnderecos(29 downto 2) and barramentoEnderecos(0)) and (barramentoEnderecos(1))
-	posZer <= nor(barramentoEnderecos(29 downto 2)) and (barramentoEnderecos(1 downto 0))
-	posZer <= nor(barramentoEnderecos(29 downto 3) and barramentoEnderecos(1 downto 0)) and (barramentoEnderecos(2))
-	posZer <= nor(barramentoEnderecos(29 downto 3) and barramentoEnderecos(1)) and (barramentoEnderecos(2) and (barramentoEnderecos(0))
+--	posZer <= nor(barramentoEnderecos(29 downto 0);
+--	posZer <= nor(barramentoEnderecos(29 downto 1)) and (barramentoEnderecos(1));
+--	posZer <= nor(barramentoEnderecos(29 downto 2) and barramentoEnderecos(0)) and (barramentoEnderecos(1));
+--	posZer <= nor(barramentoEnderecos(29 downto 2)) and (barramentoEnderecos(1 downto 0));
+--	posZer <= nor(barramentoEnderecos(29 downto 3) and barramentoEnderecos(1 downto 0)) and (barramentoEnderecos(2));
+--	posZer <= nor(barramentoEnderecos(29 downto 3) and barramentoEnderecos(1)) and (barramentoEnderecos(2) and (barramentoEnderecos(0));
 
 	
    posicaoZero <= not (barramentoEnderecos(5) or barramentoEnderecos(4) or barramentoEnderecos(3) or barramentoEnderecos(2) or barramentoEnderecos(1) or barramentoEnderecos(0));

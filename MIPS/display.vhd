@@ -1,6 +1,5 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use work.constantesProcessador.all;
 
 entity display is
   
@@ -11,7 +10,7 @@ entity display is
 	 habilita: in std_logic;
 
     -- Output ports
-    display :  out  std_logic_vector(6 downto 0);
+    display :  out  std_logic_vector(6 downto 0)
 	 
   );
 end entity;

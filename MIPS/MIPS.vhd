@@ -22,8 +22,7 @@ entity MIPS is
    -- Input ports
    	clk     : in  std_logic;
    	SW      : in  std_logic_vector(1 downto 0);
-   	HEX0,HEX1,HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0);
-	   LEDR : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+   	HEX0,HEX1,HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0)
 	 
 	-- Output ports
    	-- addrOUT :  out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
@@ -316,19 +315,16 @@ begin
 	-- entradaAula <= registerA;
 	-- entradaBula <= muxRtImedSignal;
 	
-	LEDR(9) <= clk;
-   LEDR(8 downto 5) <= (OTHERS => '0');
+--	LEDR(9) <= clk;
+--   LEDR(8 downto 5) <= (OTHERS => '0');
 
 	DISPLAY0 : entity work.conversorHex7Seg 
 		port map(
 			dadoHex => displaySignal(3 downto 0),
-			apaga => '0',
-            negativo => '0',
-            overFlow => '0',
 			saida7seg => HEX0
 		);
 
-   	DISPLAY1 : entity work.conversorHex7Seg 
+   DISPLAY1 : entity work.conversorHex7Seg 
 		port map(
 			dadoHex => displaySignal(7 downto 4),
 			saida7seg => HEX1
