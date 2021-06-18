@@ -1,5 +1,5 @@
 Archive Project report for MIPS
-Thu Jun 03 16:12:38 2021
+Fri Jun 18 14:16:22 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Thu Jun 03 16:12:38 2021 ;
+; Archive Project Status ; Successful - Fri Jun 18 14:16:22 2021 ;
 ; Revision Name          ; MIPS                                  ;
 ; Top-level Entity Name  ; MIPS                                  ;
 ; Family                 ; Cyclone V                             ;
@@ -51,18 +51,18 @@ Info: File Set 'Source control' contains:
     Info: Automatically detected source files
 Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
 Info: Archive will store files relative to the closest common parent directory
-Info (13213): Using common directory C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/
+Info (13213): Using common directory C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive 'C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.qar'
+Info: Generated archive 'C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'MIPS.archive.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4819 megabytes
-    Info: Processing ended: Thu Jun 03 16:12:38 2021
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 4824 megabytes
+    Info: Processing ended: Fri Jun 18 14:16:22 2021
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 
@@ -71,15 +71,18 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 +--------------------------------------------------------------+
 ; File Name                                                    ;
 +--------------------------------------------------------------+
+; bancoRegistradoresArqRegMem.vhd                              ;
 ; BancoRegMIPS.vhd                                             ;
 ; c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf ;
 ; conversorHex7seg.vhd                                         ;
+; edgeDetector.vhd                                             ;
 ; estendeSinalGenerico.vhd                                     ;
 ; interfaceCHAVES.vhd                                          ;
 ; MIPS.qpf                                                     ;
 ; MIPS.qsf                                                     ;
 ; MIPS.vhd                                                     ;
 ; muxGenerico2x1.vhd                                           ;
+; muxGenerico3x1.vhd                                           ;
 ; RAMMIPS.vhd                                                  ;
 ; RegistradorGenerico.vhd                                      ;
 ; ROM.vhd                                                      ;
@@ -92,6 +95,7 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 ; Waveform.vwf                                                 ;
 ; Waveform1.vwf                                                ;
 ; Waveform3.vwf                                                ;
+; Waveform4.vwf                                                ;
 +--------------------------------------------------------------+
 
 

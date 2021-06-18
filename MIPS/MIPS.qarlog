@@ -1,38 +1,36 @@
-Quartus Prime Archive log --	C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.qarlog
+Quartus Prime Archive log --	C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.qarlog
 
-Archive:	C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.qar
-Date:		Thu Jun 03 16:12:38 2021
+Archive:	C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.qar
+Date:		Fri Jun 18 14:16:22 2021
 Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 	=========== Files Selected: ===========
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/BancoRegMIPS.vhd
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.qpf
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.qsf
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.vhd
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/RAMMIPS.vhd
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/ROM.vhd
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/RegistradorGenerico.vhd
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/UC_ULA.vhd
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/ULA.vhd
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/ULA1Bit.vhd
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/Unidade_Controle.vhd
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/Waveform.vwf
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/Waveform1.vwf
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/Waveform3.vwf
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/conversorHex7seg.vhd
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/estendeSinalGenerico.vhd
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/interfaceCHAVES.vhd
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/muxGenerico2x1.vhd
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/somaConstante.vhd
-C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/somadorGenerico.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/BancoRegMIPS.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.qpf
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.qsf
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/MIPS.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/RAMMIPS.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/ROM.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/RegistradorGenerico.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/UC_ULA.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/ULA.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/ULA1Bit.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/Unidade_Controle.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/Waveform.vwf
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/Waveform1.vwf
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/Waveform3.vwf
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/Waveform4.vwf
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/bancoRegistradoresArqRegMem.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/conversorHex7seg.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/edgeDetector.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/estendeSinalGenerico.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/interfaceCHAVES.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/muxGenerico2x1.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/muxGenerico3x1.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/somaConstante.vhd
+C:/Users/55129/Documents/7semestre/descomp/git prjeto/DesignDeComputadores/MIPS/somadorGenerico.vhd
 c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
-	======= Total: 21 files to archive =======
+	======= Total: 25 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.
-
-
-******* Archived project restoration attempt on Mon Jun 14 17:58:58 2021
-Source archive file:	C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS.qar
-Archive was extracted into	C:/Users/Joao/OneDrive - Insper - Institudo de Ensino e Pesquisa/7/DesComp/DesignDeComputadores/MIPS/MIPS_restored/
-		 - successfully.

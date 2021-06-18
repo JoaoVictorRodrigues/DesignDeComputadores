@@ -20,13 +20,16 @@ entity MIPS is
 
   port(
    -- Input ports
-   	clk     : in  std_logic;
-   	SW      : in  std_logic_vector(1 downto 0);
-   	HEX0,HEX1,HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0)
+   	CLOCK_50: in  std_logic;
+   	SW      : in  std_logic_vector(9 downto 0);
+		KEY      : in  std_logic_vector(3 downto 0);
+   	HEX0,HEX1,HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0);
+		
 	 
 	-- Output ports
-   	-- addrOUT :  out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
-	-- countPC : out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
+	LEDR : out std_logic_vector(9 downto 0);
+   addrOUT :  out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
+	countPC : out  std_logic_vector(DATA_WIDTH_ROM-1 downto 0)
 	-- dataRead: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	-- dataWrite: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
 	-- entradaAula: out std_logic_vector(DATA_WIDTH_ROM-1 downto 0);
@@ -96,10 +99,17 @@ architecture arch_name of MIPS is
 	alias we : std_logic is pontosControle(0);
 	
 	signal displaySignal: std_logic_vector(23 downto 0);
+	signal clk : std_logic;
 	
 
 begin
 
+	detectorSub0: work.edgeDetector(bordaSubida) 
+		port map (
+			clk => CLOCK_50,
+			entrada => (not KEY(0)),
+			saida => clk);
+	
 	--- Instancia ROM
 	--- Recebe dado enviado pelo PC
 	--- Envia a instrução referente a posição recebida
@@ -306,17 +316,19 @@ begin
 	
 	-- dataREGW <= saidaMuxULARAM;
 	
-	-- addrOUT <= saidaULA;
-	-- countPC <= saidaPC;
+	addrOUT <= saidaULA;
+	countPC <= saidaPC;
 	-- dataRead <= saidaRAM;
 	-- dataWrite <= registerB;
-	displaySignal <= saidaPC(23 downto 0);
+	displaySignal <= saidaPC(23 downto 0) when SW(0) = '0' 
+						else saidaULA(23 downto 0);
+	
 	-- Sinalextendido <= imediatoExt;
 	-- entradaAula <= registerA;
 	-- entradaBula <= muxRtImedSignal;
 	
 --	LEDR(9) <= clk;
---   LEDR(8 downto 5) <= (OTHERS => '0');
+   LEDR(9 downto 0) <= SW(9 downto 0);
 
 	DISPLAY0 : entity work.conversorHex7Seg 
 		port map(
